@@ -49,10 +49,13 @@ var NAVTREEINDEX0 =
 "batch__calc__dftb_8py.html#af4b76c2f60f8c4ee6181d793b97be433":[3,0,0,1,1,15],
 "batch__calc__dftb_8py_source.html":[3,0,0,1,1],
 "class_d_fdb_1_1analyse_1_1_d_fanalysis.html":[2,0,0,0,0],
-"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0":[2,0,0,0,0,4],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1":[2,0,0,0,0,6],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0":[2,0,0,0,0,7],
 "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b":[2,0,0,0,0,1],
-"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5":[2,0,0,0,0,2],
-"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b":[2,0,0,0,0,3],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5":[2,0,0,0,0,3],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234":[2,0,0,0,0,2],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073":[2,0,0,0,0,4],
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b":[2,0,0,0,0,5],
 "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#ab31c59b13440f2e7f87ea89c54585741":[2,0,0,0,0,0],
 "class_d_fdb_1_1db_1_1_d_fdatabase.html":[2,0,0,1,0],
 "class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d":[2,0,0,1,0,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "opt__struct__dftb_8py.html#a65be15481695a139d219126d027148fa":[3,0,0,1,3,10],
 "opt__struct__dftb_8py.html#a6847f643acc03b90b6bc1b576c4b2f55":[3,0,0,1,3,5],
 "opt__struct__dftb_8py.html#a7d487ba09e36ea87f857eb735cc6d0d3":[3,0,0,1,3,1],
-"opt__struct__dftb_8py.html#a81e2b5af800e9f348156914683e97fd2":[3,0,0,1,3,15],
-"opt__struct__dftb_8py.html#a82861557fbad89341fd262d96a192b20":[3,0,0,1,3,19],
-"opt__struct__dftb_8py.html#a8c38d74a571486775d16f02fd8eac53c":[3,0,0,1,3,17],
-"opt__struct__dftb_8py.html#ab3fe253ea0c0fb085e25824dd3814dbb":[3,0,0,1,3,9]
+"opt__struct__dftb_8py.html#a81e2b5af800e9f348156914683e97fd2":[3,0,0,1,3,15]
 };

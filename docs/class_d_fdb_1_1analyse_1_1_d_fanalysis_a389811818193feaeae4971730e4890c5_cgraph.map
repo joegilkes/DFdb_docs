@@ -1,4 +1,4 @@
 <map id="DFdb.analyse.DFanalysis.plot_force_difference" name="DFdb.analyse.DFanalysis.plot_force_difference">
 <area shape="rect" id="node1" title="Plot the RMSDs of atomic forces between the molecules in DFdb sets compared to a reference set." alt="" coords="5,5,196,47"/>
-<area shape="rect" id="node2" href="$class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073" title=" " alt="" coords="244,5,415,47"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073" title="Calculate the RMSDs of atomic forces between the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
 </map>
