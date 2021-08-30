@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "DFdb Documentation", "index.html", [
-    [ "DFdb Python Package", "index.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
