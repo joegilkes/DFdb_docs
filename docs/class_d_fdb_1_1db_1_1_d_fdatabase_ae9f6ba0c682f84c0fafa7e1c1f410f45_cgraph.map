@@ -1,5 +1,0 @@
-<map id="DFdb.db.DFdatabase.add_relaxed" name="DFdb.db.DFdatabase.add_relaxed">
-<area shape="rect" id="node1" title="Load a single relaxed structure into the database." alt="" coords="5,39,172,80"/>
-<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0" title="Inbuilt method for parsing calculator details from a finished calculation." alt="" coords="220,5,367,47"/>
-<area shape="rect" id="node3" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d" title="Inbuilt method for parsing structure names into key/value pairs for entry into the database." alt="" coords="220,71,367,112"/>
-</map>

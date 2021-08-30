@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">import</span> os</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html">DFanalysis</a>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>DFanalysis:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Handles analysis and plotting of comparative results.</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">    Contains functions to extract a range of comparative properties from </span></div>
@@ -125,15 +125,15 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral">            Number of samples to evaluate Scikit-learn KDE plots over</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">            when calculating sample means and vaiances.</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral">    &#39;&#39;&#39;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html">   34</a></span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#ab31c59b13440f2e7f87ea89c54585741">__init__</a>(self, skl_kde_samples=10000):</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">def </span>__init__(self, skl_kde_samples=10000):</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Initialise DFanalysis object.&#39;&#39;&#39;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples = skl_kde_samples</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        self.skl_kde_samples = skl_kde_samples</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        plt.style.use(f<span class="stringliteral">&#39;{self.modulepath}/seaborn_large.mplstyle&#39;</span>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#ab31c59b13440f2e7f87ea89c54585741">   40</a></span>&#160;        </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">   41</a></span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">plot_position_difference</a>(self, reference, comparisons, ignore_H=False, plot_type=&#39;hist&#39;,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">def </span>plot_position_difference(self, reference, comparisons, ignore_H=False, plot_type=&#39;hist&#39;,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                 reference_name=None, comparison_names=None, title=None,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                 return_data=False, savefig=None):</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Plot the lRMSDs of atomic positions between the molecules in DFdb sets compared to a reference set.</span></div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">            lRMSDs, otherwise this value returns None.</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment"># Ensure plot_type makes sense.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">   85</a></span>&#160;        plot_types = [</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        plot_types = [</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="stringliteral">&#39;hist&#39;</span>,</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="stringliteral">&#39;hist+kde&#39;</span>,</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="stringliteral">&#39;kde&#39;</span></div>
@@ -197,7 +197,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Argument savefig should be None or a string.&#39;</span>)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment"># Calculate lRMSDs for each comparative dataset.</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        rmsds = [self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">_compare_positions</a>_compare_positions(reference, comparison, ignore_H) <span class="keywordflow">for</span> comparison <span class="keywordflow">in</span> comparisons]</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        rmsds = [self._compare_positions(reference, comparison, ignore_H) <span class="keywordflow">for</span> comparison <span class="keywordflow">in</span> comparisons]</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment"># Gather struct_name data if needed.</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span> return_data:</div>
@@ -230,8 +230,8 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                means[i] = np.mean(rmsd_list)</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                variances[i] = np.var(rmsd_list)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                stdevs[i] = np.sqrt(variances[i])</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                sample_means[i] = np.mean(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                sample_variances[i] = np.var(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                sample_means[i] = np.mean(kde.sample(self.skl_kde_samples))</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                sample_variances[i] = np.var(kde.sample(self.skl_kde_samples))</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                sample_stdevs[i] = np.sqrt(sample_variances[i])</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                ax[i].fill_between(x, np.exp(logprob), alpha=0.5)</div>
@@ -333,7 +333,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">return</span> rmsd_list</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">plot_force_difference</a>(self, reference, comparisons, plot_type=&#39;hist&#39;,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">def </span>plot_force_difference(self, reference, comparisons, plot_type=&#39;hist&#39;,</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                              reference_name=None, comparison_names=None, title=None,</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                              return_data=False, savefig=None):</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Plot the RMSDs of atomic forces between the molecules in DFdb sets compared</span></div>
@@ -363,7 +363,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="comment"># Ensure plot type makes sense</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        plot_types = [</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="stringliteral">&#39;hist&#39;</span>,</div>
-<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">  272</a></span>&#160;            <span class="stringliteral">&#39;hist+kde&#39;</span>,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="stringliteral">&#39;hist+kde&#39;</span>,</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="stringliteral">&#39;kde&#39;</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        ]</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> plot_type <span class="keywordflow">not</span> <span class="keywordflow">in</span> plot_types:</div>
@@ -380,7 +380,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Argument savefig should be None or a string.&#39;</span>)</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="comment"># Calculate RMSDs for each comparative dataset.</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        rmsds = [self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">_compare_forces</a>_compare_forces(reference, comparison) <span class="keywordflow">for</span> comparison <span class="keywordflow">in</span> comparisons]</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        rmsds = [self._compare_forces(reference, comparison) <span class="keywordflow">for</span> comparison <span class="keywordflow">in</span> comparisons]</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="comment"># Gather struct_name data if needed.</span></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">if</span> return_data:</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            mol_names = [row.struct_name <span class="keywordflow">for</span> row <span class="keywordflow">in</span> reference]</div>
@@ -412,8 +412,8 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                means[i] = np.mean(rmsd_list)</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                variances[i] = np.var(rmsd_list)</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                stdevs[i] = np.sqrt(variances[i])</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                sample_means[i] = np.mean(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                sample_variances[i] = np.var(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                sample_means[i] = np.mean(kde.sample(self.skl_kde_samples))</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                sample_variances[i] = np.var(kde.sample(self.skl_kde_samples))</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                sample_stdevs[i] = np.sqrt(sample_variances[i])</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                ax[i].fill_between(x, np.exp(logprob), alpha=0.5)</div>
@@ -500,7 +500,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">return</span> rmsd_list</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">plot_energy_difference</a>(self, reference_set, comparison_sets,</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keyword">def </span>plot_energy_difference(self, reference_set, comparison_sets,</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                               plot_type=&#39;hist&#39;, reference_name=None,</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                               comparison_names=None, title=None,</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                               return_data=False, savefig=None):</div>
@@ -537,7 +537,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        mol_names = []</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        all_mol_names = []</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">for</span> sublist <span class="keywordflow">in</span> reference_set:</div>
-<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">  446</a></span>&#160;            struct_name = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            struct_name = <span class="stringliteral">&#39;&#39;</span></div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">for</span> i, structure <span class="keywordflow">in</span> enumerate(sublist):</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                <span class="keywordflow">if</span> struct_name != <span class="stringliteral">&#39;&#39;</span>:</div>
@@ -600,7 +600,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordflow">for</span> s, comparison_set <span class="keywordflow">in</span> enumerate(comparison_sets):</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            energy_diffs_by_name = []</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <span class="keywordflow">for</span> ref_sublist, comp_sublist <span class="keywordflow">in</span> zip(reference_set, comparison_set):</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                energy_diffs = self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1">_compare_energies</a>_compare_energies(ref_sublist, comp_sublist)</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                energy_diffs = self._compare_energies(ref_sublist, comp_sublist)</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                energy_diffs_by_name.append(energy_diffs)</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            all_energy_diffs = np.concatenate(energy_diffs_by_name).ravel()</div>
@@ -633,8 +633,8 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                means[i] = np.mean(all_energy_diffs)</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                variances[i] = np.var(all_energy_diffs)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                stdevs[i] = np.sqrt(variances[i])</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                sample_means[i] = np.mean(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                sample_variances[i] = np.var(kde.sample(self.<a class="code" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a>skl_kde_samples))</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                sample_means[i] = np.mean(kde.sample(self.skl_kde_samples))</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                sample_variances[i] = np.var(kde.sample(self.skl_kde_samples))</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                sample_stdevs[i] = np.sqrt(sample_variances[i])</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                ax[i].fill_between(x, np.exp(logprob), alpha=0.5)</div>
@@ -708,7 +708,7 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="keywordflow">return</span> rel_energy_list</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160; </div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="keyword">def </span><a class="code" href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">ari2list</a>(ari):</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="keyword">def </span>ari2list(ari):</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Converts an AtomsRow Iterator object to a list of AtomsRow objects</span></div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="stringliteral">    so they can be enumerated over.</span></div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="stringliteral">    </span></div>
@@ -727,16 +727,6 @@ $(document).ready(function(){initNavTree('analyse_8py_source.html',''); initResi
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    ar_list = [ar <span class="keywordflow">for</span> ar <span class="keywordflow">in</span> ari]</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keywordflow">return</span> ar_list</div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html">DFdb.analyse.DFanalysis</a></div><div class="ttdoc">Handles analysis and plotting of comparative results.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00034">analyse.py:34</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a103d084d38614a6fd33388eeb26aedb1"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1">DFdb.analyse.DFanalysis._compare_energies</a></div><div class="ttdeci">def _compare_energies(self, arl1, arl2)</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00611">analyse.py:611</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a1abf06bd44f595f62f28a946547157b0"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a></div><div class="ttdeci">skl_kde_samples</div><div class="ttdoc">int</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00041">analyse.py:41</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a2193b9959e668738e07d9a011e410c8b"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference</a></div><div class="ttdeci">def plot_position_difference(self, reference, comparisons, ignore_H=False, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None)</div><div class="ttdoc">Plot the lRMSDs of atomic positions between the molecules in DFdb sets compared to a reference set.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00085">analyse.py:87</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a389811818193feaeae4971730e4890c5"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference</a></div><div class="ttdeci">def plot_force_difference(self, reference, comparisons, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None)</div><div class="ttdoc">Plot the RMSDs of atomic forces between the molecules in DFdb sets compared to a reference set.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00272">analyse.py:274</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a5a3e24f866b66faca3cb57c0bc1b9234"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">DFdb.analyse.DFanalysis._compare_positions</a></div><div class="ttdeci">def _compare_positions(self, arl1, arl2, ignore_H=False)</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00212">analyse.py:212</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_a5fdea4dbbfe2611fb9b193d708b07073"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">DFdb.analyse.DFanalysis._compare_forces</a></div><div class="ttdeci">def _compare_forces(self, arl1, arl2)</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00390">analyse.py:390</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_aa511144de588c1f1b3b3c8b66aeea81b"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference</a></div><div class="ttdeci">def plot_energy_difference(self, reference_set, comparison_sets, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None)</div><div class="ttdoc">Plot the energy differences between identically structured molecules in DFdb sets compared to a refer...</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00446">analyse.py:449</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_html_ab31c59b13440f2e7f87ea89c54585741"><div class="ttname"><a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#ab31c59b13440f2e7f87ea89c54585741">DFdb.analyse.DFanalysis.__init__</a></div><div class="ttdeci">def __init__(self, skl_kde_samples=10000)</div><div class="ttdoc">Initialise DFanalysis object.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00040">analyse.py:40</a></div></div>
-<div class="ttc" id="anamespace_d_fdb_1_1analyse_html_a9c70e14e01162300e675b89d1a7185e0"><div class="ttname"><a href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">DFdb.analyse.ari2list</a></div><div class="ttdeci">def ari2list(ari)</div><div class="ttdoc">Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00642">analyse.py:642</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -103,23 +103,23 @@ $(document).ready(function(){initNavTree('batch__calc__aims_8py_source.html','')
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">from</span> ase.io.trajectory <span class="keyword">import</span> Trajectory</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"># Find working directory</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#afba4a407ab586892edda94a9bc287ca4">   12</a></span>&#160;cwd = os.getcwd()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;cwd = os.getcwd()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"># Set up input parser</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a6e65e9cc8650bb8766302918c09cd233">   15</a></span>&#160;parser = argparse.ArgumentParser(description=<span class="stringliteral">&#39;Process inputs for optimisation.&#39;</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;parser = argparse.ArgumentParser(description=<span class="stringliteral">&#39;Process inputs for optimisation.&#39;</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="stringliteral">&#39;batchname&#39;</span>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a47bec879e0bdd8357ceacd613a9b5578">   18</a></span>&#160;    help=<span class="stringliteral">&#39;The name of the batch trajectory to run calculations on (including extension).&#39;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    help=<span class="stringliteral">&#39;The name of the batch trajectory to run calculations on (including extension).&#39;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&#39;basis_set&#39;</span>,</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a9c72df49cb7f0cd3f8bc4eb491abdf1a">   22</a></span>&#160;    default=<span class="stringliteral">&#39;intermediate&#39;</span>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    default=<span class="stringliteral">&#39;intermediate&#39;</span>,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    help=<span class="stringliteral">&#39;The basis set to be used.&#39;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&#39;--out_ext&#39;</span>,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&#39;-e&#39;</span>,</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a4fda1576c9ab9794b04632757ffdd118">   28</a></span>&#160;    dest=<span class="stringliteral">&#39;out_ext&#39;</span>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    dest=<span class="stringliteral">&#39;out_ext&#39;</span>,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    help=<span class="stringliteral">&#39;Extension to add to outputs, to be used when doing multiple optimisations on the same geometry.&#39;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;parser.add_argument(</div>
@@ -133,46 +133,46 @@ $(document).ready(function(){initNavTree('batch__calc__aims_8py_source.html','')
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="stringliteral">&#39;--enable_spin&#39;</span>,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="stringliteral">&#39;-s&#39;</span>,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    dest=<span class="stringliteral">&#39;enable_spin&#39;</span>,</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#aa8b5207fcf5138f1587818237edf8ca7">   42</a></span>&#160;    choices=[<span class="stringliteral">&#39;True&#39;</span>, <span class="stringliteral">&#39;False&#39;</span>],</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    choices=[<span class="stringliteral">&#39;True&#39;</span>, <span class="stringliteral">&#39;False&#39;</span>],</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    default=<span class="stringliteral">&#39;False&#39;</span>,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    help=<span class="stringliteral">&#39;Whether or not to enable spin collinear calculations.&#39;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"># Parse args</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a4466bdb0d82ea1739768a2f25ac13e9d">   48</a></span>&#160;args = parser.parse_args()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;args = parser.parse_args()</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#ad911c0106a6908735039c8e5d9d9e2b3">   50</a></span>&#160;batchname = args.batchname</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;batchname = args.batchname</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#af132c901822343e6c7f41461a36f5012">   52</a></span>&#160;basis_set = args.basis_set</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;basis_set = args.basis_set</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a23045049fd00657bf0865f7dbe4d60c1">   54</a></span>&#160;out_ext = args.out_ext</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;out_ext = args.out_ext</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordflow">if</span> out_ext <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    out_ext = f<span class="stringliteral">&#39;_{out_ext}&#39;</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    out_ext = <span class="stringliteral">&#39;&#39;</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#aff8c3b41b9355f5acbc433900858ff6a">   60</a></span>&#160;opt_xc = args.opt_xc</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;opt_xc = args.opt_xc</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a89e0416ae6b9b74415aa09b541b8b006">   62</a></span>&#160;enable_spin = args.enable_spin</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;enable_spin = args.enable_spin</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordflow">if</span> enable_spin == <span class="stringliteral">&#39;True&#39;</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    enable_spin = <span class="keyword">True</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordflow">elif</span> enable_spin == <span class="stringliteral">&#39;False&#39;</span>:</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    enable_spin = <span class="keyword">False</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"># Read in batch of structures.</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#abd8bf8ae95d33585570466d669415a09">   69</a></span>&#160;batch = read(batchname, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;batch = read(batchname, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;print(f<span class="stringliteral">&#39;Starting calculations on {len(batch)} {batchname[6:-5]} geometries.&#39;</span>)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"># Resolve hyperparameters into AIMS parameters</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordflow">if</span> enable_spin:</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a8cf17fa889851ce1a3a1a200691c1617">   74</a></span>&#160;    spin_type = <span class="stringliteral">&#39;collinear&#39;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#aaf6d6d91a5a703804a2cdaa1314f5a51">   75</a></span>&#160;    dim = 1</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    spin_type = <span class="stringliteral">&#39;collinear&#39;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    dim = 1</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    spin_type = <span class="stringliteral">&#39;none&#39;</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    dim = 0</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"># Set up main calculator</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#abb476344f59a6ecbaec892eb46a6cfde">   81</a></span>&#160;calc = Aims(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;calc = Aims(</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        xc=opt_xc,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        vdw_correction_hirshfeld=<span class="stringliteral">&#39;&#39;</span>,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        species_dir=f<span class="stringliteral">&#39;{os.environ[&quot;AIMS_SPECIES_DIR&quot;]}/{basis_set}&#39;</span>,</div>
@@ -187,14 +187,14 @@ $(document).ready(function(){initNavTree('batch__calc__aims_8py_source.html','')
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        sc_accuracy_rho=3e-5,</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        sc_accuracy_forces=1e-4)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#aef70c0007f2ac319e78a5866b4c4a458">   96</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordflow">for</span> i, molecule <span class="keywordflow">in</span> enumerate(batch):</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    molecule.set_calculator(deepcopy(calc))</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    print(f<span class="stringliteral">&#39;Getting new forces for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#a1abc92e1b8f487ec67b4f68c5eec3576">  100</a></span>&#160;    forces = molecule.get_forces()</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    forces = molecule.get_forces()</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    print(f<span class="stringliteral">&#39;Forces: {forces}&#39;</span>)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    print(f<span class="stringliteral">&#39;Getting new energy for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="namespacebatch__calc__aims.html#ac8f26ff38f5e5b6681b67f33fef8461d">  103</a></span>&#160;    energy = molecule.get_potential_energy()</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    energy = molecule.get_potential_energy()</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    print(f<span class="stringliteral">&#39;Energy: {energy}&#39;</span>)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    writer.write(deepcopy(molecule))</div>
