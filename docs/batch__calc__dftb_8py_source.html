@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('batch__calc__dftb_8py_source.html','')
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#af4b76c2f60f8c4ee6181d793b97be433">   88</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>) </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#af4b76c2f60f8c4ee6181d793b97be433">   88</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordflow">for</span> i, molecule <span class="keywordflow">in</span> enumerate(batch):</div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a4eb078e943b1d25905ae65eac843fbbf">   90</a></span>&#160;    calc.label = f<span class="stringliteral">&#39;{batchname[6:-5]}_{i}&#39;</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    molecule.set_calculator(calc)</div>

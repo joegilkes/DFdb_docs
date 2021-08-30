@@ -92,21 +92,21 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="title">submit.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="submit_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_d_fdb_1_1submit.html">    1</a></span>&#160;<span class="stringliteral">&quot;&quot;&quot; Class for handling interaction with the SLURM queuing system.&quot;&quot;&quot;</span></div>
+<a href="submit_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespace_d_fdb_1_1submit.html">    1</a></span>&#160;<span class="comment">## @brief  Class for handling interaction with the SLURM queuing system.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> ase.io <span class="keyword">import</span> write</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> os</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html">SLURMsubmit</a>():</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;Class for communicating with the commonly used SLURM queing system</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">    at a computer cluster.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">    Parameters:</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">    calc_folder: Folder for all calculations.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">    options: DFoptions object to extract global/calculator options from.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html">   14</a></span>&#160;<span class="stringliteral">    subfolder: (Optional) Folder within calc_folder to plcae calculations in.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">##Class for communicating with the commonly used SLURM queing system</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">#    at a computer cluster.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"># @par Parameters</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">#   calc_folder Folder for all calculations.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">#   options DFoptions object to extract global/calculator options from.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">#   subfolder   (Optional) Folder within calc_folder to plcae calculations in.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html">SLURMsubmit</a>():</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aacaad2c997f1cbdd024e0631e2b1e085">   16</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aacaad2c997f1cbdd024e0631e2b1e085">__init__</a>(self, calc_folder, options, subfolder=None):</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#af7ef6a4e5845e9569b56834f6c3d5878">   17</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#af7ef6a4e5845e9569b56834f6c3d5878">calc_folder</a>calc_folder = calc_folder</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#adb41bd298bb4c7e3c738ff031d5d2224">   18</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#adb41bd298bb4c7e3c738ff031d5d2224">options</a>options = options</div>
@@ -143,19 +143,19 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#a8b752dc3515e9f473294bf4b01c4a2a1">relax</a>(self, row):</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Add a structure to the queue for geometry relaxation.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">        </span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral">        Contains a SLURM job generator which creates all the neccessary files</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">        and directories, then submits a geometry optimsation job for the</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">        relevant structure and calculator.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral">        Uses the calculator options currently set in DFoptions.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">        Parameters:</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">        row: ASE db AtomsRow object, obtained with DFdatabase.dc.select().</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#a8b752dc3515e9f473294bf4b01c4a2a1">   64</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">## @brief Add a structure to the queue for geometry relaxation.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    #        Contains a SLURM job generator which creates all the neccessary files</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    #        and directories, then submits a geometry optimsation job for the</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    #        relevant structure and calculator.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    #        Uses the calculator options currently set in DFoptions.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    # @par Parameters</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    #   row ASE db AtomsRow object, obtained with DFdatabase.dc.select().</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#a8b752dc3515e9f473294bf4b01c4a2a1">   64</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#a8b752dc3515e9f473294bf4b01c4a2a1">relax</a>(self, row):</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        struct_name = row.struct_name</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        calc_type = self.<a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#a4fc35064b99c6a40b332f144b6285824">calc_options</a>calc_options[<span class="stringliteral">&#39;name&#39;</span>]</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> calc_type <span class="keywordflow">not</span> <span class="keywordflow">in</span> (<span class="stringliteral">&#39;aims&#39;</span>, <span class="stringliteral">&#39;dftb&#39;</span>):</div>
@@ -239,18 +239,18 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            print(f<span class="stringliteral">&#39;Submitted job {job_name} to the queue.&#39;</span>)</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aa075a37a541cfa3814be91cbde5e6e0c">batch_get_energies</a>(self, rows):</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Add a batch job to the SLURM queue which obtains updated</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="stringliteral">        energies and forces with the current calculator.</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="stringliteral">        Contains a SLURM job generator which creates all the neccessary files</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="stringliteral">        and directories, then submits a batch calculation job for the</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="stringliteral">        relevant structures and calculator.</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="stringliteral">        Parameters:</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="stringliteral">        rows: ASE db AtomsRow Iterator object, obtained with DFdatabase.dc.select().</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aa075a37a541cfa3814be91cbde5e6e0c">  159</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">##Add a batch job to the SLURM queue which obtains updated</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    #        energies and forces with the current calculator.</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">    #        Contains a SLURM job generator which creates all the neccessary files</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">    #        and directories, then submits a batch calculation job for the</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">    #        relevant structures and calculator.</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">    # @par Parameters</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">    #   rows    ASE db AtomsRow Iterator object, obtained with DFdatabase.dc.select().</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aa075a37a541cfa3814be91cbde5e6e0c">  159</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aa075a37a541cfa3814be91cbde5e6e0c">batch_get_energies</a>(self, rows):</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        geometries = []</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        row_list = []</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">for</span> row <span class="keywordflow">in</span> rows:</div>
