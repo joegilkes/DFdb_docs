@@ -103,13 +103,13 @@ $(document).ready(function(){initNavTree('batch__calc__dftb_8py_source.html','')
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">from</span> ase.io.trajectory <span class="keyword">import</span> Trajectory</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"># Find working directory</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;cwd = os.getcwd()</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#ae567ab7eddf63489cb1c559df9d98e3a">   12</a></span>&#160;cwd = os.getcwd()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"># Set up input parser</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;parser = argparse.ArgumentParser(description=<span class="stringliteral">&#39;Process inputs for optimisation.&#39;</span>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a9e75233879fd019ce50282007316903b">   15</a></span>&#160;parser = argparse.ArgumentParser(description=<span class="stringliteral">&#39;Process inputs for optimisation.&#39;</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="stringliteral">&#39;batchname&#39;</span>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    help=<span class="stringliteral">&#39;The name of the batch trajectory to run calculations on (including extension).&#39;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a146558d08015b9c1995e2414c5fdd73d">   18</a></span>&#160;    help=<span class="stringliteral">&#39;The name of the batch trajectory to run calculations on (including extension).&#39;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&#39;paramset&#39;</span>,</div>
@@ -118,51 +118,51 @@ $(document).ready(function(){initNavTree('batch__calc__dftb_8py_source.html','')
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="stringliteral">&#39;--out_ext&#39;</span>,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&#39;-e&#39;</span>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    dest=<span class="stringliteral">&#39;out_ext&#39;</span>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a3c9cb12e84b3b9bf2c89a456ca60d10d">   27</a></span>&#160;    dest=<span class="stringliteral">&#39;out_ext&#39;</span>,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    help=<span class="stringliteral">&#39;Extension to add to outputs, to be used when doing multiple optimisations on the same geometry.&#39;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;parser.add_argument(</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="stringliteral">&#39;--enable_spin&#39;</span>,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="stringliteral">&#39;-s&#39;</span>,</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    dest=<span class="stringliteral">&#39;enable_spin&#39;</span>,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    choices=[<span class="stringliteral">&#39;True&#39;</span>, <span class="stringliteral">&#39;False&#39;</span>],</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    default=<span class="stringliteral">&#39;False&#39;</span>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#aacde7c92b518bab647a856a52bd5ca61">   34</a></span>&#160;    choices=[<span class="stringliteral">&#39;True&#39;</span>, <span class="stringliteral">&#39;False&#39;</span>],</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#add9554142fdb1a140ce733b3468f807d">   35</a></span>&#160;    default=<span class="stringliteral">&#39;False&#39;</span>,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    help=<span class="stringliteral">&#39;Whether or not to enable spin collinear calculations.&#39;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"># Parse args</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;args = parser.parse_args()</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a35a6a287097c6caf6dbe5925793077ac">   40</a></span>&#160;args = parser.parse_args()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;batchname = args.batchname</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a7915ce19d078f1e58172d5b4ae60739f">   42</a></span>&#160;batchname = args.batchname</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;paramset = args.paramset</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#ab69e7ffd143a3f38307a7886907aa7c1">   44</a></span>&#160;paramset = args.paramset</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;out_ext = args.out_ext</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a503e33834f5804410db4e18620b7a8c5">   46</a></span>&#160;out_ext = args.out_ext</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordflow">if</span> out_ext <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    out_ext = f<span class="stringliteral">&#39;_{out_ext}&#39;</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    out_ext = <span class="stringliteral">&#39;&#39;</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;enable_spin = args.enable_spin</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#ae452bbb76afb549d6775ab2b14f3fea5">   52</a></span>&#160;enable_spin = args.enable_spin</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordflow">if</span> enable_spin == <span class="stringliteral">&#39;True&#39;</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    enable_spin = <span class="keyword">True</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordflow">elif</span> enable_spin == <span class="stringliteral">&#39;False&#39;</span>:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    enable_spin = <span class="keyword">False</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"># Read in batch of structures.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;batch = read(batchname, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a5ad83a757c8a7621ac38c36e065c00bd">   59</a></span>&#160;batch = read(batchname, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;print(f<span class="stringliteral">&#39;Starting calculations on {len(batch)} {batchname[6:-5]} geometries.&#39;</span>)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"># Spin not implemented yet.</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordflow">if</span> enable_spin:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    spin_type = <span class="stringliteral">&#39;collinear&#39;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    dim = 1</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a5f9f9de7200b3eb732733b5e336c427d">   64</a></span>&#160;    spin_type = <span class="stringliteral">&#39;collinear&#39;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#aba3d2c6e6fe7b391d030841a3a7b734f">   65</a></span>&#160;    dim = 1</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    spin_type = <span class="stringliteral">&#39;none&#39;</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    dim = 0</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"># Set up main calculator</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;calc = Dftb(</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a0ae138db16fa89fe3735ef0de1d0d1b4">   71</a></span>&#160;calc = Dftb(</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Hamiltonian_=<span class="stringliteral">&#39;DFTB&#39;</span>,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Hamiltonian_SCC=<span class="stringliteral">&#39;Yes&#39;</span>,</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Hamiltonian_SCCTolerance=1e-6,</div>
@@ -179,15 +179,15 @@ $(document).ready(function(){initNavTree('batch__calc__dftb_8py_source.html','')
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>) </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#af4b76c2f60f8c4ee6181d793b97be433">   88</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>) </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordflow">for</span> i, molecule <span class="keywordflow">in</span> enumerate(batch):</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    calc.label = f<span class="stringliteral">&#39;{batchname[6:-5]}_{i}&#39;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a4eb078e943b1d25905ae65eac843fbbf">   90</a></span>&#160;    calc.label = f<span class="stringliteral">&#39;{batchname[6:-5]}_{i}&#39;</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    molecule.set_calculator(calc)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    print(f<span class="stringliteral">&#39;Getting new forces for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    forces = molecule.get_forces()</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a6e4a2d1749f1ba973dd467b1c5fd15b3">   93</a></span>&#160;    forces = molecule.get_forces()</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    print(f<span class="stringliteral">&#39;Forces: {forces}&#39;</span>)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    print(f<span class="stringliteral">&#39;Getting new energy for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    energy = molecule.get_potential_energy()</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="namespacebatch__calc__dftb.html#a2c078631d5799b0ae8bbff752a415725">   96</a></span>&#160;    energy = molecule.get_potential_energy()</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    print(f<span class="stringliteral">&#39;Energy: {energy}&#39;</span>)</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    molecule.info.update({<span class="stringliteral">&#39;paramset&#39;</span>: paramset})</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>

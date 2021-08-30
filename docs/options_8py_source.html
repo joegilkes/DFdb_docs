@@ -96,28 +96,28 @@ $(document).ready(function(){initNavTree('options_8py_source.html',''); initResi
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> json</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> os</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span>DFoptions:</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Class which handles global options for an instance of DFdb.&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html">DFoptions</a>:</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html">    6</a></span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Class which handles global options for an instance of DFdb.&#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">def </span>__init__(self):</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Initialise DFoptions object with default options set.&#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a483b31c3aea53dba6205c30c90106f43">__init__</a>(self):</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a483b31c3aea53dba6205c30c90106f43">    9</a></span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Initialise DFoptions object with default options set.&#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        self.load(f<span class="stringliteral">&#39;{self.modulepath}/../saved_options/default_options.json&#39;</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a2c2d6947328dcf9e3ad1572c6029817e">load</a>load(f<span class="stringliteral">&#39;{self.modulepath}/../saved_options/default_options.json&#39;</span>)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">def </span>get(self):</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a962d04291839acbe3d15e2ed5a78262b">get</a>(self):</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Get the current options that have been set in this instance of DFdb.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">        Can be accessed within an instance of DFdatabase as `DFdatabase.options.get()`.</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a962d04291839acbe3d15e2ed5a78262b">   17</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        print(<span class="stringliteral">&#39;DFdb global options set in current instance:&#39;</span>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> key <span class="keywordflow">in</span> self.o:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> key <span class="keywordflow">in</span> self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">o</a>o:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            print(f<span class="stringliteral">&#39;  {key}: {self.o[key]}&#39;</span>)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        print(<span class="stringliteral">&#39;&#39;</span>)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        print(<span class="stringliteral">&#39;DFdb calculator options set in current instance:&#39;</span>)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">for</span> key <span class="keywordflow">in</span> self.co:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">for</span> key <span class="keywordflow">in</span> self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">co</a>co:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            print(f<span class="stringliteral">&#39;  {key}: {self.co[key]}&#39;</span>)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">def </span>set_globals(self, key, value):</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a3b53b63680c79113158b04e5aee61937">set_globals</a>(self, key, value):</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Set new global options for this instance of DFdb.</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">        The options can be passed in as either single strings representing a</span></div>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('options_8py_source.html',''); initResi
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">        key: string/list of strings containing DFdb options keys.</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral">        value: string/list of strings containing DFdb options values.</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a3b53b63680c79113158b04e5aee61937">   38</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> type(key) != list:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            key = [key]</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            value = [value]</div>
@@ -139,9 +139,9 @@ $(document).ready(function(){initNavTree('options_8py_source.html',''); initResi
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> zip(key, value):</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            print(f<span class="stringliteral">&#39;Setting key {k} to value {v}.&#39;</span>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            self.o[k] = v</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">o</a>o[k] = v</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">def </span>set_calc_options(self, key, value):</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a49d7e93e4dfb8b9bef771bbdc657e177">set_calc_options</a>(self, key, value):</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Set new calculator options for this instance of DFdb.</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">        The options can be passed in as either single strings representing a</span></div>
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('options_8py_source.html',''); initResi
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">        key: string/list of strings containing DFdb options keys.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">        value: string/list of strings containing DFdb options values.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a49d7e93e4dfb8b9bef771bbdc657e177">   62</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> type(key) != list:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            key = [key]</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            value = [value]</div>
@@ -163,30 +163,39 @@ $(document).ready(function(){initNavTree('options_8py_source.html',''); initResi
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> zip(key, value):</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            print(f<span class="stringliteral">&#39;Setting key {k} to value {v}.&#39;</span>)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            self.co[k] = v</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">co</a>co[k] = v</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">def </span>save(self, filename):</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a745b36b300f4fb4455b89976608004e7">save</a>(self, filename):</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Save the current DFoptions to file.</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">        Parameters:</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="stringliteral">        filename: Path to the file where parameters should be saved. Should be a file in JSON format.</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a745b36b300f4fb4455b89976608004e7">   80</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">with</span> io.open(filename, <span class="stringliteral">&#39;w&#39;</span>) <span class="keyword">as</span> options_file:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            json.dump([self.o, self.co], options_file)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            json.dump([self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">o</a>o, self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">co</a>co], options_file)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">def </span>load(self, filename):</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a2c2d6947328dcf9e3ad1572c6029817e">load</a>(self, filename):</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Load a set of DFoptions from a file.</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="stringliteral">        Parameters:</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="stringliteral">        filename: Path to the file where parameters are saved. Should be a file in JSON format.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a2c2d6947328dcf9e3ad1572c6029817e">   90</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">with</span> io.open(filename) <span class="keyword">as</span> options_file:</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            options_list = json.load(options_file)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        self.o = options_list[0]</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        self.co = options_list[1]</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">   94</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">o</a>o = options_list[0]</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">   95</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">co</a>co = options_list[1]</div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html">DFdb.options.DFoptions</a></div><div class="ttdoc">Class which handles global options for an instance of DFdb.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00006">options.py:6</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a2c2d6947328dcf9e3ad1572c6029817e"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a2c2d6947328dcf9e3ad1572c6029817e">DFdb.options.DFoptions.load</a></div><div class="ttdeci">def load(self, filename)</div><div class="ttdoc">Load a set of DFoptions from a file.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00090">options.py:90</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a33eb9c5e23e3ed0b0234dabfe93057af"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">DFdb.options.DFoptions.o</a></div><div class="ttdeci">o</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00094">options.py:94</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a3b53b63680c79113158b04e5aee61937"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a3b53b63680c79113158b04e5aee61937">DFdb.options.DFoptions.set_globals</a></div><div class="ttdeci">def set_globals(self, key, value)</div><div class="ttdoc">Set new global options for this instance of DFdb.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00038">options.py:38</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a483b31c3aea53dba6205c30c90106f43"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a483b31c3aea53dba6205c30c90106f43">DFdb.options.DFoptions.__init__</a></div><div class="ttdeci">def __init__(self)</div><div class="ttdoc">Initialise DFoptions object with default options set.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00009">options.py:9</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a49d7e93e4dfb8b9bef771bbdc657e177"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a49d7e93e4dfb8b9bef771bbdc657e177">DFdb.options.DFoptions.set_calc_options</a></div><div class="ttdeci">def set_calc_options(self, key, value)</div><div class="ttdoc">Set new calculator options for this instance of DFdb.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00062">options.py:62</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a571a55d885c2f3410e0664599bce0dcb"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">DFdb.options.DFoptions.co</a></div><div class="ttdeci">co</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00095">options.py:95</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a745b36b300f4fb4455b89976608004e7"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a745b36b300f4fb4455b89976608004e7">DFdb.options.DFoptions.save</a></div><div class="ttdeci">def save(self, filename)</div><div class="ttdoc">Save the current DFoptions to file.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00080">options.py:80</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html_a962d04291839acbe3d15e2ed5a78262b"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html#a962d04291839acbe3d15e2ed5a78262b">DFdb.options.DFoptions.get</a></div><div class="ttdeci">def get(self)</div><div class="ttdoc">Get the current options that have been set in this instance of DFdb.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00017">options.py:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

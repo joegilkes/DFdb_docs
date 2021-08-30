@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>DFdatabase:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html">DFdatabase</a>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&#39;&#39;&#39;Class which handles all database communication.</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">    </span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">    Contains functions to ingest new structures and reaction paths,</span></div>
@@ -111,9 +111,9 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">    db_file: Path to the ASE database file.</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">    options: (optional) DFoptions instance.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">    &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html">   20</a></span>&#160;<span class="stringliteral">    &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">def </span>__init__(self, db_file, mode, options=None):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a555d147579a2f6d4ea07ec37ff18c29e">__init__</a>(self, db_file, mode, options=None):</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Initialise DFdatabase object.</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">        Load in ASE database if it exists, else create a new one and load</span></div>
@@ -121,38 +121,38 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">        If a DFoptions instance is provided, attach it here. Otherwise,</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">        initialise DFdatabase with default options.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        self.db_file = db_file</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        self.mode = mode</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> self.mode <span class="keywordflow">not</span> <span class="keywordflow">in</span> (<span class="stringliteral">&#39;geometry&#39;</span>, <span class="stringliteral">&#39;reaction&#39;</span>):</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a555d147579a2f6d4ea07ec37ff18c29e">   30</a></span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">   31</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">db_file</a>db_file = db_file</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">   32</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">mode</a>mode = mode</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">mode</a>mode <span class="keywordflow">not</span> <span class="keywordflow">in</span> (<span class="stringliteral">&#39;geometry&#39;</span>, <span class="stringliteral">&#39;reaction&#39;</span>):</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Unknown database mode, must be either `geometry` or `reaction`.&#39;</span>)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isfile(self.db_file):</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isfile(self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">db_file</a>db_file):</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            print(f<span class="stringliteral">&#39;Database file {self.db_file} not found, creating a new one.&#39;</span>)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            self.dc.metadata = {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">   37</a></span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc = ase.db.connect(self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">db_file</a>db_file)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata = {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="stringliteral">&#39;title&#39;</span>: <span class="stringliteral">&#39;DFdb Comparative Database&#39;</span>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="stringliteral">&#39;db_mode&#39;</span>: self.mode</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="stringliteral">&#39;db_mode&#39;</span>: self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">mode</a>mode</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> self.mode == <span class="stringliteral">&#39;reaction&#39;</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                _metadata = self.dc.metadata</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">mode</a>mode == <span class="stringliteral">&#39;reaction&#39;</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                _metadata = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                _metadata.update({<span class="stringliteral">&#39;num_reacs&#39;</span>: 0})</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                self.dc.metadata = _metadata</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata = _metadata</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment"># Hacky workaround fix for the database needing to be refreshed before displaying metadata.</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc = ase.db.connect(self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">db_file</a>db_file)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> self.dc.metadata[<span class="stringliteral">&#39;db_mode&#39;</span>] != self.mode:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc = ase.db.connect(self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">db_file</a>db_file)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata[<span class="stringliteral">&#39;db_mode&#39;</span>] != self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">mode</a>mode:</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Given database mode does not match the type of the existing database.&#39;</span>)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> options:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            self.options = options</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">options</a>options = options</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            self.options = DFoptions()</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        self.modification_list = [</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">options</a>options = <a class="code" href="class_d_fdb_1_1options_1_1_d_foptions.html">DFoptions</a>()</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">   57</a></span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">modification_list</a>modification_list = [</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="stringliteral">&#39;_MS&#39;</span>,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="stringliteral">&#39;_ES&#39;</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="stringliteral">&#39;_PrS&#39;</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">   61</a></span>&#160;            <span class="stringliteral">&#39;_PrS&#39;</span>,</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="stringliteral">&#39;_PhS&#39;</span>,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="stringliteral">&#39;Hyd_&#39;</span>,</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="stringliteral">&#39;Cross_&#39;</span>,</div>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        ]</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">def </span>add_relaxed(self, struct_file, eqm_struct=None):</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">add_relaxed</a>(self, struct_file, eqm_struct=None):</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Load a single relaxed structure into the database.</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="stringliteral">        Structures added into the database this way get tagged as</span></div>
@@ -176,21 +176,21 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        struct = read(f<span class="stringliteral">&#39;{self.options.o[&quot;relaxed_folder&quot;]}/{struct_file}&#39;</span>)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        struct_dict, extra_data = self.__struct_parser__(struct_file, relaxed=<span class="keyword">True</span>)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        calc_dict, calc_data = self.__calc_parser__(struct)</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">   85</a></span>&#160;        struct_dict, extra_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">__struct_parser__</a>__struct_parser__(struct_file, relaxed=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        calc_dict, calc_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">__calc_parser__</a>__calc_parser__(struct)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        struct_dict.update(calc_dict)</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> eqm_struct <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> type(eqm_struct) == bool:</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            struct_dict.update({<span class="stringliteral">&#39;equilibrium_structure&#39;</span>: eqm_struct})</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        extra_data.update(calc_data)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        self.dc.write(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.write(</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            struct,</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            key_value_pairs=struct_dict,</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            data=extra_data</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            )</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">def </span>add_batch(self, traj_file, relaxed, eqm_struct=None):</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">add_batch</a>(self, traj_file, relaxed, eqm_struct=None):</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Loads all structures in a single .traj file into the database.</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">        Useful for adding all structures from a minima hopping run into</span></div>
@@ -213,26 +213,26 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        subfolder, name_ext = os.path.split(traj_file)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        name, ext = os.path.splitext(name_ext)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span>  name[:6] != <span class="stringliteral">&#39;batch_&#39;</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">  122</a></span>&#160;        <span class="keywordflow">if</span>  name[:6] != <span class="stringliteral">&#39;batch_&#39;</span>:</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;traj_file is not a batch job trajectory.&#39;</span>)</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        traj = read(f<span class="stringliteral">&#39;{traj_file}&#39;</span>, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">for</span> struct <span class="keywordflow">in</span> traj:</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            struct_dict, extra_data = self.__struct_parser__(name_ext[6:], relaxed=relaxed)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            calc_dict, calc_data = self.__calc_parser__(struct)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            struct_dict, extra_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">__struct_parser__</a>__struct_parser__(name_ext[6:], relaxed=relaxed)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            calc_dict, calc_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">__calc_parser__</a>__calc_parser__(struct)</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            struct_dict.update(calc_dict)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> eqm_struct <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> type(eqm_struct) == bool:</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                struct_dict.update({<span class="stringliteral">&#39;equilibrium_structure&#39;</span>: eqm_struct})</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                extra_data.update(calc_data)</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            self.dc.write(</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.write(</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                struct,</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                key_value_pairs=struct_dict,</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                data=extra_data</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            )</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">def </span>add_unrelaxed(self, struct_file):</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#af84848663841aa1fd76c8fae316e213e">add_unrelaxed</a>(self, struct_file):</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Load a single unrelaxed structure into the database.</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="stringliteral">        This structure will be tagged as unrelaxed and will not have an</span></div>
@@ -244,16 +244,16 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        struct = read(f<span class="stringliteral">&#39;{self.options.o[&quot;unrelaxed_folder&quot;]}/{struct_file}&#39;</span>)</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        struct_dict, extra_data = self.__struct_parser__(struct_file, relaxed=<span class="keyword">False</span>)</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#af84848663841aa1fd76c8fae316e213e">  153</a></span>&#160;        struct_dict, extra_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">__struct_parser__</a>__struct_parser__(struct_file, relaxed=<span class="keyword">False</span>)</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        self.dc.write(</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.write(</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            struct,</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            key_value_pairs=struct_dict,</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            data=extra_data</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            )</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">def </span>add_reaction(self, reac_file, nimages):</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aac8fdd648be72b0d7e3558cb0c520e62">add_reaction</a>(self, reac_file, nimages):</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Load the end state of a NEB calculation into the database.</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="stringliteral">        The final [nimages] of the provided trajectory will be loaded into</span></div>
@@ -269,17 +269,17 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        reaction = read(f<span class="stringliteral">&#39;{self.options.o[&quot;reaction_folder&quot;]}/{reac_file}&#39;</span>, index=f<span class="stringliteral">&#39;-{nimages}:&#39;</span>)</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        reac_dict_list, extra_data_list = self.__reac_parser__(reaction, reac_file)</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aac8fdd648be72b0d7e3558cb0c520e62">  178</a></span>&#160;        reac_dict_list, extra_data_list = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aebe9fc9e9956328db0cb9d1825842e24">__reac_parser__</a>__reac_parser__(reaction, reac_file)</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">for</span> i, image <span class="keywordflow">in</span> enumerate(reaction):</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            self.dc.write(</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.write(</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                image,</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                key_value_pairs=reac_dict_list[i],</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                data=extra_data_list[i]</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                )</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">def </span>get_row_info(self, row):</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84749a8684314839986f8c9de58674dc">get_row_info</a>(self, row):</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Display pertinent information about a selected ASE.db row.</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="stringliteral">        Parameters:</span></div>
@@ -288,7 +288,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        print((</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            f<span class="stringliteral">&#39;DFdb row information:\n&#39;</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            f<span class="stringliteral">&#39;---------------------\n&#39;</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84749a8684314839986f8c9de58674dc">  197</a></span>&#160;            f<span class="stringliteral">&#39;---------------------\n&#39;</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            f<span class="stringliteral">&#39;  Structure name: {row.struct_name}\n&#39;</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            f<span class="stringliteral">&#39;  Formula: {row.formula}\n&#39;</span></div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            f<span class="stringliteral">&#39;  Polymeric: {&quot;Yes&quot; if row.polymeric else &quot;No&quot;}&#39;</span></div>
@@ -308,7 +308,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        print(f<span class="stringliteral">&#39;  Energy: {row.energy} eV&#39;</span>)</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">def </span>get(self, selection=None, **kwargs):</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068">get</a>(self, selection=None, **kwargs):</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Select a single row and return it as a dictionary.</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="stringliteral">        </span></div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="stringliteral">        Shortcut to Dfdatabase.dc.get(). Refer to ase/db/core.py for full </span></div>
@@ -319,10 +319,10 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="stringliteral">        selection: int, str or list</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="stringliteral">            See the select() method.</span></div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> self.dc.get(selection, **kwargs)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068">get</a>(selection, **kwargs)</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">def </span>select(self, selection=None, filter=None, explain=False,</div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068">  230</a></span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">select</a>(self, selection=None, filter=None, explain=False,</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;               verbosity=1, limit=None, offset=0, sort=None,</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;               include_data=True, columns=&#39;all&#39;, **kwargs):</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Select rows, return as a list.</span></div>
@@ -365,13 +365,13 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="stringliteral">            For example, if only the row id and the energy is needed,</span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="stringliteral">            queries can be speeded up by setting columns=[&#39;id&#39;, &#39;energy&#39;].</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        ari = self.dc.select(selection, filter, explain, verbosity, limit,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        ari = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">select</a>(selection, filter, explain, verbosity, limit,</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                             offset, sort, include_data, columns, **kwargs)</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        ar_list = [ar <span class="keywordflow">for</span> ar <span class="keywordflow">in</span> ari]</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> ar_list</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">def </span>export(self, row, filetype=&#39;xyz&#39;, filename=None):</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">  280</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ac008646f8d190ba613855f119210bd7e">export</a>(self, row, filetype=&#39;xyz&#39;, filename=None):</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Exports the Atoms object within the given row to a file.</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="stringliteral">        The resulting file will be placed in the [export_path] of the current DFoptions</span></div>
@@ -392,7 +392,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            atoms = row.toatoms()</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">if</span> filename:</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">if</span> type(filename) <span class="keywordflow">is</span> <span class="keywordflow">not</span> str:</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;filename must be a string!&#39;</span>)</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ac008646f8d190ba613855f119210bd7e">  301</a></span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;filename must be a string!&#39;</span>)</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            file_out = filename</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            file_out = f<span class="stringliteral">&#39;{row.struct_name}.{filetype}&#39;</span></div>
@@ -401,7 +401,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        print(f<span class="stringliteral">&#39;Structure written to {self.options.o[&quot;export_folder&quot;]}/{file_out}&#39;</span>)</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">def </span>__struct_parser__(self, struct_file, relaxed):</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">__struct_parser__</a>(self, struct_file, relaxed):</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Inbuilt method for parsing structure names into key/value pairs</span></div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="stringliteral">        for entry into the database.</span></div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="stringliteral">        &#39;&#39;&#39;</span></div>
@@ -413,11 +413,11 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">elif</span> <span class="stringliteral">&#39;SMC&#39;</span> <span class="keywordflow">in</span> name:</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            end_group = <span class="stringliteral">&#39;SMC&#39;</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            end_group = <span class="stringliteral">&#39;N/A&#39;</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">  322</a></span>&#160;            end_group = <span class="stringliteral">&#39;N/A&#39;</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        polymeric = <span class="keyword">True</span> <span class="keywordflow">if</span> end_group != <span class="stringliteral">&#39;N/A&#39;</span> <span class="keywordflow">else</span> <span class="keyword">False</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> any(substring <span class="keywordflow">in</span> name <span class="keywordflow">for</span> substring <span class="keywordflow">in</span> self.modification_list):</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">if</span> any(substring <span class="keywordflow">in</span> name <span class="keywordflow">for</span> substring <span class="keywordflow">in</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">modification_list</a>modification_list):</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            pure_struct = <span class="keyword">False</span></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            pure_struct = <span class="keyword">True</span></div>
@@ -443,7 +443,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">return</span> struct_dict, extra_data</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">def </span>__calc_parser__(self, atoms):</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">__calc_parser__</a>(self, atoms):</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Inbuilt method for parsing calculator details from a finished</span></div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="stringliteral">        calculation.</span></div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="stringliteral"></span> </div>
@@ -459,11 +459,11 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="stringliteral">&#39;DFTBparamset&#39;</span>: atoms.info[<span class="stringliteral">&#39;paramset&#39;</span>] <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;dftb&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        }</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        extra_data = calc.parameters</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">  368</a></span>&#160; </div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">return</span> calc_dict, extra_data</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">def </span>__reac_parser__(self, reaction, reac_file):</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aebe9fc9e9956328db0cb9d1825842e24">__reac_parser__</a>(self, reaction, reac_file):</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="stringliteral">&#39;&#39;&#39;Inbuilt method for parsing reaction details from a finished NEB calculation.</span></div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="stringliteral">        Assumes the highest energy image in `reaction` is the transition state,</span></div>
@@ -474,10 +474,10 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            energies[i] = image.get_potential_energy()</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        ts_index = np.argmax(energies)</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        reac_id = self.dc.metadata[<span class="stringliteral">&#39;num_reacs&#39;</span>]+1</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        reac_id = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata[<span class="stringliteral">&#39;num_reacs&#39;</span>]+1</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        subfolder, name_ext = os.path.split(reac_file)</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        reac_name, ext = os.path.splitext(name_ext)</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aebe9fc9e9956328db0cb9d1825842e24">  386</a></span>&#160; </div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;Cross_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            reac_type = <span class="stringliteral">&#39;crosslinking&#39;</span></div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">elif</span> <span class="stringliteral">&#39;Hyd_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
@@ -497,7 +497,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                <span class="stringliteral">&#39;reac_end&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==len(reaction) <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                <span class="stringliteral">&#39;reac_type&#39;</span>: reac_type</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            }</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            calc_dict, calc_data = self.__calc_parser__(image)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            calc_dict, calc_data = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">__calc_parser__</a>__calc_parser__(image)</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            reac_dict.update(calc_dict)</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            dict_list.append(calc_dict)</div>
@@ -505,6 +505,25 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">return</span> dict_list, data_list</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html">DFdb.db.DFdatabase</a></div><div class="ttdoc">Class which handles all database communication.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00020">db.py:20</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a23b560fc00676e5b58d046f4d1c5023d"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a23b560fc00676e5b58d046f4d1c5023d">DFdb.db.DFdatabase.__struct_parser__</a></div><div class="ttdeci">def __struct_parser__(self, struct_file, relaxed)</div><div class="ttdoc">Inbuilt method for parsing structure names into key/value pairs for entry into the database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00322">db.py:322</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a278a257be836da9fc578abce6161ae0a"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">DFdb.db.DFdatabase.add_batch</a></div><div class="ttdeci">def add_batch(self, traj_file, relaxed, eqm_struct=None)</div><div class="ttdoc">Loads all structures in a single .traj file into the database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00122">db.py:122</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a4fab67da1fd9090113759fa2e3c20da0"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a4fab67da1fd9090113759fa2e3c20da0">DFdb.db.DFdatabase.__calc_parser__</a></div><div class="ttdeci">def __calc_parser__(self, atoms)</div><div class="ttdoc">Inbuilt method for parsing calculator details from a finished calculation.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00368">db.py:368</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a555d147579a2f6d4ea07ec37ff18c29e"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a555d147579a2f6d4ea07ec37ff18c29e">DFdb.db.DFdatabase.__init__</a></div><div class="ttdeci">def __init__(self, db_file, mode, options=None)</div><div class="ttdoc">Initialise DFdatabase object.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00030">db.py:30</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a65b08f0051eb0bd88901fc1993ab9a54"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a></div><div class="ttdeci">options</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00057">db.py:57</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a6e2cdc39bd654bf8de0f962fff6416a1"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">DFdb.db.DFdatabase.modification_list</a></div><div class="ttdeci">modification_list</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00061">db.py:61</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a7db7bffce1c0423d2dc2e6b976f0645c"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">DFdb.db.DFdatabase.select</a></div><div class="ttdeci">def select(self, selection=None, filter=None, explain=False, verbosity=1, limit=None, offset=0, sort=None, include_data=True, columns='all', **kwargs)</div><div class="ttdoc">Select rows, return as a list.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00280">db.py:282</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a84749a8684314839986f8c9de58674dc"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84749a8684314839986f8c9de58674dc">DFdb.db.DFdatabase.get_row_info</a></div><div class="ttdeci">def get_row_info(self, row)</div><div class="ttdoc">Display pertinent information about a selected ASE.db row.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00197">db.py:197</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a89d935e69d9436bebbaf945fe3e4bebb"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a></div><div class="ttdeci">dc</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00037">db.py:37</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a92584500eca7fe6176b725077e29b5e8"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">DFdb.db.DFdatabase.db_file</a></div><div class="ttdeci">db_file</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00031">db.py:31</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_aac8fdd648be72b0d7e3558cb0c520e62"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aac8fdd648be72b0d7e3558cb0c520e62">DFdb.db.DFdatabase.add_reaction</a></div><div class="ttdeci">def add_reaction(self, reac_file, nimages)</div><div class="ttdoc">Load the end state of a NEB calculation into the database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00178">db.py:178</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_aacbdc84f79ff3308de3e96e69b323068"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068">DFdb.db.DFdatabase.get</a></div><div class="ttdeci">def get(self, selection=None, **kwargs)</div><div class="ttdoc">Select a single row and return it as a dictionary.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00230">db.py:230</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_ac008646f8d190ba613855f119210bd7e"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ac008646f8d190ba613855f119210bd7e">DFdb.db.DFdatabase.export</a></div><div class="ttdeci">def export(self, row, filetype='xyz', filename=None)</div><div class="ttdoc">Exports the Atoms object within the given row to a file.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00301">db.py:301</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_acc47acd97d0da5b7dd93bfca19968950"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#acc47acd97d0da5b7dd93bfca19968950">DFdb.db.DFdatabase.mode</a></div><div class="ttdeci">mode</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00032">db.py:32</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_ae9f6ba0c682f84c0fafa7e1c1f410f45"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">DFdb.db.DFdatabase.add_relaxed</a></div><div class="ttdeci">def add_relaxed(self, struct_file, eqm_struct=None)</div><div class="ttdoc">Load a single relaxed structure into the database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00085">db.py:85</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_aebe9fc9e9956328db0cb9d1825842e24"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aebe9fc9e9956328db0cb9d1825842e24">DFdb.db.DFdatabase.__reac_parser__</a></div><div class="ttdeci">def __reac_parser__(self, reaction, reac_file)</div><div class="ttdoc">Inbuilt method for parsing reaction details from a finished NEB calculation.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00386">db.py:386</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_af84848663841aa1fd76c8fae316e213e"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#af84848663841aa1fd76c8fae316e213e">DFdb.db.DFdatabase.add_unrelaxed</a></div><div class="ttdeci">def add_unrelaxed(self, struct_file)</div><div class="ttdoc">Load a single unrelaxed structure into the database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00153">db.py:153</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1options_1_1_d_foptions_html"><div class="ttname"><a href="class_d_fdb_1_1options_1_1_d_foptions.html">DFdb.options.DFoptions</a></div><div class="ttdoc">Class which handles global options for an instance of DFdb.</div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00006">options.py:6</a></div></div>
 <div class="ttc" id="anamespace_d_fdb_1_1options_html"><div class="ttname"><a href="namespace_d_fdb_1_1options.html">DFdb.options</a></div><div class="ttdef"><b>Definition:</b> <a href="options_8py_source.html#l00001">options.py:1</a></div></div>
 <div class="ttc" id="anamespace_d_fdb_1_1submit_html"><div class="ttname"><a href="namespace_d_fdb_1_1submit.html">DFdb.submit</a></div><div class="ttdef"><b>Definition:</b> <a href="submit_8py_source.html#l00001">submit.py:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,0 +1,6 @@
+<map id="DFdb.db.DFdatabase.__struct_parser__" name="DFdb.db.DFdatabase.__struct_parser__">
+<area shape="rect" id="node1" title="Inbuilt method for parsing structure names into key/value pairs for entry into the database." alt="" coords="220,71,367,112"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a" title="Loads all structures in a single .traj file into the database." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node3" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45" title="Load a single relaxed structure into the database." alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node4" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#af84848663841aa1fd76c8fae316e213e" title="Load a single unrelaxed structure into the database." alt="" coords="5,136,172,177"/>
+</map>

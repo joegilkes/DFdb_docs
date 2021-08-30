@@ -88,10 +88,52 @@ $(document).ready(function(){initNavTree('namespace_d_fdb_1_1analyse.html',''); 
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">DFdb.analyse Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html">DFanalysis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles analysis and plotting of comparative results.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9c70e14e01162300e675b89d1a7185e0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">ari2list</a> (ari)</td></tr>
+<tr class="memdesc:a9c70e14e01162300e675b89d1a7185e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over.  <a href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">More...</a><br /></td></tr>
+<tr class="separator:a9c70e14e01162300e675b89d1a7185e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9c70e14e01162300e675b89d1a7185e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c70e14e01162300e675b89d1a7185e0">&#9670;&nbsp;</a></span>ari2list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DFdb.analyse.ari2list </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ari</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over. </p>
+<p>If a selection is made directly from the ASE Database object (using DFdatabase.dc.select), a lazy iterator over AtomsRows will be returned which gets destroyed after iterating over for the first time. This iterator also cannot be enumerated over. This can be fixed by preconverting the lazy iterator into a list. However, for large selections this can take up a large amount of memory.</p>
+<dl class="section user"><dt>Parameters</dt><dd></dd></dl>
+<p>ari lazy iterator (generator object) AtomsRow iterator obtained by direct database selection. </p>
+
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00642">642</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<div class="fragment"></div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
