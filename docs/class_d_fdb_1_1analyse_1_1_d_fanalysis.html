@@ -129,7 +129,6 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1abf06bd44f595f62f28a946547157b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">skl_kde_samples</a></td></tr>
-<tr class="memdesc:a1abf06bd44f595f62f28a946547157b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">int  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">More...</a><br /></td></tr>
 <tr class="separator:a1abf06bd44f595f62f28a946547157b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -147,10 +146,14 @@ Private Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles analysis and plotting of comparative results. </p>
 <p>Contains functions to extract a range of comparative properties from lists of AtomsRows, as well as plotting functions to combine their outputs into publication-quality graphs.</p>
-<pre class="fragment">        Number of samples to evaluate Scikit-learn KDE plots over
-        when calculating sample means and vaiances.
-</pre> 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00034">34</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skl_kde_samples</td><td>int Number of samples to evaluate Scikit-learn KDE plots over when calculating sample means and vaiances. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00035">35</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab31c59b13440f2e7f87ea89c54585741"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab31c59b13440f2e7f87ea89c54585741">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -180,7 +183,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Initialise <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html" title="Handles analysis and plotting of comparative results.">DFanalysis</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00040">40</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00038">38</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 </div>
 </div>
@@ -263,11 +266,6 @@ Private Member Functions</h2></td></tr>
 <pre class="fragment">   Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or
    uses Scikit-learn to fit an accurate KDE plot and report mean and variance
    of the resulting data.
-
-   Return 0 is a Pandas DataFrame containing the accurate results from the KDE fit
-   if the Scikit-learn implementation is used, else return 0 is None. Return 1 is
-   a Pandas DataFrame of all the position lRMSDs if return_data is true, else return 1 is
-   None.
 </pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">reference</td><td>list List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
@@ -284,7 +282,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the position lRMSDs, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00085">85</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00078">78</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">DFdb.analyse.DFanalysis._compare_positions()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -360,7 +358,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of lRMSDs with a value for each pair of rows in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00212">212</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00205">205</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -451,7 +449,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd></dd></dl>
 <p>reference List of AtomsRows with identical chemical formulae to those in comparison. comparisons List of comparative lists of AtomsRows with identical chemical formulae to those in reference. plot_type (Default: hist, Choices: [hist, hist+kde, kde]) The type of plot to produce. reference_name (Optional) Name of the reference dataset. comparison_names (Optional) List of names of the comparison datasets. title (Optional) Figure title for the graph. return_data (Default: False) Whether to include a DataFrame of all the lRMSD data used in plotting. savefig (Optional) Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00272">272</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00265">265</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">DFdb.analyse.DFanalysis._compare_forces()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -513,7 +511,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd></dd></dl>
 <p>arl1 List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. arl2 List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00390">390</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00383">383</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -605,7 +603,7 @@ Private Member Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd></dd></dl>
 <p>reference_set List of lists of AtomsRows, separated by struct_names. The first entry of each sub-list should be a reliable energy reference. comparison_sets List of comparative lists of AtomsRows, with sub-lists separated by struct_names. The first entry of each sub-list should be a reliable energy reference. plot_type (Default: hist, Choices: [hist, hist+kde, kde]) The type of plot to produce. reference_name (Optional) Name of the reference dataset. comparison_names (Optional) List of names of the comparison datasets. title (Optional) Figure title for the graph. return_data (Default: False) Whether to include a DataFrame of all the lRMSD data used in plotting. savefig (Optional) Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00446">446</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00439">439</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1">DFdb.analyse.DFanalysis._compare_energies()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -669,7 +667,7 @@ Private Member Functions</h2></td></tr>
 </pre> <dl class="section user"><dt>Parameters</dt><dd></dd></dl>
 <p>arl1 List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. arl2 List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00611">611</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00604">604</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -699,9 +697,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>int </p>
-
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00041">41</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00039">39</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
 

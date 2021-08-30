@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('namespace_d_fdb_1_1analyse.html',''); 
 <div class="title">DFdb.analyse Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="namespace_d_fdb.html">DFdb</a> analysis module.  
+<a href="namespace_d_fdb_1_1analyse.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -108,7 +111,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a9c70e14e01162300e675b89d1a7185e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over.  <a href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">More...</a><br /></td></tr>
 <tr class="separator:a9c70e14e01162300e675b89d1a7185e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="namespace_d_fdb.html">DFdb</a> analysis module. </p>
+<p>Contains the <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html" title="Handles analysis and plotting of comparative results.">DFanalysis</a> class for plotting comparative results, as well as the (now deprecated) ari2list function for converting lazy iterators to lists.</p>
+<p>Typical usage: </p><div class="fragment"><div class="line"><span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1analyse.html">DFdb.analyse</a> <span class="keyword">import</span> DFanalysis</div>
+<div class="line">da = DFanalysis()</div>
+<div class="line">da.plot_position_difference...</div>
+<div class="ttc" id="anamespace_d_fdb_1_1analyse_html"><div class="ttname"><a href="namespace_d_fdb_1_1analyse.html">DFdb.analyse</a></div><div class="ttdoc">DFdb analysis module.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00001">analyse.py:1</a></div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a9c70e14e01162300e675b89d1a7185e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c70e14e01162300e675b89d1a7185e0">&#9670;&nbsp;</a></span>ari2list()</h2>
 
@@ -130,12 +140,12 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Parameters</dt><dd></dd></dl>
 <p>ari lazy iterator (generator object) AtomsRow iterator obtained by direct database selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00642">642</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<span class="keyword">def </span><a class="code" href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">ari2list</a>(ari):</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    ar_list = [ar <span class="keywordflow">for</span> ar <span class="keywordflow">in</span> ari]</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    <span class="keywordflow">return</span> ar_list</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160; </div>
-<div class="ttc" id="anamespace_d_fdb_1_1analyse_html_a9c70e14e01162300e675b89d1a7185e0"><div class="ttname"><a href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">DFdb.analyse.ari2list</a></div><div class="ttdeci">def ari2list(ari)</div><div class="ttdoc">Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00642">analyse.py:642</a></div></div>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00635">635</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="keyword">def </span><a class="code" href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">ari2list</a>(ari):</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    ar_list = [ar <span class="keywordflow">for</span> ar <span class="keywordflow">in</span> ari]</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordflow">return</span> ar_list</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160; </div>
+<div class="ttc" id="anamespace_d_fdb_1_1analyse_html_a9c70e14e01162300e675b89d1a7185e0"><div class="ttname"><a href="namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0">DFdb.analyse.ari2list</a></div><div class="ttdeci">def ari2list(ari)</div><div class="ttdoc">Converts an AtomsRow Iterator object to a list of AtomsRow objects so they can be enumerated over.</div><div class="ttdef"><b>Definition:</b> <a href="analyse_8py_source.html#l00635">analyse.py:635</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
