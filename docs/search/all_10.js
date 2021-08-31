@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writer_98',['writer',['../namespacebatch__calc__aims.html#aef70c0007f2ac319e78a5866b4c4a458',1,'batch_calc_aims.writer()'],['../namespacebatch__calc__dftb.html#af4b76c2f60f8c4ee6181d793b97be433',1,'batch_calc_dftb.writer()'],['../namespaceopt__struct__dftb.html#a82861557fbad89341fd262d96a192b20',1,'opt_struct_dftb.writer()']]]
+  ['writer_100',['writer',['../namespace_d_fdb__scripts_1_1batch__calc__aims.html#aa64e38b40bc79a1dcb9df62dc439e7c4',1,'DFdb_scripts.batch_calc_aims.writer()'],['../namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ac0cf502846eb5fc6cd8d0749803f3e39',1,'DFdb_scripts.batch_calc_dftb.writer()'],['../namespace_d_fdb__scripts_1_1opt__struct__dftb.html#ae321470872b5570f6132e4a4bc8ac6bd',1,'DFdb_scripts.opt_struct_dftb.writer()']]]
 ];

@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">#            Folder for all calculations to take place in.</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"># @param                        options         ***DFoptions object*** &lt;br&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">#            Object to extract global/calculator options from. Usually best to use the</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">#            current DFdatabase instance&#39;s options by passing DBdb.db.DFdatabase.options.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">#            current DFdatabase instance&#39;s options by passing DFdb.db.DFdatabase.options.</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"># @param                        subfolder       ***str; Optional*** &lt;br&gt;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">#            Folder within calc_folder to place calculations in.</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">#</span></div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">## @brief Initialise DFsubmit instance.</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    #        Loads in the relevant job submission system and creates new folders if required.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    #    Loads in the relevant job submission system and creates new folders if required.</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    #</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a929439b6c95909241f09e9e5d8d89dd8">   48</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a929439b6c95909241f09e9e5d8d89dd8">__init__</a>(self, calc_folder, options, subfolder=None):</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6d89421c2c052d26bbc405d8a41d0539">   49</a></span>&#160;        self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6d89421c2c052d26bbc405d8a41d0539">calc_folder</a>calc_folder = calc_folder</div>
@@ -264,7 +264,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        f.write(s)</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        f.close()</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        os.system(f<span class="stringliteral">&#39;cp {self.modulepath}/../scripts/opt_struct_{calc_type}.py {self.calc_folder}/{struct_name}&#39;</span>)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        os.system(f<span class="stringliteral">&#39;cp {self.modulepath}/../DFdb_scripts/opt_struct_{calc_type}.py {self.calc_folder}/{struct_name}&#39;</span>)</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;nosubmit&#39;</span>:</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            print(f<span class="stringliteral">&#39;Set up job for running in {self.calc_folder}/{struct_name}.&#39;</span>)</div>
@@ -363,7 +363,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        f.write(s)</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        f.close()</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        os.system(f<span class="stringliteral">&#39;cp {self.modulepath}/../scripts/batch_calc_{calc_type}.py {self.calc_folder}/{struct_name}&#39;</span>)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        os.system(f<span class="stringliteral">&#39;cp {self.modulepath}/../DFdb_scripts/batch_calc_{calc_type}.py {self.calc_folder}/{struct_name}&#39;</span>)</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;nosubmit&#39;</span>:</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            print(f<span class="stringliteral">&#39;Set up job for running in {self.calc_folder}/{struct_name}.&#39;</span>)</div>

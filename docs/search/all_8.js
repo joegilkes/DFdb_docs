@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_56',['help',['../namespacebatch__calc__aims.html#a47bec879e0bdd8357ceacd613a9b5578',1,'batch_calc_aims.help()'],['../namespacebatch__calc__dftb.html#a146558d08015b9c1995e2414c5fdd73d',1,'batch_calc_dftb.help()'],['../namespaceopt__struct__aims.html#ad985678f4778620119f472870a3e7e70',1,'opt_struct_aims.help()'],['../namespaceopt__struct__dftb.html#acd67f252344468992f7c9923154393d6',1,'opt_struct_dftb.help()']]]
+  ['help_60',['help',['../namespace_d_fdb__scripts_1_1batch__calc__aims.html#a122a447e6c1dc27f1b2953adf6e87de9',1,'DFdb_scripts.batch_calc_aims.help()'],['../namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a445bcda37be1649d6e222370ae818129',1,'DFdb_scripts.batch_calc_dftb.help()'],['../namespace_d_fdb__scripts_1_1opt__struct__aims.html#a068cf1e93c469bb120c26ccf02c87e4a',1,'DFdb_scripts.opt_struct_aims.help()'],['../namespace_d_fdb__scripts_1_1opt__struct__dftb.html#a0261596f5e60037a8f4ef8ff32ea10a0',1,'DFdb_scripts.opt_struct_dftb.help()']]]
 ];

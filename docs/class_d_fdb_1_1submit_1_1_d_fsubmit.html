@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">calc_folder</td><td><em><b>str</b></em> <br  />
  Folder for all calculations to take place in. </td></tr>
     <tr><td class="paramname">options</td><td><em><b>DFoptions object</b></em> <br  />
- Object to extract global/calculator options from. Usually best to use the current DFdatabase instance's options by passing DBdb.db.DFdatabase.options. </td></tr>
+ Object to extract global/calculator options from. Usually best to use the current DFdatabase instance's options by passing <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>. </td></tr>
     <tr><td class="paramname">subfolder</td><td><em><b>str; Optional</b></em> <br  />
  Folder within calc_folder to place calculations in. </td></tr>
   </table>
@@ -196,8 +196,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialise <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html" title="Handles communication with various queueing systems.">DFsubmit</a> instance. </p>
-<pre class="fragment">   Loads in the relevant job submission system and creates new folders if required.
-</pre> 
+<p>Loads in the relevant job submission system and creates new folders if required. </p>
+
 <p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00048">48</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">def </span>__init__(self, calc_folder, options, subfolder=None):</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        self.calc_folder = calc_folder</div>

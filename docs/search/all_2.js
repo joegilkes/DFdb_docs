@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['basis_5fset_15',['basis_set',['../namespacebatch__calc__aims.html#af132c901822343e6c7f41461a36f5012',1,'batch_calc_aims.basis_set()'],['../namespaceopt__struct__aims.html#ac47a1648454cc8b445a83ad10bf537e0',1,'opt_struct_aims.basis_set()']]],
-  ['batch_16',['batch',['../namespacebatch__calc__aims.html#abd8bf8ae95d33585570466d669415a09',1,'batch_calc_aims.batch()'],['../namespacebatch__calc__dftb.html#a5ad83a757c8a7621ac38c36e065c00bd',1,'batch_calc_dftb.batch()']]],
-  ['batch_5fcalc_5faims_17',['batch_calc_aims',['../namespacebatch__calc__aims.html',1,'']]],
-  ['batch_5fcalc_5faims_2epy_18',['batch_calc_aims.py',['../batch__calc__aims_8py.html',1,'']]],
-  ['batch_5fcalc_5fdftb_19',['batch_calc_dftb',['../namespacebatch__calc__dftb.html',1,'']]],
-  ['batch_5fcalc_5fdftb_2epy_20',['batch_calc_dftb.py',['../batch__calc__dftb_8py.html',1,'']]],
-  ['batch_5fget_5fenergies_21',['batch_get_energies',['../class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5',1,'DFdb::submit::DFsubmit']]],
-  ['batchname_22',['batchname',['../namespacebatch__calc__aims.html#ad911c0106a6908735039c8e5d9d9e2b3',1,'batch_calc_aims.batchname()'],['../namespacebatch__calc__dftb.html#a7915ce19d078f1e58172d5b4ae60739f',1,'batch_calc_dftb.batchname()']]]
+  ['basis_5fset_15',['basis_set',['../namespace_d_fdb__scripts_1_1batch__calc__aims.html#afe75a74720f3fc4f0514aeaad1a9dc0e',1,'DFdb_scripts.batch_calc_aims.basis_set()'],['../namespace_d_fdb__scripts_1_1opt__struct__aims.html#ab74cdfe96e6f87e5d6b74d9291e0b59b',1,'DFdb_scripts.opt_struct_aims.basis_set()']]],
+  ['batch_16',['batch',['../namespace_d_fdb__scripts_1_1batch__calc__aims.html#a6ceee47c881506f8613bda52511a4672',1,'DFdb_scripts.batch_calc_aims.batch()'],['../namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a4aba080f9e01a5658e90dbfeb5760d05',1,'DFdb_scripts.batch_calc_dftb.batch()']]],
+  ['batch_5fcalc_5faims_2epy_17',['batch_calc_aims.py',['../batch__calc__aims_8py.html',1,'']]],
+  ['batch_5fcalc_5fdftb_2epy_18',['batch_calc_dftb.py',['../batch__calc__dftb_8py.html',1,'']]],
+  ['batch_5fget_5fenergies_19',['batch_get_energies',['../class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5',1,'DFdb::submit::DFsubmit']]],
+  ['batchname_20',['batchname',['../namespace_d_fdb__scripts_1_1batch__calc__aims.html#a51addda080751939fd487967bd20e48b',1,'DFdb_scripts.batch_calc_aims.batchname()'],['../namespace_d_fdb__scripts_1_1batch__calc__dftb.html#aaa64a33501f653b34a9b7cfead351517',1,'DFdb_scripts.batch_calc_dftb.batchname()']]]
 ];
