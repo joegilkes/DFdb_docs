@@ -107,9 +107,8 @@ var NAVTREEINDEX0 =
 "functions.html":[2,2,0],
 "functions_func.html":[2,2,1],
 "functions_vars.html":[2,2,2],
-"index.html":[],
 "index.html":[0],
-"namespace_d_f_d_b__scripts.html":[1,0,2],
+"index.html":[],
 "namespace_d_fdb.html":[1,0,0],
 "namespace_d_fdb_1_1analyse.html":[1,0,0,0],
 "namespace_d_fdb_1_1analyse.html#a9c70e14e01162300e675b89d1a7185e0":[1,0,0,0,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "opt__struct__dftb_8py.html#a13be2df67d4364b182c452a571218a26":[3,0,0,1,4,8],
 "opt__struct__dftb_8py.html#a266bab7b01c162736aac976d40cc001a":[3,0,0,1,4,12],
 "opt__struct__dftb_8py.html#a55c099a31ce3d6db6b628c9baa7f06d8":[3,0,0,1,4,17],
-"opt__struct__dftb_8py.html#a602a0f13b86528bd8a88f2d238ecfaa9":[3,0,0,1,4,18]
+"opt__struct__dftb_8py.html#a602a0f13b86528bd8a88f2d238ecfaa9":[3,0,0,1,4,18],
+"opt__struct__dftb_8py.html#a75c1de8bfd3bb91442bfb70ceb115fe7":[3,0,0,1,4,3]
 };
