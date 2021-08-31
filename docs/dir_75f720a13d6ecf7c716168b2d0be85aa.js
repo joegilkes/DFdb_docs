@@ -9,6 +9,6 @@ var dir_75f720a13d6ecf7c716168b2d0be85aa =
       [ "DFoptions", "class_d_fdb_1_1options_1_1_d_foptions.html", "class_d_fdb_1_1options_1_1_d_foptions" ]
     ] ],
     [ "submit.py", "submit_8py.html", [
-      [ "SLURMsubmit", "class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html", "class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit" ]
+      [ "DFsubmit", "class_d_fdb_1_1submit_1_1_d_fsubmit.html", "class_d_fdb_1_1submit_1_1_d_fsubmit" ]
     ] ]
 ];

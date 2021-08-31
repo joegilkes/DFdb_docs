@@ -94,14 +94,30 @@ $(document).ready(function(){initNavTree('namespace_d_fdb_1_1options.html',''); 
 <div class="title">DFdb.options Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> options module.  
+<a href="namespace_d_fdb_1_1options.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html">DFoptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class which handles global options for an instance of <a class="el" href="namespace_d_fdb.html">DFdb</a>.  <a href="class_d_fdb_1_1options_1_1_d_foptions.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles global options for an instance of <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a>.  <a href="class_d_fdb_1_1options_1_1_d_foptions.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> options module. </p>
+<p>Contains the <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html" title="Handles global options for an instance of DFdb.">DFoptions</a> class for handling global options for an instance of DFdb.DFdatabase.</p>
+<p>Typical usage: </p><div class="fragment"><div class="line"><span class="preprocessor">@code</span></div>
+<div class="line">   <span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1db.html">DFdb.db</a> <span class="keyword">import</span> DFdatabase</div>
+<div class="line">   <span class="comment"># Not specifying options here creates a new DFoptions instance with default values.</span></div>
+<div class="line">   db = DFdatabase(<span class="stringliteral">&#39;/path/to/db_file&#39;</span>, <span class="stringliteral">&#39;geometry&#39;</span>)</div>
+<div class="line">   db.options.load(<span class="stringliteral">&#39;/path/to/options_file&#39;</span>)</div>
+<div class="line">   db.options.get()</div>
+<div class="line">   db.options.set_globals(<span class="stringliteral">&#39;export_folder&#39;</span>, <span class="stringliteral">&#39;/path/to/new_export_folder&#39;</span>)</div>
+<div class="line">   db.options.set_calc_options(<span class="stringliteral">&#39;aims_xc&#39;</span>, <span class="stringliteral">&#39;b3lyp&#39;</span>)</div>
+<div class="line">   db.options.save(<span class="stringliteral">&#39;/path/to/my_new_options_file&#39;</span>)</div>
+<div class="ttc" id="anamespace_d_fdb_1_1db_html"><div class="ttname"><a href="namespace_d_fdb_1_1db.html">DFdb.db</a></div><div class="ttdoc">Main ASE database wrapper.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00001">db.py:1</a></div></div>
+</div><!-- fragment -->  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

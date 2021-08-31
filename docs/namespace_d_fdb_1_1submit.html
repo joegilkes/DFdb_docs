@@ -94,14 +94,29 @@ $(document).ready(function(){initNavTree('namespace_d_fdb_1_1submit.html',''); i
 <div class="title">DFdb.submit Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> job submission module.  
+<a href="namespace_d_fdb_1_1submit.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html">SLURMsubmit</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communicating with the commonly used SLURM queing system at a computer cluster.  <a href="class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html">DFsubmit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles communication with various queueing systems.  <a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> job submission module. </p>
+<p>Contains the <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html" title="Handles communication with various queueing systems.">DFsubmit</a> class for handling job submission on various HPC queuing systems.</p>
+<p>Typical usage: </p><div class="fragment"><div class="line"><span class="preprocessor">@code</span></div>
+<div class="line">   <span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1db.html">DFdb.db</a> <span class="keyword">import</span> DFdatabase</div>
+<div class="line">   <span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1submit.html">DFdb.submit</a> <span class="keyword">import</span> DFsubmit</div>
+<div class="line">   db = DFdatabase(...)</div>
+<div class="line">   selection = db.get(...)</div>
+<div class="line">   sm = DFsubmit(<span class="stringliteral">&#39;/path/to/calc_folder&#39;</span>, db.options, subfolder=<span class="stringliteral">&#39;my_calc_subfolder&#39;</span>)</div>
+<div class="line">   sm.relax(selection)</div>
+<div class="ttc" id="anamespace_d_fdb_1_1db_html"><div class="ttname"><a href="namespace_d_fdb_1_1db.html">DFdb.db</a></div><div class="ttdoc">Main ASE database wrapper.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00001">db.py:1</a></div></div>
+<div class="ttc" id="anamespace_d_fdb_1_1submit_html"><div class="ttname"><a href="namespace_d_fdb_1_1submit.html">DFdb.submit</a></div><div class="ttdoc">DFdb job submission module.</div><div class="ttdef"><b>Definition:</b> <a href="submit_8py_source.html#l00001">submit.py:1</a></div></div>
+</div><!-- fragment -->  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

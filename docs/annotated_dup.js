@@ -11,7 +11,7 @@ var annotated_dup =
         [ "DFoptions", "class_d_fdb_1_1options_1_1_d_foptions.html", "class_d_fdb_1_1options_1_1_d_foptions" ]
       ] ],
       [ "submit", "namespace_d_fdb_1_1submit.html", [
-        [ "SLURMsubmit", "class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html", "class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit" ]
+        [ "DFsubmit", "class_d_fdb_1_1submit_1_1_d_fsubmit.html", "class_d_fdb_1_1submit_1_1_d_fsubmit" ]
       ] ]
     ] ]
 ];

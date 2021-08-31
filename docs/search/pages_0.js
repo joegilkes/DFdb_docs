@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dfdb_20python_20package_197',['DFdb Python Package',['../index.html',1,'']]]
+  ['deprecated_20list_198',['Deprecated List',['../deprecated.html',1,'']]],
+  ['dfdb_20python_20package_199',['DFdb Python Package',['../index.html',1,'']]]
 ];

@@ -6,6 +6,6 @@ var searchData=
   ['batch_5fcalc_5faims_2epy_18',['batch_calc_aims.py',['../batch__calc__aims_8py.html',1,'']]],
   ['batch_5fcalc_5fdftb_19',['batch_calc_dftb',['../namespacebatch__calc__dftb.html',1,'']]],
   ['batch_5fcalc_5fdftb_2epy_20',['batch_calc_dftb.py',['../batch__calc__dftb_8py.html',1,'']]],
-  ['batch_5fget_5fenergies_21',['batch_get_energies',['../class_d_fdb_1_1submit_1_1_s_l_u_r_msubmit.html#aa075a37a541cfa3814be91cbde5e6e0c',1,'DFdb::submit::SLURMsubmit']]],
+  ['batch_5fget_5fenergies_21',['batch_get_energies',['../class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5',1,'DFdb::submit::DFsubmit']]],
   ['batchname_22',['batchname',['../namespacebatch__calc__aims.html#ad911c0106a6908735039c8e5d9d9e2b3',1,'batch_calc_aims.batchname()'],['../namespacebatch__calc__dftb.html#a7915ce19d078f1e58172d5b4ae60739f',1,'batch_calc_dftb.batchname()']]]
 ];

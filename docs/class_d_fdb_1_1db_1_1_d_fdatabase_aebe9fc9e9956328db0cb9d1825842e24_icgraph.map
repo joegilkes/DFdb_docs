@@ -1,4 +1,4 @@
 <map id="DFdb.db.DFdatabase.__reac_parser__" name="DFdb.db.DFdatabase.__reac_parser__">
 <area shape="rect" id="node1" title="Inbuilt method for parsing reaction details from a finished NEB calculation." alt="" coords="220,5,367,47"/>
-<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#aac8fdd648be72b0d7e3558cb0c520e62" title="Load the end state of a NEB calculation into the database." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#aac8fdd648be72b0d7e3558cb0c520e62" title="Load the end state of a NEB calculation into a database." alt="" coords="5,5,172,47"/>
 </map>
