@@ -638,9 +638,9 @@ Private Member Functions</h2></td></tr>
 <p>Each unique struct_name in a <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> set must be accompanied by a corresponding energy reference, placed first in that set's list. For example, if there are 4 types of struct_name forming 4 sub-lists in 'reference_set', the first molecule of each sub-list should be a reference structure which all other energies will be compared against, eg. an optimised ground state structure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td><em><b>list</b></em> <br  />
+    <tr><td class="paramname">reference_set</td><td><em><b>list</b></em> <br  />
  List of lists of AtomsRows, separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
-    <tr><td class="paramname">comparisons</td><td><em><b>list</b></em> <br  />
+    <tr><td class="paramname">comparison_sets</td><td><em><b>list</b></em> <br  />
  List of comparative lists of AtomsRows, with sub-lists separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
     <tr><td class="paramname">plot_type</td><td><em><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b></em> <br  />
  The type of plot to produce. </td></tr>
