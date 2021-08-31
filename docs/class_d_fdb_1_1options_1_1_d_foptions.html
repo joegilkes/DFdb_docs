@@ -141,7 +141,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles global options for an instance of <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00029">29</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00027">27</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a483b31c3aea53dba6205c30c90106f43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a483b31c3aea53dba6205c30c90106f43">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -161,12 +161,12 @@ Public Attributes</h2></td></tr>
 
 <p>Initialise <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html" title="Handles global options for an instance of DFdb.">DFoptions</a> object with default options set. </p>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00032">32</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">def </span>__init__(self):</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        self.load(f<span class="stringliteral">&#39;{self.modulepath}/../saved_options/default_options.json&#39;</span>)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00030">30</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">def </span>__init__(self):</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        self.load(f<span class="stringliteral">&#39;{self.modulepath}/../saved_options/default_options.json&#39;</span>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a2c2d6947328dcf9e3ad1572c6029817e">DFdb.options.DFoptions.load()</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -201,9 +201,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print the current options that have been set in this instance of DFdb.DFdatabase. </p>
-<pre class="fragment">   Can be accessed within an instance of DFdatabase as `DFdatabase.options.get()`.
-</pre> 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00041">41</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p>Can be accessed within an instance of DFdatabase as <code>DFdatabase.options.get()</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00039">39</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">DFdb.options.DFoptions.co</a>, and <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">DFdb.options.DFoptions.o</a>.</p>
 
@@ -242,19 +242,19 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set new global options for this instance of DFdb.DFdatabase. </p>
-<pre class="fragment">   The options can be passed in as either single strings representing a
-   single key/value pair, or as lists of keys and their respective values.
-
-   Can be accessed within an instance of DFdatabase as `DFdatabase.options.set_globals()`.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>The options can be passed in as either single strings representing a single key/value pair, or as lists of keys and their respective values.</p>
+<p>Can be accessed within an instance of DFdatabase as <code>DFdatabase.options.set_globals()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td><b>str or list</b> Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> global options key, or a list of keys corresponding to the list of values. </td></tr>
-    <tr><td class="paramname">value</td><td><b>str or list</b> Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> global options value, or a list of values corresponing to the list of keys. </td></tr>
+    <tr><td class="paramname">key</td><td><em><b>str or list</b></em> <br  />
+ Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> global options key, or a list of keys corresponding to the list of values. </td></tr>
+    <tr><td class="paramname">value</td><td><em><b>str or list</b></em> <br  />
+ Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> global options value, or a list of values corresponing to the list of keys. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00064">64</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00062">62</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">DFdb.options.DFoptions.o</a>.</p>
 
@@ -293,19 +293,19 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set new calculator options for this instance of DFdb.Dfdatabase. </p>
-<pre class="fragment">   The options can be passed in as either single strings representing a
-   single key/value pair, or as lists of keys and their respective values.
-
-   Can be accessed within an instance of DFdatabase as `DFdatabase.options.set_calc_options()`.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>The options can be passed in as either single strings representing a single key/value pair, or as lists of keys and their respective values.</p>
+<p>Can be accessed within an instance of DFdatabase as <code>DFdatabase.options.set_calc_options()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td><b>str or list</b> Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> calculator options key, or a list of keys corresponding to the list of values. </td></tr>
-    <tr><td class="paramname">value</td><td><b>str or list</b> Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> calculator options value, or a list of values corresponing to the list of keys. </td></tr>
+    <tr><td class="paramname">key</td><td><em><b>str or list</b></em> <br  />
+ Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> calculator options key, or a list of keys corresponding to the list of values. </td></tr>
+    <tr><td class="paramname">value</td><td><em><b>str or list</b></em> <br  />
+ Either a single <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> calculator options value, or a list of values corresponing to the list of keys. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00090">90</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00088">88</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">DFdb.options.DFoptions.co</a>.</p>
 
@@ -340,12 +340,13 @@ Public Attributes</h2></td></tr>
 <p>Save the current <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html" title="Handles global options for an instance of DFdb.">DFoptions</a> to file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td><b>str</b> Path to the file where parameters should be saved. Should be a file in JSON format. </td></tr>
+    <tr><td class="paramname">filename</td><td><em><b>str</b></em> <br  />
+ Path to the file where parameters should be saved. Should be a file in JSON format. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00109">109</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00107">107</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a571a55d885c2f3410e0664599bce0dcb">DFdb.options.DFoptions.co</a>, and <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a33eb9c5e23e3ed0b0234dabfe93057af">DFdb.options.DFoptions.o</a>.</p>
 
@@ -380,12 +381,13 @@ Public Attributes</h2></td></tr>
 <p>Load a set of <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html" title="Handles global options for an instance of DFdb.">DFoptions</a> from a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td><b>str</b> Path to the file where parameters are saved. Should be a file in JSON format. </td></tr>
+    <tr><td class="paramname">filename</td><td><em><b>str</b></em> <br  />
+ Path to the file where parameters are saved. Should be a file in JSON format. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00120">120</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00118">118</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a483b31c3aea53dba6205c30c90106f43">DFdb.options.DFoptions.__init__()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -415,7 +417,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00124">124</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00122">122</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a962d04291839acbe3d15e2ed5a78262b">DFdb.options.DFoptions.get()</a>, <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a745b36b300f4fb4455b89976608004e7">DFdb.options.DFoptions.save()</a>, and <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a3b53b63680c79113158b04e5aee61937">DFdb.options.DFoptions.set_globals()</a>.</p>
 
@@ -433,7 +435,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00125">125</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="options_8py_source.html#l00123">123</a> of file <a class="el" href="options_8py_source.html">options.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a962d04291839acbe3d15e2ed5a78262b">DFdb.options.DFoptions.get()</a>, <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a745b36b300f4fb4455b89976608004e7">DFdb.options.DFoptions.save()</a>, and <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a49d7e93e4dfb8b9bef771bbdc657e177">DFdb.options.DFoptions.set_calc_options()</a>.</p>
 

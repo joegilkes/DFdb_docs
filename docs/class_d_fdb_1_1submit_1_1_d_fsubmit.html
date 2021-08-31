@@ -145,14 +145,17 @@ Public Attributes</h2></td></tr>
 <p>Currently has support for submitting jobs on Orac (using SLURM) and Young (using their custom version of PBS). Support for Avon is planned. Also supports creating job files but not submitting, which is useful for small-scale DFTB+ calculations which don't need to run on HPC systems.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">calc_folder</td><td><b>str</b> Folder for all calculations to take place in. </td></tr>
-    <tr><td class="paramname">options</td><td><b>DFoptions object</b> Object to extract global/calculator options from. Usually best to use the current DFdatabase instance's options by passing <code>DFdatabase.options</code>. </td></tr>
-    <tr><td class="paramname">subfolder</td><td><b>str; Optional</b> Folder within calc_folder to place calculations in. </td></tr>
+    <tr><td class="paramname">calc_folder</td><td><em><b>str</b></em> <br  />
+ Folder for all calculations to take place in. </td></tr>
+    <tr><td class="paramname">options</td><td><em><b>DFoptions object</b></em> <br  />
+ Object to extract global/calculator options from. Usually best to use the current DFdatabase instance's options by passing DBdb.db.DFdatabase.options. </td></tr>
+    <tr><td class="paramname">subfolder</td><td><em><b>str; Optional</b></em> <br  />
+ Folder within calc_folder to place calculations in. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00043">43</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00041">41</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a929439b6c95909241f09e9e5d8d89dd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a929439b6c95909241f09e9e5d8d89dd8">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -195,43 +198,43 @@ Public Attributes</h2></td></tr>
 <p>Initialise <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html" title="Handles communication with various queueing systems.">DFsubmit</a> instance. </p>
 <pre class="fragment">   Loads in the relevant job submission system and creates new folders if required.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00050">50</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">def </span>__init__(self, calc_folder, options, subfolder=None):</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        self.calc_folder = calc_folder</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        self.options = options</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        self.subfolder = subfolder</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            os.mkdir(self.calc_folder)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> self.subfolder <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            self.calc_folder = f<span class="stringliteral">&#39;{self.calc_folder}/{self.subfolder}&#39;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            os.mkdir(self.calc_folder)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Orac&#39;</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Orac&#39;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Avon&#39;</span>: <span class="comment"># Ready to go but not implemented yet.</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Avon&#39;</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;PBS/Young&#39;</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Young&#39;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;qsub&#39;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;none&#39;</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;nosubmit&#39;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Unknown submission system!&#39;</span>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        self.calc_options = self.options.co</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        self.dftb_skf_paths={</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="stringliteral">&#39;pbc&#39;</span>: <span class="stringliteral">&#39;pbc-0-3&#39;</span>,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="stringliteral">&#39;matsci&#39;</span>: <span class="stringliteral">&#39;matsci-0-3&#39;</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00048">48</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">def </span>__init__(self, calc_folder, options, subfolder=None):</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        self.calc_folder = calc_folder</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        self.options = options</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        self.subfolder = subfolder</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            os.mkdir(self.calc_folder)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> self.subfolder <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            self.calc_folder = f<span class="stringliteral">&#39;{self.calc_folder}/{self.subfolder}&#39;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            os.mkdir(self.calc_folder)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Orac&#39;</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Orac&#39;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Avon&#39;</span>: <span class="comment"># Ready to go but not implemented yet.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Avon&#39;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;PBS/Young&#39;</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Young&#39;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;qsub&#39;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;none&#39;</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;nosubmit&#39;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Unknown submission system!&#39;</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        self.modulepath, _ = os.path.split(os.path.realpath(__file__))</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        self.calc_options = self.options.co</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        self.dftb_skf_paths={</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="stringliteral">&#39;pbc&#39;</span>: <span class="stringliteral">&#39;pbc-0-3&#39;</span>,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="stringliteral">&#39;matsci&#39;</span>: <span class="stringliteral">&#39;matsci-0-3&#39;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -263,20 +266,17 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add a structure to the queue for geometry relaxation. </p>
-<pre class="fragment">   Contains a job generator which creates all the neccessary files
-   and directories, then submits a geometry optimsation job for the
-   relevant structure and calculator through the requested job submission
-   system.
-
-   Uses the calculator options currently set in DFoptions.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Contains a job generator which creates all the neccessary files and directories, then submits a geometry optimsation job for the relevant structure and calculator through the requested job submission system.</p>
+<p>Uses the calculator options currently set in DFoptions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">row</td><td><b>AtomsRow</b> ASE AtomsRow obtained with DFdatabase.select() or .get(). </td></tr>
+    <tr><td class="paramname">row</td><td><em><b>AtomsRow</b></em> <br  />
+ ASE AtomsRow obtained with <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c" title="Select rows from a database, return as a list of rows.">DFdb.db.DFdatabase.select()</a> or <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068" title="Select a single row from a database.">DFdb.db.DFdatabase.get()</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00099">99</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00098">98</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">DFdb.submit.DFsubmit.options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
 
@@ -309,13 +309,11 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add a batch job to the queue to obtain updated energies and forces. </p>
-<pre class="fragment">   Contains a job generator which creates all the neccessary files
-   and directories, then submits a batch calculation job for the
-   relevant structures and calculator through the requested job submission
-   system.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Contains a job generator which creates all the neccessary files and directories, then submits a batch calculation job for the relevant structures and calculator through the requested job submission system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rows</td><td><b>list</b> List of ASE AtomsRows obtained with DFdatabase.select() </td></tr>
+    <tr><td class="paramname">rows</td><td><em><b>list</b></em> <br  />
+ List of ASE AtomsRows obtained with <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c" title="Select rows from a database, return as a list of rows.">DFdb.db.DFdatabase.select()</a> or <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068" title="Select a single row from a database.">DFdb.db.DFdatabase.get()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +337,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00051">51</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00049">49</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 </div>
 </div>
@@ -355,7 +353,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00052">52</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00050">50</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
@@ -373,7 +371,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00053">53</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00051">51</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 </div>
 </div>
@@ -389,7 +387,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00065">65</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00063">63</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
@@ -407,7 +405,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00066">66</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00064">64</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 </div>
 </div>
@@ -423,7 +421,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00079">79</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00077">77</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
@@ -441,7 +439,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00080">80</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00078">78</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 </div>
 </div>

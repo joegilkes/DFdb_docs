@@ -107,14 +107,13 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main ASE database wrapper. </p>
 <p>Contains the <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html" title="Wraps ASE database to add functionality.">DFdatabase</a> class, which wraps ASE's db module to add additional functionality. This includes functions for adding structures to a database with additional metadata to aid in searching and filtering, as well as functions for getting rows from a database and exporting these rows back out to files.</p>
-<p>Typical usage: </p><div class="fragment"><div class="line"><span class="preprocessor">@code</span></div>
-<div class="line">   <span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1db.html">DFdb.db</a> <span class="keyword">import</span> DFdatabase</div>
-<div class="line">   db = DFdatabase(<span class="stringliteral">&#39;/path/to/db_file&#39;</span>, <span class="stringliteral">&#39;geometry&#39;</span>)</div>
-<div class="line">   db.add_relaxed(<span class="stringliteral">&#39;/path/to/structure&#39;</span>)</div>
-<div class="line">   all_relaxed = db.select(relaxed=1)</div>
-<div class="line">   db.export(all_relaxed, filename=<span class="stringliteral">&#39;all_relaxed.traj&#39;</span>)</div>
+<p>Typical usage: </p><div class="fragment"><div class="line"><span class="keyword">from</span> <a class="code" href="namespace_d_fdb_1_1db.html">DFdb.db</a> <span class="keyword">import</span> DFdatabase</div>
+<div class="line">db = DFdatabase(<span class="stringliteral">&#39;/path/to/db_file&#39;</span>, <span class="stringliteral">&#39;geometry&#39;</span>)</div>
+<div class="line">db.add_relaxed(<span class="stringliteral">&#39;/path/to/structure&#39;</span>)</div>
+<div class="line">all_relaxed = db.select(relaxed=1)</div>
+<div class="line">db.export(all_relaxed, filename=<span class="stringliteral">&#39;all_relaxed.traj&#39;</span>)</div>
 <div class="ttc" id="anamespace_d_fdb_1_1db_html"><div class="ttname"><a href="namespace_d_fdb_1_1db.html">DFdb.db</a></div><div class="ttdoc">Main ASE database wrapper.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00001">db.py:1</a></div></div>
-</div><!-- fragment -->  </div></div><!-- contents -->
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

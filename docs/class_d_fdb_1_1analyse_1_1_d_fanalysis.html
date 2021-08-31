@@ -148,12 +148,13 @@ Private Member Functions</h2></td></tr>
 <p>Contains functions to extract a range of comparative properties from lists of AtomsRows, as well as plotting functions to combine their outputs into publication-quality graphs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">skl_kde_samples</td><td><b>int</b> Number of samples to evaluate Scikit-learn KDE plots over when calculating sample means and vaiances. </td></tr>
+    <tr><td class="paramname">skl_kde_samples</td><td><em><b>int</b></em> <br  />
+ Number of samples to evaluate Scikit-learn KDE plots over when calculating sample means and vaiances. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00038">38</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00036">36</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab31c59b13440f2e7f87ea89c54585741"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab31c59b13440f2e7f87ea89c54585741">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -183,7 +184,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Initialise <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html" title="Handles analysis and plotting of comparative results.">DFanalysis</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00041">41</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00039">39</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 </div>
 </div>
@@ -263,26 +264,33 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Plot the lRMSDs of atomic positions between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set. </p>
-<pre class="fragment">   Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or
-   uses Scikit-learn to fit an accurate KDE plot and report mean and variance
-   of the resulting data.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or uses Scikit-learn to fit an accurate KDE plot and report mean and variance of the resulting data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td><b>list</b> List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
-    <tr><td class="paramname">comparisons</td><td><b>list</b> List of comparative lists of AtomsRows with identical chemical formulae to those in reference. </td></tr>
-    <tr><td class="paramname">ignore_H</td><td><b>boolean; Default: False</b> Whether to ignore hydrogens in the RMSD calculation. </td></tr>
-    <tr><td class="paramname">plot_type</td><td><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b> The type of plot to produce. </td></tr>
-    <tr><td class="paramname">reference_name</td><td><b>str; Optional</b> Name of the reference dataset. </td></tr>
-    <tr><td class="paramname">comparison_names</td><td><b>list; Optional</b> List of names of the comparison datasets. </td></tr>
-    <tr><td class="paramname">title</td><td><b>str; Optional</b> Figure title for the graph. </td></tr>
-    <tr><td class="paramname">return_data</td><td><b>boolean; Default: False</b> Whether to include a DataFrame of all the lRMSD data used in plotting. </td></tr>
-    <tr><td class="paramname">savefig</td><td><b>str or None; Optional</b> Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
+    <tr><td class="paramname">reference</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
+    <tr><td class="paramname">comparisons</td><td><em><b>list</b></em> <br  />
+ List of comparative lists of AtomsRows with identical chemical formulae to those in reference. </td></tr>
+    <tr><td class="paramname">ignore_H</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to ignore hydrogens in the RMSD calculation. </td></tr>
+    <tr><td class="paramname">plot_type</td><td><em><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b></em> <br  />
+ The type of plot to produce. </td></tr>
+    <tr><td class="paramname">reference_name</td><td><em><b>str; Optional</b></em> <br  />
+ Name of the reference dataset. </td></tr>
+    <tr><td class="paramname">comparison_names</td><td><em><b>list; Optional</b></em> <br  />
+ List of names of the comparison datasets. </td></tr>
+    <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
+ Figure title for the graph. </td></tr>
+    <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to include a DataFrame of all the lRMSD data used in plotting. </td></tr>
+    <tr><td class="paramname">savefig</td><td><em><b>str or None; Optional</b></em> <br  />
+ Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the position lRMSDs, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00081">81</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00079">79</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">DFdb.analyse.DFanalysis._compare_positions()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -346,19 +354,21 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculate the (least)RMSDs of atomic positions between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets. </p>
-<pre class="fragment">   The molecules in each of the sets should be calculated from the
-   same structure files to ensure identical atomic mapping.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>The molecules in each of the sets should be calculated from the same structure files to ensure identical atomic mapping.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arl1</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
-    <tr><td class="paramname">arl2</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1. </td></tr>
-    <tr><td class="paramname">ignore_H</td><td><b>boolean; Default: False</b> Whether to ignore hydrogens in the RMSD calculation.</td></tr>
+    <tr><td class="paramname">arl1</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
+    <tr><td class="paramname">arl2</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1. </td></tr>
+    <tr><td class="paramname">ignore_H</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to ignore hydrogens in the RMSD calculation.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of lRMSDs with a value for each pair of rows in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00208">208</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00206">206</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -444,25 +454,31 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Plot the RMSDs of atomic forces between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set. </p>
-<pre class="fragment">   Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or
-   uses Scikit-learn to fit an accurate KDE plot and report mean and variance
-   of the resulting data.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or uses Scikit-learn to fit an accurate KDE plot and report mean and variance of the resulting data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td><b>list</b> List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
-    <tr><td class="paramname">comparisons</td><td><b>list</b> List of comparative lists of AtomsRows with identical chemical formulae to those in reference. </td></tr>
-    <tr><td class="paramname">plot_type</td><td><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b> The type of plot to produce. </td></tr>
-    <tr><td class="paramname">reference_name</td><td><b>str; Optional</b> Name of the reference dataset. </td></tr>
-    <tr><td class="paramname">comparison_names</td><td><b>list; Optional</b> List of names of the comparison datasets. </td></tr>
-    <tr><td class="paramname">title</td><td><b>str; Optional</b> Figure title for the graph. </td></tr>
-    <tr><td class="paramname">return_data</td><td><b>boolean; Default: False</b> Whether to include a DataFrame of all the RMSD data used in plotting. </td></tr>
-    <tr><td class="paramname">savefig</td><td><b>str or None; Optional</b> Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
+    <tr><td class="paramname">reference</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
+    <tr><td class="paramname">comparisons</td><td><em><b>list</b></em> <br  />
+ List of comparative lists of AtomsRows with identical chemical formulae to those in reference. </td></tr>
+    <tr><td class="paramname">plot_type</td><td><em><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b></em> <br  />
+ The type of plot to produce. </td></tr>
+    <tr><td class="paramname">reference_name</td><td><em><b>str; Optional</b></em> <br  />
+ Name of the reference dataset. </td></tr>
+    <tr><td class="paramname">comparison_names</td><td><em><b>list; Optional</b></em> <br  />
+ List of names of the comparison datasets. </td></tr>
+    <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
+ Figure title for the graph. </td></tr>
+    <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to include a DataFrame of all the RMSD data used in plotting. </td></tr>
+    <tr><td class="paramname">savefig</td><td><em><b>str or None; Optional</b></em> <br  />
+ Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the force RMSDs, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00276">276</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00274">274</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">DFdb.analyse.DFanalysis._compare_forces()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -520,18 +536,19 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculate the RMSDs of atomic forces between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets. </p>
-<pre class="fragment">   The molecules in each of the sets should be calculated from the
-   same structure files to ensure identical atomic mapping.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>The molecules in each of the sets should be calculated from the same structure files to ensure identical atomic mapping.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arl1</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
-    <tr><td class="paramname">arl2</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1.</td></tr>
+    <tr><td class="paramname">arl1</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
+    <tr><td class="paramname">arl2</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of RMSDs with a value for each pair of rows in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00397">397</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00395">395</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -617,32 +634,33 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Plot the energy differences between identically structured molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set. </p>
-<pre class="fragment">   Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or
-   uses Scikit-learn to fit an accurate KDE plot and report mean and variance
-   of the resulting data.
-
-   Each unique struct_name in a DFdb set must be accompanied by a corresponding
-   energy reference, placed first in that set's list. For example, if there are 4 types
-   of struct_name forming 4 sub-lists in 'reference_set', the first molecule of each
-   sub-list should be a reference structure which all other energies will be compared
-   against, eg. an optimised ground state structure.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or uses Scikit-learn to fit an accurate KDE plot and report mean and variance of the resulting data.</p>
+<p>Each unique struct_name in a <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> set must be accompanied by a corresponding energy reference, placed first in that set's list. For example, if there are 4 types of struct_name forming 4 sub-lists in 'reference_set', the first molecule of each sub-list should be a reference structure which all other energies will be compared against, eg. an optimised ground state structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">reference</td><td><b>list</b> List of lists of AtomsRows, separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
-    <tr><td class="paramname">comparisons</td><td><b>list</b> List of comparative lists of AtomsRows, with sub-lists separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
-    <tr><td class="paramname">plot_type</td><td><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b> The type of plot to produce. </td></tr>
-    <tr><td class="paramname">reference_name</td><td><b>str; Optional</b> Name of the reference dataset. </td></tr>
-    <tr><td class="paramname">comparison_names</td><td><b>list; Optional</b> List of names of the comparison datasets. </td></tr>
-    <tr><td class="paramname">title</td><td><b>str; Optional</b> Figure title for the graph. </td></tr>
-    <tr><td class="paramname">return_data</td><td><b>boolean; Default: False</b> Whether to include a DataFrame of all the relative energy difference data used in </td></tr>
+    <tr><td class="paramname">reference</td><td><em><b>list</b></em> <br  />
+ List of lists of AtomsRows, separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
+    <tr><td class="paramname">comparisons</td><td><em><b>list</b></em> <br  />
+ List of comparative lists of AtomsRows, with sub-lists separated by struct_names. The first entry of each sub-list should be a reliable energy reference. </td></tr>
+    <tr><td class="paramname">plot_type</td><td><em><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b></em> <br  />
+ The type of plot to produce. </td></tr>
+    <tr><td class="paramname">reference_name</td><td><em><b>str; Optional</b></em> <br  />
+ Name of the reference dataset. </td></tr>
+    <tr><td class="paramname">comparison_names</td><td><em><b>list; Optional</b></em> <br  />
+ List of names of the comparison datasets. </td></tr>
+    <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
+ Figure title for the graph. </td></tr>
+    <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to include a DataFrame of all the relative energy difference data used in </td></tr>
     <tr><td class="paramname">plotting.</td><td></td></tr>
-    <tr><td class="paramname">savefig</td><td><b>str or None; Optional</b> Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
+    <tr><td class="paramname">savefig</td><td><em><b>str or None; Optional</b></em> <br  />
+ Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the relative energy differences, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00464">464</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00462">462</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1">DFdb.analyse.DFanalysis._compare_energies()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -700,19 +718,19 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compare relative energies of the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets. </p>
-<pre class="fragment">   Energies of each molecule in the sets get defined relative to a reference structure,
-   eg. to the ground state structure, which will be read from the first AtomsRow. All
-   molecules in each of the sets AND the reference should have the same chemical formulae.
-</pre><dl class="params"><dt>Parameters</dt><dd>
+<p>Energies of each molecule in the sets get defined relative to a reference structure, eg. to the ground state structure, which will be read from the first AtomsRow. All molecules in each of the sets AND the reference should have the same chemical formulae.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arl1</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
-    <tr><td class="paramname">arl2</td><td><b>list</b> List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1.</td></tr>
+    <tr><td class="paramname">arl1</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
+    <tr><td class="paramname">arl2</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of relative energy differences with a value for each pair of rows (excluding the first pair, since these are the reference values) in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00636">636</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00634">634</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -742,7 +760,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00042">42</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00040">40</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
 
