@@ -94,14 +94,27 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_repo_README"></a> <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> is an ASE database wrapper package, made to facilitate the creation, propagation and analysis of comparative benchmarking databases.</p>
 <ul>
-<li>Wraps inputting of unrelaxed structures, relaxed structures and reactions calculated with NEB with a rich tagging system for easy filtering of database entries.</li>
-<li>Contains SLURM submission methods and premade ASE calculators so new optimisations can be submitted to the queue on-the-fly.</li>
+<li>Interactive design, made for use in an iPython Jupyter notebook.</li>
+<li>Wraps inputting of unrelaxed structures, relaxed structures and reactions calculated with NEB into databases with a rich tagging system for easy filtering of database entries.</li>
+<li>Contains HPC job submission methods and premade ASE calculators so new optimisations can be submitted to queues on-the-fly.</li>
 <li>Analysis routines allow the user to perform large-scale comparisons across specified slices of databases.</li>
 </ul>
 <p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> was originally built to aid in benchmarking of DFTB parameter sets against hybrid-DFT calculations. However, it could easily be modified for other benchmarking purposes.</p>
 <h1>Documentation</h1>
-<p>Documentation is extracted from the code and compiled by Doxygen on every push to the main branch. It is available <a href="https://joegilkes.github.io/DFdb_docs/index.html">here</a>.</p>
-<p>This documentation was generated from commit 9345754 </p>
+<p>Documentation is extracted from the code and compiled by Doxygen on every push to the main branch. It is available <a href="https://joegilkes.github.io/DFdb_docs/index.html">here</a>. If you are on the documentation but don't have access to the repository, email me at [<a href="#" onclick="location.href='mai'+'lto:'+'j.g'+'il'+'kes'+'@w'+'arw'+'ic'+'k.a'+'c.'+'uk'; return false;">j.gil<span style="display: none;">.nosp@m.</span>kes@<span style="display: none;">.nosp@m.</span>warwi<span style="display: none;">.nosp@m.</span>ck.a<span style="display: none;">.nosp@m.</span>c.uk</a>] to request access.</p>
+<p><a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> comes with a full tutorial for introducing new users to its usage and guiding them through the process of reproducing results from the two siloxane databases currently provided with the package. For more information, check out <code>notebooks/Tutorial.ipynb</code>.</p>
+<h1>Requirements</h1>
+<p>In order to function correctly, <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> requires the following Python 3 packages:</p>
+<ul>
+<li>NumPy</li>
+<li>Matplotlib</li>
+<li>Pandas</li>
+<li>Seaborn</li>
+<li>Scikit-learn</li>
+<li>ASE</li>
+</ul>
+<p>In addition, to perform DFT and DFTB calculations, MPI-aware binaries of <a href="https://fhi-aims.org/">FHI-aims</a> and <a href="https://dftbplus.org/">DFTB+</a> are required.</p>
+<p>This documentation was generated from commit cf57282 </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
