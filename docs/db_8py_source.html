@@ -459,7 +459,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">else</span>:</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            end_group = <span class="stringliteral">&#39;N/A&#39;</span></div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        polymeric = <span class="keyword">True</span> <span class="keywordflow">if</span> end_group != <span class="stringliteral">&#39;N/A&#39;</span> <span class="keywordflow">else</span> <span class="keyword">False</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        polymeric = <span class="keyword">True</span> <span class="keywordflow">if</span> <span class="stringliteral">&#39;poly_&#39;</span> <span class="keywordflow">in</span> name <span class="keywordflow">else</span> <span class="keyword">False</span></div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">if</span> any(substring <span class="keywordflow">in</span> name <span class="keywordflow">for</span> substring <span class="keywordflow">in</span> self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">modification_list</a>modification_list):</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            pure_struct = <span class="keyword">False</span></div>
