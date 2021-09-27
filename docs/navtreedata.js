@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "DFdb Documentation", "index.html", [
-    [ "DFdb Python Package", "index.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -52,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_d_fdb_2____init_____8py.html",
-"opt__struct__dftb_8py.html#a799b52933e0643b0f1b8d77d03e7e4d6"
+"opt__struct__dftb_8py.html#a883745fa27f960769f43fcb0f2aac4fc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
