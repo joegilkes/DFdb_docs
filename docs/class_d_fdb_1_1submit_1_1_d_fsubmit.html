@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('class_d_fdb_1_1submit_1_1_d_fsubmit.ht
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_d_fdb_1_1submit_1_1_d_fsubmit-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DFdb.submit.DFsubmit Class Reference</div>  </div>
@@ -106,7 +107,7 @@ $(document).ready(function(){initNavTree('class_d_fdb_1_1submit_1_1_d_fsubmit.ht
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit__coll__graph.png" border="0" usemap="#a_d_fdb_8submit_8_d_fsubmit_coll__map" alt="Collaboration graph"/></div>
 <map name="a_d_fdb_8submit_8_d_fsubmit_coll__map" id="a_d_fdb_8submit_8_d_fsubmit_coll__map">
-<area shape="rect" title="Handles communication with various queueing systems." alt="" coords="5,5,160,200"/>
+<area shape="rect" title="Handles communication with various queueing systems." alt="" coords="5,5,160,215"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,6 +139,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ab35c61190866e842e877cf1cec4d0f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb9b7d9ea0ec1990a73c3299ebcb258"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aabb9b7d9ea0ec1990a73c3299ebcb258">dftb_skf_paths</a></td></tr>
 <tr class="separator:aabb9b7d9ea0ec1990a73c3299ebcb258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa701f87b55736cefe4d7c9c87a4e0709"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">_preamble_writer</a> (self, struct_name, job_name)</td></tr>
+<tr class="memdesc:aa701f87b55736cefe4d7c9c87a4e0709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend for creating job submission system preamble.  <a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">More...</a><br /></td></tr>
+<tr class="separator:aa701f87b55736cefe4d7c9c87a4e0709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles communication with various queueing systems. </p>
@@ -204,20 +211,20 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        self.options = options</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        self.subfolder = subfolder</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            os.mkdir(self.calc_folder)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> self.subfolder <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            self.calc_folder = f<span class="stringliteral">&#39;{self.calc_folder}/{self.subfolder}&#39;</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> self.subfolder <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            self.calc_folder = f<span class="stringliteral">&#39;{self.calc_folder}/{self.subfolder}&#39;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            os.makedirs(self.calc_folder)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.isdir(self.calc_folder):</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            os.mkdir(self.calc_folder)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Orac&#39;</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Orac&#39;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Orac&#39;</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Orac&#39;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Avon&#39;</span>: <span class="comment"># Ready to go but not implemented yet.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Avon&#39;</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Avon&#39;</span>: <span class="comment"># Ready to go but not implemented yet.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Avon&#39;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;SLURM/Archer2&#39;</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Archer2&#39;</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            self.qsub_command = <span class="stringliteral">&#39;sbatch&#39;</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">elif</span> self.options.o[<span class="stringliteral">&#39;submission_system&#39;</span>] == <span class="stringliteral">&#39;PBS/Young&#39;</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            self.sub_sys = <span class="stringliteral">&#39;Young&#39;</span></div>
@@ -278,7 +285,18 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00098">98</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">DFdb.submit.DFsubmit.options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit_a1bc1765884b1e54bcd4b8d8dcb4a83f5_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1submit_1_1_d_fsubmit_a1bc1765884b1e54bcd4b8d8dcb4a83f5_cgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a1bc1765884b1e54bcd4b8d8dcb4a83f5_cgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a1bc1765884b1e54bcd4b8d8dcb4a83f5_cgraph">
+<area shape="rect" title="Add a structure to the queue for geometry relaxation." alt="" coords="5,13,189,39"/>
+<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709" title="Backend for creating job submission system preamble." alt="" coords="237,5,395,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -318,9 +336,93 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00196">196</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00167">167</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">DFdb.submit.DFsubmit.options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit_a6582c88f2259936ac65ca86595904cb5_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1submit_1_1_d_fsubmit_a6582c88f2259936ac65ca86595904cb5_cgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a6582c88f2259936ac65ca86595904cb5_cgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a6582c88f2259936ac65ca86595904cb5_cgraph">
+<area shape="rect" title="Add a batch job to the queue to obtain updated energies and forces." alt="" coords="5,5,195,47"/>
+<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709" title="Backend for creating job submission system preamble." alt="" coords="243,5,400,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa701f87b55736cefe4d7c9c87a4e0709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa701f87b55736cefe4d7c9c87a4e0709">&#9670;&nbsp;</a></span>_preamble_writer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DFdb.submit.DFsubmit._preamble_writer </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>struct_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>job_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Backend for creating job submission system preamble. </p>
+<p>Uses the provided job submission system defined by 'submission_system' in <a class="el" href="namespace_d_fdb_1_1options.html" title="DFdb options module.">DFdb.options</a> to write the system-specific preamble for the final job submission script.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">struct_name</td><td><em><b>str</b></em> <br  />
+ The row's struct_name. </td></tr>
+    <tr><td class="paramname">job_name</td><td><em><b>str</b></em> <br  />
+ The job name extracted from the row's struct_name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>preamble, a string containing the starting section of the job submission script. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00245">245</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<div class="fragment"></div><!-- fragment -->
+<p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">DFdb.submit.DFsubmit.options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph.png" border="0" usemap="#aclass_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph">
+<area shape="rect" title="Backend for creating job submission system preamble." alt="" coords="243,35,400,76"/>
+<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5" title="Add a batch job to the queue to obtain updated energies and forces." alt="" coords="5,5,195,47"/>
+<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5" title="Add a structure to the queue for geometry relaxation." alt="" coords="8,71,192,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -355,7 +457,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00050">50</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>.</p>
 
 </div>
 </div>
@@ -387,9 +489,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00063">63</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00060">60</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +507,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00064">64</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00061">61</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
 </div>
 </div>

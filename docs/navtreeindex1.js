@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"opt__struct__dftb_8py.html#a799b52933e0643b0f1b8d77d03e7e4d6":[2,0,0,1,4,9],
 "opt__struct__dftb_8py.html#a883745fa27f960769f43fcb0f2aac4fc":[2,0,0,1,4,1],
 "opt__struct__dftb_8py.html#a9aa769cf8c92eda087af4174606a4106":[2,0,0,1,4,7],
 "opt__struct__dftb_8py.html#a9f907e2ad2de32edb9da71ffbb5f1e90":[2,0,0,1,4,16],

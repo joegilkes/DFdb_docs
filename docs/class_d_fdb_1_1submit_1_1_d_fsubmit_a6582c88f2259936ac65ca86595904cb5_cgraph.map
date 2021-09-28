@@ -1,0 +1,4 @@
+<map id="DFdb.submit.DFsubmit.batch_get_energies" name="DFdb.submit.DFsubmit.batch_get_energies">
+<area shape="rect" id="node1" title="Add a batch job to the queue to obtain updated energies and forces." alt="" coords="5,5,195,47"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709" title="Backend for creating job submission system preamble." alt="" coords="243,5,400,47"/>
+</map>
