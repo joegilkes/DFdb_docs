@@ -294,7 +294,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        s += <span class="stringliteral">&#39;\n&#39;</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        s += f<span class="stringliteral">&#39;if [ &quot;$PWD&quot; != &quot;{os.path.abspath(self.calc_folder + &quot;/&quot; + struct_name)}&quot; ]\n&#39;</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        s += <span class="stringliteral">&#39;then\n&#39;</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        s += f<span class="stringliteral">&#39;    cd &quot;{self.calc_folder}/{struct_name}&quot;\n&#39;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        s += f<span class="stringliteral">&#39;    cd &quot;{os.path.abspath(self.calc_folder + &quot;/&quot; + struct_name)}&quot;\n&#39;</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        s += <span class="stringliteral">&#39;fi\n&#39;</span></div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        s += <span class="stringliteral">&#39;\n&#39;</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
