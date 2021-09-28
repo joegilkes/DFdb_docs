@@ -51,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_d_fdb_2____init_____8py.html",
-"opt__struct__dftb_8py.html#a799b52933e0643b0f1b8d77d03e7e4d6"
+"opt__struct__aims_8py.html#ab85642e4a49068c05e59eda38769be59"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

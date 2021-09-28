@@ -500,7 +500,7 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment">    #</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment">    #    In the event that a DFT calculation was done, report back the functional.</span></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="comment">    #    In the event that a DFTB calculation was done, report back the parameter</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">    #    set.</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">    #    set. In the event that an xTB calculation was done, report back the parameter set.</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">    #</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">    #</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="comment">    # @param                    atoms           ***ASE Atoms object*** &lt;br&gt;</span></div>
@@ -519,73 +519,75 @@ $(document).ready(function(){initNavTree('db_8py_source.html',''); initResizable
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        calc_dict = {</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            <span class="stringliteral">&#39;DFTcalc&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;aims&#39;</span> <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
 <div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <span class="stringliteral">&#39;DFTBcalc&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;dftb&#39;</span> <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="stringliteral">&#39;DFTfunctional&#39;</span>: calc.parameters.xc <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;aims&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span>,</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            <span class="stringliteral">&#39;DFTBparamset&#39;</span>: atoms.info[<span class="stringliteral">&#39;paramset&#39;</span>] <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;dftb&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        extra_data = calc.parameters</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> calc_dict, extra_data</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="stringliteral">&#39;xTBcalc&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;xtb&#39;</span> <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            <span class="stringliteral">&#39;DFTfunctional&#39;</span>: calc.parameters.xc <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;aims&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span>,</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <span class="stringliteral">&#39;DFTBparamset&#39;</span>: atoms.info[<span class="stringliteral">&#39;paramset&#39;</span>] <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;dftb&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span>,</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            <span class="stringliteral">&#39;xTBparamset&#39;</span>: atoms.info[<span class="stringliteral">&#39;paramset&#39;</span>] <span class="keywordflow">if</span> calc.name==<span class="stringliteral">&#39;xtb&#39;</span> <span class="keywordflow">else</span> <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        extra_data = calc.parameters</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">## @brief Inbuilt method for parsing reaction details from a finished NEB calculation.</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment">    #    Assumes the highest energy image in `reaction` is the transition state,</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">    #    and tags it as such. Returns a list of dictionaries, one for each image.</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">    # @param                    reaction        ***list*** &lt;br&gt;</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment">    #                List of ASE Atoms objects corresponding to the finished reaction path.</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment">    # @param                    reac_file       ***str*** &lt;br&gt;</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">    #                Path to NEB trajectory.</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment">    # @return</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">    #            dict_list, a list of dictionaries containing the key-value pairs which</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">    #            will become columns and data in a database, and data_list, a list of</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">    #            dictionaries which also gets attached to the resulting database rows</span></div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">    #            but cannot be used for selecting rows (just extra metadata from the</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">    #            calculator).</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">    #</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">    # @protected</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">  456</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">_reac_parser</a>(self, reaction, reac_file):</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        energies = np.zeros(len(reaction))</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keywordflow">for</span> i, image <span class="keywordflow">in</span> enumerate(reaction):</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            energies[i] = image.get_potential_energy()</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        ts_index = np.argmax(energies)</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        reac_id = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata[<span class="stringliteral">&#39;num_reacs&#39;</span>]+1</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        subfolder, name_ext = os.path.split(reac_file)</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        reac_name, ext = os.path.splitext(name_ext)</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;Cross_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            reac_type = <span class="stringliteral">&#39;crosslinking&#39;</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">elif</span> <span class="stringliteral">&#39;Hyd_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            reac_type = <span class="stringliteral">&#39;hydration&#39;</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            reac_type = <span class="stringliteral">&#39;&#39;</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        dict_list = []</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        data_list = []</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">for</span> i, image <span class="keywordflow">in</span> enumerate(reaction):</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            reac_dict = {</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                <span class="stringliteral">&#39;reac_name&#39;</span>: reac_name,</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                <span class="stringliteral">&#39;reac_id&#39;</span>: reac_id,</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                <span class="stringliteral">&#39;reac_TS&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==ts_index <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                <span class="stringliteral">&#39;reac_start&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==0 <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="stringliteral">&#39;reac_end&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==len(reaction) <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                <span class="stringliteral">&#39;reac_type&#39;</span>: reac_type</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            }</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            calc_dict, calc_data = self.__calc_parser__(image)</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            reac_dict.update(calc_dict)</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            dict_list.append(calc_dict)</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            data_list.append(calc_data)</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160; </div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <span class="keywordflow">return</span> dict_list, data_list</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">return</span> calc_dict, extra_data</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="comment">## @brief Inbuilt method for parsing reaction details from a finished NEB calculation.</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">    #    Assumes the highest energy image in `reaction` is the transition state,</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment">    #    and tags it as such. Returns a list of dictionaries, one for each image.</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment">    # @param                    reaction        ***list*** &lt;br&gt;</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">    #                List of ASE Atoms objects corresponding to the finished reaction path.</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">    # @param                    reac_file       ***str*** &lt;br&gt;</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment">    #                Path to NEB trajectory.</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="comment">    # @return</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="comment">    #            dict_list, a list of dictionaries containing the key-value pairs which</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">    #            will become columns and data in a database, and data_list, a list of</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">    #            dictionaries which also gets attached to the resulting database rows</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">    #            but cannot be used for selecting rows (just extra metadata from the</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment">    #            calculator).</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">    #</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment">    # @protected</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno"><a class="line" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">  458</a></span>&#160;    <span class="keyword">def </span><a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">_reac_parser</a>(self, reaction, reac_file):</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        energies = np.zeros(len(reaction))</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">for</span> i, image <span class="keywordflow">in</span> enumerate(reaction):</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            energies[i] = image.get_potential_energy()</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        ts_index = np.argmax(energies)</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        reac_id = self.<a class="code" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">dc</a>dc.metadata[<span class="stringliteral">&#39;num_reacs&#39;</span>]+1</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        subfolder, name_ext = os.path.split(reac_file)</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        reac_name, ext = os.path.splitext(name_ext)</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;Cross_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            reac_type = <span class="stringliteral">&#39;crosslinking&#39;</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">elif</span> <span class="stringliteral">&#39;Hyd_&#39;</span> <span class="keywordflow">in</span> reac_name:</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            reac_type = <span class="stringliteral">&#39;hydration&#39;</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            reac_type = <span class="stringliteral">&#39;&#39;</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        dict_list = []</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        data_list = []</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keywordflow">for</span> i, image <span class="keywordflow">in</span> enumerate(reaction):</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;            reac_dict = {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                <span class="stringliteral">&#39;reac_name&#39;</span>: reac_name,</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                <span class="stringliteral">&#39;reac_id&#39;</span>: reac_id,</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="stringliteral">&#39;reac_TS&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==ts_index <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                <span class="stringliteral">&#39;reac_start&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==0 <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                <span class="stringliteral">&#39;reac_end&#39;</span>: <span class="keyword">True</span> <span class="keywordflow">if</span> i==len(reaction) <span class="keywordflow">else</span> <span class="keyword">False</span>,</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                <span class="stringliteral">&#39;reac_type&#39;</span>: reac_type</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            calc_dict, calc_data = self.__calc_parser__(image)</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            reac_dict.update(calc_dict)</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            dict_list.append(calc_dict)</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            data_list.append(calc_data)</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keywordflow">return</span> dict_list, data_list</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
 <div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html">DFdb.db.DFdatabase</a></div><div class="ttdoc">Wraps ASE database to add functionality.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00046">db.py:46</a></div></div>
-<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a0f6c50a12b0364e484936533a11f4119"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">DFdb.db.DFdatabase._reac_parser</a></div><div class="ttdeci">def _reac_parser(self, reaction, reac_file)</div><div class="ttdoc">Inbuilt method for parsing reaction details from a finished NEB calculation.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00456">db.py:456</a></div></div>
+<div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a0f6c50a12b0364e484936533a11f4119"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119">DFdb.db.DFdatabase._reac_parser</a></div><div class="ttdeci">def _reac_parser(self, reaction, reac_file)</div><div class="ttdoc">Inbuilt method for parsing reaction details from a finished NEB calculation.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00458">db.py:458</a></div></div>
 <div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a278a257be836da9fc578abce6161ae0a"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">DFdb.db.DFdatabase.add_batch</a></div><div class="ttdeci">def add_batch(self, traj_file, relaxed, eqm_struct=None)</div><div class="ttdoc">Loads all structures in a single .traj file into a database.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00152">db.py:152</a></div></div>
 <div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a555d147579a2f6d4ea07ec37ff18c29e"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a555d147579a2f6d4ea07ec37ff18c29e">DFdb.db.DFdatabase.__init__</a></div><div class="ttdeci">def __init__(self, db_file, mode, options=None)</div><div class="ttdoc">Initialise DFdatabase object.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00056">db.py:56</a></div></div>
 <div class="ttc" id="aclass_d_fdb_1_1db_1_1_d_fdatabase_html_a61176dcdae68f6bf2b4665532f64c749"><div class="ttname"><a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749">DFdb.db.DFdatabase._calc_parser</a></div><div class="ttdeci">def _calc_parser(self, atoms)</div><div class="ttdoc">Inbuilt method for parsing calculator details from a finished calculation.</div><div class="ttdef"><b>Definition:</b> <a href="db_8py_source.html#l00423">db.py:423</a></div></div>

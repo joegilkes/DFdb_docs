@@ -94,5 +94,24 @@ var namespace_d_fdb__scripts =
       [ "opt", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#a55c099a31ce3d6db6b628c9baa7f06d8", null ],
       [ "fmax", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#a602a0f13b86528bd8a88f2d238ecfaa9", null ],
       [ "writer", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#ae321470872b5570f6132e4a4bc8ac6bd", null ]
+    ] ],
+    [ "opt_struct_xtb", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html", [
+      [ "cwd", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a404825f47025672e57d8b3eaa79cc632", null ],
+      [ "parser", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#af6e777cac5cd2344c40859ce97ac1879", null ],
+      [ "help", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a94e3ff52da98a05a912359222b47aa88", null ],
+      [ "dest", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#aad54147b097c2fdd62cab27b41852f77", null ],
+      [ "choices", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a6ad1a49562e6ad0a3d31d1cf63f564e3", null ],
+      [ "default", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#aa308aa25d76fdd4f817597f3e2b40aee", null ],
+      [ "args", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#af46e5c6d95e64809ad04920cf2a024b3", null ],
+      [ "molfile", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#ab9eaed084a89c5c9c2e41d67206527a5", null ],
+      [ "molname", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a04f4712588e2891dab15aa9ee21b907e", null ],
+      [ "paramset", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a9a75f1b67a4486da92130873c54a7378", null ],
+      [ "out_ext", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#af76906b02fac2de4547118e0be1bd341", null ],
+      [ "do_continue", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a1c8df83bec7a7b9be90c575bf9ab097b", null ],
+      [ "molecule", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a51033389e0fa1df6ade4eeb119a53610", null ],
+      [ "calc", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a5ed6f2dd4a9eaa8cc8c0790c7970665a", null ],
+      [ "opt", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a74230347b683db5995fd7eea4204bf53", null ],
+      [ "fmax", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#aeaaf3af3a927bdb1493f49d715a6b8e7", null ],
+      [ "writer", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a0b83604587636f0bc3702478c6275107", null ]
     ] ]
 ];
