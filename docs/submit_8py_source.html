@@ -212,7 +212,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        s += <span class="stringliteral">&#39;export MKL_NUM_THREADS=1\n&#39;</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        s += <span class="stringliteral">&#39;export MKL_DYNAMIC=FALSE\n&#39;</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        s += f<span class="stringliteral">&#39;if [ &quot;$PWD&quot; != &quot;{self.calc_folder}/{struct_name}&quot; ]; then cd &quot;{self.calc_folder}/{struct_name}&quot; fi&#39;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        s += f<span class="stringliteral">&#39;if [ &quot;$PWD&quot; != &quot;{self.calc_folder}/{struct_name}&quot; ]; then cd &quot;{self.calc_folder}/{struct_name}&quot; fi\n&#39;</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> calc_type == <span class="stringliteral">&#39;aims&#39;</span>:</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            s += f<span class="stringliteral">&#39;export ASE_AIMS_COMMAND=&quot;{self.options.o[&quot;aims_exec&quot;]} &gt; {struct_name}.out&quot;\n&#39;</span></div>
@@ -286,7 +286,7 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        s += <span class="stringliteral">&#39;export MKL_NUM_THREADS=1\n&#39;</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        s += <span class="stringliteral">&#39;export MKL_DYNAMIC=FALSE\n&#39;</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        s += f<span class="stringliteral">&#39;if [ &quot;$PWD&quot; != &quot;{self.calc_folder}/{struct_name}&quot; ]; then cd &quot;{self.calc_folder}/{struct_name}&quot; fi&#39;</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        s += f<span class="stringliteral">&#39;if [ &quot;$PWD&quot; != &quot;{self.calc_folder}/{struct_name}&quot; ]; then cd &quot;{self.calc_folder}/{struct_name}&quot; fi\n&#39;</span></div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> calc_type == <span class="stringliteral">&#39;aims&#39;</span>:</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            s += f<span class="stringliteral">&#39;export ASE_AIMS_COMMAND=&quot;{self.options.o[&quot;aims_exec&quot;]} &gt; {struct_name}.out&quot;\n&#39;</span></div>
