@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"opt__struct__aims_8py.html#aafae2247199fe8bb4c9c21c49dac6249":[2,0,0,1,3,18],
+"opt__struct__aims_8py.html#ab74cdfe96e6f87e5d6b74d9291e0b59b":[2,0,0,1,3,9],
 "opt__struct__aims_8py.html#ab85642e4a49068c05e59eda38769be59":[2,0,0,1,3,17],
 "opt__struct__aims_8py.html#ab8a9ed0d2dbf852a4126967a038d831a":[2,0,0,1,3,12],
 "opt__struct__aims_8py.html#ac2dd55ddfa552e7e39c08942b111d1dd":[2,0,0,1,3,14],

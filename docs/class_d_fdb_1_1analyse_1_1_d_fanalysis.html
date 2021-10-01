@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('class_d_fdb_1_1analyse_1_1_d_fanalysis
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis__coll__graph.png" border="0" usemap="#a_d_fdb_8analyse_8_d_fanalysis_coll__map" alt="Collaboration graph"/></div>
 <map name="a_d_fdb_8analyse_8_d_fanalysis_coll__map" id="a_d_fdb_8analyse_8_d_fanalysis_coll__map">
-<area shape="rect" title="Handles analysis and plotting of comparative results." alt="" coords="5,5,183,171"/>
+<area shape="rect" title="Handles analysis and plotting of comparative results." alt="" coords="5,5,208,200"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -119,6 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2193b9959e668738e07d9a011e410c8b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">plot_position_difference</a> (self, reference, comparisons, ignore_H=False, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None)</td></tr>
 <tr class="memdesc:a2193b9959e668738e07d9a011e410c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the lRMSDs of atomic positions between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">More...</a><br /></td></tr>
 <tr class="separator:a2193b9959e668738e07d9a011e410c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc83fa09f59eecea96e6c32ec611b02"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02">plot_bond_length_difference</a> (self, reference, comparisons, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None, kde_bw_minmax=[-1.0, 1.0])</td></tr>
+<tr class="memdesc:aebc83fa09f59eecea96e6c32ec611b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the mean differences in bond lengths between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02">More...</a><br /></td></tr>
+<tr class="separator:aebc83fa09f59eecea96e6c32ec611b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389811818193feaeae4971730e4890c5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">plot_force_difference</a> (self, reference, comparisons, plot_type='hist', reference_name=None, comparison_names=None, title=None, return_data=False, savefig=None)</td></tr>
 <tr class="memdesc:a389811818193feaeae4971730e4890c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the RMSDs of atomic forces between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">More...</a><br /></td></tr>
 <tr class="separator:a389811818193feaeae4971730e4890c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +139,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a5a3e24f866b66faca3cb57c0bc1b9234"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">_compare_positions</a> (self, arl1, arl2, ignore_H=False)</td></tr>
 <tr class="memdesc:a5a3e24f866b66faca3cb57c0bc1b9234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the (least)RMSDs of atomic positions between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">More...</a><br /></td></tr>
 <tr class="separator:a5a3e24f866b66faca3cb57c0bc1b9234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2153faca8410c0904855ad890dca9477"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2153faca8410c0904855ad890dca9477">_compare_bond_lengths</a> (self, arl1, arl2)</td></tr>
+<tr class="memdesc:a2153faca8410c0904855ad890dca9477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the mean differences in bond lengths between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2153faca8410c0904855ad890dca9477">More...</a><br /></td></tr>
+<tr class="separator:a2153faca8410c0904855ad890dca9477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fdea4dbbfe2611fb9b193d708b07073"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">_compare_forces</a> (self, arl1, arl2)</td></tr>
 <tr class="memdesc:a5fdea4dbbfe2611fb9b193d708b07073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the RMSDs of atomic forces between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">More...</a><br /></td></tr>
 <tr class="separator:a5fdea4dbbfe2611fb9b193d708b07073"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +160,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00036">36</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00037">37</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab31c59b13440f2e7f87ea89c54585741"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab31c59b13440f2e7f87ea89c54585741">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -184,7 +190,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Initialise <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html" title="Handles analysis and plotting of comparative results.">DFanalysis</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00039">39</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00040">40</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 </div>
 </div>
@@ -290,7 +296,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the position lRMSDs, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00079">79</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00080">80</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5a3e24f866b66faca3cb57c0bc1b9234">DFdb.analyse.DFanalysis._compare_positions()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -380,6 +386,195 @@ Private Member Functions</h2></td></tr>
 <map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a5a3e24f866b66faca3cb57c0bc1b9234_icgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a5a3e24f866b66faca3cb57c0bc1b9234_icgraph">
 <area shape="rect" title="Calculate the (least)RMSDs of atomic positions between the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
 <area shape="rect" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b" title="Plot the lRMSDs of atomic positions between the molecules in DFdb sets compared to a reference set." alt="" coords="5,5,196,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebc83fa09f59eecea96e6c32ec611b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc83fa09f59eecea96e6c32ec611b02">&#9670;&nbsp;</a></span>plot_bond_length_difference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DFdb.analyse.DFanalysis.plot_bond_length_difference </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>reference</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>comparisons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>plot_type</em> = <code>'hist'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>reference_name</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>comparison_names</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>title</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>return_data</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>savefig</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>kde_bw_minmax</em> = <code>[-1.0,&#160;1.0]</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot the mean differences in bond lengths between the molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set. </p>
+<p>Either uses Seaborn to produce a rough histogram or histogram+KDE plot, or uses Scikit-learn to fit an accurate KDE plot and report mean and variance of the resulting data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows with identical chemical formulae to those in comparison. </td></tr>
+    <tr><td class="paramname">comparisons</td><td><em><b>list</b></em> <br  />
+ List of comparative lists of AtomsRows with identical chemical formulae to those in reference. </td></tr>
+    <tr><td class="paramname">plot_type</td><td><em><b>str; Default: hist; Choices: (hist, hist+kde, kde)</b></em> <br  />
+ The type of plot to produce. </td></tr>
+    <tr><td class="paramname">reference_name</td><td><em><b>str; Optional</b></em> <br  />
+ Name of the reference dataset. </td></tr>
+    <tr><td class="paramname">comparison_names</td><td><em><b>list; Optional</b></em> <br  />
+ List of names of the comparison datasets. </td></tr>
+    <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
+ Figure title for the graph. </td></tr>
+    <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to include a DataFrame of all the RMSD data used in plotting. </td></tr>
+    <tr><td class="paramname">savefig</td><td><em><b>str or None; Optional</b></em> <br  />
+ Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed. </td></tr>
+    <tr><td class="paramname">kde_bw_minmax</td><td><em><b>list; Default: [-1.0, 1.0]</b></em> <br  />
+ The minimum/maximum KDE bandwidths to search over when evaluating an accurate KDE (plot_type='kde'). Should be laid out as [min, max]. These values are passed into numpy.logspace(), so they should be interpreted as 10^min and 10^max. This option is included here as a failsafe if the optimised bandwith is clearly being evaluated to be too low (overfitting of data).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the mean bond length differences, otherwise this value returns None. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00291">291</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<div class="fragment"></div><!-- fragment -->
+<p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2153faca8410c0904855ad890dca9477">DFdb.analyse.DFanalysis._compare_bond_lengths()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_aebc83fa09f59eecea96e6c32ec611b02_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aebc83fa09f59eecea96e6c32ec611b02_cgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aebc83fa09f59eecea96e6c32ec611b02_cgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aebc83fa09f59eecea96e6c32ec611b02_cgraph">
+<area shape="rect" title="Plot the mean differences in bond lengths between the molecules in DFdb sets compared to a reference ..." alt="" coords="5,5,196,47"/>
+<area shape="rect" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2153faca8410c0904855ad890dca9477" title="Calculate the mean differences in bond lengths between the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2153faca8410c0904855ad890dca9477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2153faca8410c0904855ad890dca9477">&#9670;&nbsp;</a></span>_compare_bond_lengths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DFdb.analyse.DFanalysis._compare_bond_lengths </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arl1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>arl2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the mean differences in bond lengths between the molecules in two <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets. </p>
+<p>The molecules in each of the sets should be calculated from the same structure files to ensure identical atomic mapping.</p>
+<p>Separates out bond length differences by bond type, providing alist of bond length differences for each unique bond type encountered in the molecules.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arl1</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari2. </td></tr>
+    <tr><td class="paramname">arl2</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows containing a set of AtomsRows with identical chemical formulae to those in ari1.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of bond length differences with a value for each pair of rows in arl1 and arl2, alongside a list of corresponding bond type descriptors (eg. 'C-H'). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00466">466</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<div class="fragment"></div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02">DFdb.analyse.DFanalysis.plot_bond_length_difference()</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_a2153faca8410c0904855ad890dca9477_icgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a2153faca8410c0904855ad890dca9477_icgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a2153faca8410c0904855ad890dca9477_icgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a2153faca8410c0904855ad890dca9477_icgraph">
+<area shape="rect" title="Calculate the mean differences in bond lengths between the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
+<area shape="rect" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02" title="Plot the mean differences in bond lengths between the molecules in DFdb sets compared to a reference ..." alt="" coords="5,5,196,47"/>
 </map>
 </div>
 
@@ -478,14 +673,14 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the force RMSDs, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00285">285</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00581">581</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073">DFdb.analyse.DFanalysis._compare_forces()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_a389811818193feaeae4971730e4890c5_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a389811818193feaeae4971730e4890c5_cgraph" alt=""/></div>
 <map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a389811818193feaeae4971730e4890c5_cgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a389811818193feaeae4971730e4890c5_cgraph">
 <area shape="rect" title="Plot the RMSDs of atomic forces between the molecules in DFdb sets compared to a reference set." alt="" coords="5,5,196,47"/>
@@ -548,14 +743,14 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of RMSDs with a value for each pair of rows in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00410">410</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00706">706</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_a5fdea4dbbfe2611fb9b193d708b07073_icgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a5fdea4dbbfe2611fb9b193d708b07073_icgraph" alt=""/></div>
 <map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a5fdea4dbbfe2611fb9b193d708b07073_icgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a5fdea4dbbfe2611fb9b193d708b07073_icgraph">
 <area shape="rect" title="Calculate the RMSDs of atomic forces between the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
@@ -660,14 +855,14 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the Scikit-learn implementation is used, the first return value is a Pandas DataFrame containing the accurate results from the KDE fit. Otherwise, this value returns None. If return_data is True then the second return value is a Pandas DataFrame of all the relative energy differences, otherwise this value returns None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00477">477</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00773">773</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1">DFdb.analyse.DFanalysis._compare_energies()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0">DFdb.analyse.DFanalysis.skl_kde_samples</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_aa511144de588c1f1b3b3c8b66aeea81b_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aa511144de588c1f1b3b3c8b66aeea81b_cgraph" alt=""/></div>
 <map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aa511144de588c1f1b3b3c8b66aeea81b_cgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_aa511144de588c1f1b3b3c8b66aeea81b_cgraph">
 <area shape="rect" title="Plot the energy differences between identically structured molecules in DFdb sets compared to a refer..." alt="" coords="5,5,196,47"/>
@@ -730,14 +925,14 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A list of relative energy differences with a value for each pair of rows (excluding the first pair, since these are the reference values) in arl1 and arl2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00653">653</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00949">949</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>.</p>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis_a103d084d38614a6fd33388eeb26aedb1_icgraph.png" border="0" usemap="#aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a103d084d38614a6fd33388eeb26aedb1_icgraph" alt=""/></div>
 <map name="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a103d084d38614a6fd33388eeb26aedb1_icgraph" id="aclass_d_fdb_1_1analyse_1_1_d_fanalysis_a103d084d38614a6fd33388eeb26aedb1_icgraph">
 <area shape="rect" title="Compare relative energies of the molecules in two DFdb sets." alt="" coords="244,5,415,47"/>
@@ -760,9 +955,9 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00040">40</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l00041">41</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02">DFdb.analyse.DFanalysis.plot_bond_length_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aa511144de588c1f1b3b3c8b66aeea81b">DFdb.analyse.DFanalysis.plot_energy_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a389811818193feaeae4971730e4890c5">DFdb.analyse.DFanalysis.plot_force_difference()</a>, and <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2193b9959e668738e07d9a011e410c8b">DFdb.analyse.DFanalysis.plot_position_difference()</a>.</p>
 
 </div>
 </div>
