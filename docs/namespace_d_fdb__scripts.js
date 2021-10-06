@@ -42,6 +42,22 @@ var namespace_d_fdb__scripts =
       [ "forces", "namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a50ebceba0ed93b9dc03271c7bd0902d7", null ],
       [ "energy", "namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a96083a6333acba8cf4af7b87683ed753", null ]
     ] ],
+    [ "batch_calc_xtb", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html", [
+      [ "cwd", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#addb73fecf3fc25ddb7861af10e1fc76d", null ],
+      [ "parser", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a1ee9fbf97fc29000580f9eb98ffd962e", null ],
+      [ "help", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#ab46290583605bb9269865b3ddc051633", null ],
+      [ "dest", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a65bd26f608ea67eb0a389172c738f40e", null ],
+      [ "args", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#af263a5f9d5eead079a58e54e0aa95b83", null ],
+      [ "batchname", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a08d3626745fd8d671d6bce58e358adbd", null ],
+      [ "paramset", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a8055c7bea9afef52d4cdf38f25cb3bff", null ],
+      [ "out_ext", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a3136ab35d7d100e059ef4901de84e249", null ],
+      [ "batch", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a3502ffa861f3213f6a165946f91557bb", null ],
+      [ "calc", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#aadcf35c3326e139f1b1645e2dc96dcc7", null ],
+      [ "writer", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a2d8117abcfdd20efcffb7334cbd5f149", null ],
+      [ "label", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a43455fc5441567bf3e559e6633701cab", null ],
+      [ "forces", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#aec9f1b040a5e67e55b07fdb4656e663c", null ],
+      [ "energy", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#ac2ef86c4730d8c39561401f309854fb3", null ]
+    ] ],
     [ "opt_struct_aims", "namespace_d_fdb__scripts_1_1opt__struct__aims.html", [
       [ "cwd", "namespace_d_fdb__scripts_1_1opt__struct__aims.html#a5eb9382b9a9449f240ef4bef15b9e8ea", null ],
       [ "parser", "namespace_d_fdb__scripts_1_1opt__struct__aims.html#aa15c5a338a99122d645e267b1e4a5369", null ],
