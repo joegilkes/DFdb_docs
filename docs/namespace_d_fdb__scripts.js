@@ -42,6 +42,22 @@ var namespace_d_fdb__scripts =
       [ "forces", "namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a50ebceba0ed93b9dc03271c7bd0902d7", null ],
       [ "energy", "namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a96083a6333acba8cf4af7b87683ed753", null ]
     ] ],
+    [ "batch_calc_gulp", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html", [
+      [ "cwd", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a4cf690f90994c4ae326e419dd0d17b53", null ],
+      [ "parser", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a5928acc578c05c8597f6f11aac27ef53", null ],
+      [ "help", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a97807548306ae5f34baaafdb7e6ddf12", null ],
+      [ "dest", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a7cc1acf11b1825a83a66369a8894c6ba", null ],
+      [ "args", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a215ae10b190da6b2371264f32c9fd378", null ],
+      [ "batchname", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#ab5f8b8c7df5b072840b7713a937a6e17", null ],
+      [ "ff", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a421d9b3d777d48ac180a0e928641ec9f", null ],
+      [ "out_ext", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#ac3ad5d298a6050ed9aa21997a2c79ee1", null ],
+      [ "batch", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a9bdb419bbf83e40b3f6d64466303c0c0", null ],
+      [ "calc", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#aaeb8894070a6706505d5f271870911df", null ],
+      [ "writer", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#ad2cc25f4f85cce1e216d6ea9f4898f7a", null ],
+      [ "label", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#a2f8e2945c547bc7ad6a861afcdd0a1dd", null ],
+      [ "forces", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#ac813898b82863f83ca7b2548674f2ec7", null ],
+      [ "energy", "namespace_d_fdb__scripts_1_1batch__calc__gulp.html#aa39fc06953cf5d17710023b99298f6a2", null ]
+    ] ],
     [ "batch_calc_xtb", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html", [
       [ "cwd", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#addb73fecf3fc25ddb7861af10e1fc76d", null ],
       [ "parser", "namespace_d_fdb__scripts_1_1batch__calc__xtb.html#a1ee9fbf97fc29000580f9eb98ffd962e", null ],
@@ -110,6 +126,25 @@ var namespace_d_fdb__scripts =
       [ "opt", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#a55c099a31ce3d6db6b628c9baa7f06d8", null ],
       [ "fmax", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#a602a0f13b86528bd8a88f2d238ecfaa9", null ],
       [ "writer", "namespace_d_fdb__scripts_1_1opt__struct__dftb.html#ae321470872b5570f6132e4a4bc8ac6bd", null ]
+    ] ],
+    [ "opt_struct_gulp", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html", [
+      [ "cwd", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a021742aab2d6604d1a459b3b5592f951", null ],
+      [ "parser", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a7d9bb48b4cfe95ae5c7c0c71e9bce5b1", null ],
+      [ "help", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8ac91091d2c3031fcb300f880a1d2952", null ],
+      [ "dest", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad76e4e3859daf4fdc59b95e3cc9095a1", null ],
+      [ "choices", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a5343570e118c03928edf593b9f3564a0", null ],
+      [ "default", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6a206911ea033396432a9e0c51665867", null ],
+      [ "args", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad0d2829f663f486dd9de3b8d7ec08e11", null ],
+      [ "molfile", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad3089aede5e289a82202a48fc37c316e", null ],
+      [ "molname", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429", null ],
+      [ "ff", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a3424fa937bbb861b7cef6a101ed23d51", null ],
+      [ "out_ext", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a20bb20959618b2cb4184fda465201fb7", null ],
+      [ "do_continue", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a81bf80fd2af3afe1eca4951c72d29075", null ],
+      [ "molecule", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad91875ca6b13241b2c38c1459905dcdf", null ],
+      [ "calc", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a7c33c328d3d9befe71f212d9e4d1c41e", null ],
+      [ "opt", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26", null ],
+      [ "fmax", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8022d5899e1d9cf5dda6723aed20c94b", null ],
+      [ "writer", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#afcff224ebedd5dcfe6c9dd2c5478059f", null ]
     ] ],
     [ "opt_struct_xtb", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html", [
       [ "cwd", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html#a404825f47025672e57d8b3eaa79cc632", null ],
