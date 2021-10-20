@@ -125,10 +125,12 @@ Variables</h2></td></tr>
 <tr class="separator:ad91875ca6b13241b2c38c1459905dcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c33c328d3d9befe71f212d9e4d1c41e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a7c33c328d3d9befe71f212d9e4d1c41e">calc</a></td></tr>
 <tr class="separator:a7c33c328d3d9befe71f212d9e4d1c41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af700f5669a90a51a45a0a8c0e505aa26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26">opt</a> = LBFGS(<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad91875ca6b13241b2c38c1459905dcdf">molecule</a>, logfile=f'{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a20bb20959618b2cb4184fda465201fb7">out_ext</a>}_opt.log', trajectory=f'{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a20bb20959618b2cb4184fda465201fb7">out_ext</a>}_opt.traj')</td></tr>
+<tr class="memitem:af700f5669a90a51a45a0a8c0e505aa26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26">opt</a> = calc.get_optimizer(<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad91875ca6b13241b2c38c1459905dcdf">molecule</a>)</td></tr>
 <tr class="separator:af700f5669a90a51a45a0a8c0e505aa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8022d5899e1d9cf5dda6723aed20c94b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8022d5899e1d9cf5dda6723aed20c94b">fmax</a></td></tr>
 <tr class="separator:a8022d5899e1d9cf5dda6723aed20c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf15a23bb814c41b4a6ac29137914249"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#abf15a23bb814c41b4a6ac29137914249">lines</a> = gulp_outfile.readlines()</td></tr>
+<tr class="separator:abf15a23bb814c41b4a6ac29137914249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcff224ebedd5dcfe6c9dd2c5478059f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#afcff224ebedd5dcfe6c9dd2c5478059f">writer</a> = Trajectory(f'{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429">molname</a>}.traj', 'w')</td></tr>
 <tr class="separator:afcff224ebedd5dcfe6c9dd2c5478059f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -353,8 +355,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;=  GULP(</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    keywords=<span class="stringliteral">&#39;conp gradients dist&#39;</span>,</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    options=[],</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    keywords=<span class="stringliteral">&#39;conp opti dist&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    options=[<span class="stringliteral">&#39;maxcyc 20000&#39;</span>],</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    library=f<span class="stringliteral">&#39;{ff}.lib&#39;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    )</div>
 </div><!-- fragment -->
@@ -369,12 +371,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.opt_struct_gulp.opt = LBFGS(<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad91875ca6b13241b2c38c1459905dcdf">molecule</a>, logfile=f'{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a20bb20959618b2cb4184fda465201fb7">out_ext</a>}_opt.log', trajectory=f'{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a6df44ef2e2b3c4525a152d8fb5224429">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a20bb20959618b2cb4184fda465201fb7">out_ext</a>}_opt.traj')</td>
+          <td class="memname">DFdb_scripts.opt_struct_gulp.opt = calc.get_optimizer(<a class="el" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#ad91875ca6b13241b2c38c1459905dcdf">molecule</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00082">82</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00084">84</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
 
 </div>
 </div>
@@ -390,7 +392,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00084">84</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00085">85</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
+
+</div>
+</div>
+<a id="abf15a23bb814c41b4a6ac29137914249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf15a23bb814c41b4a6ac29137914249">&#9670;&nbsp;</a></span>lines</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.opt_struct_gulp.lines = gulp_outfile.readlines()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00089">89</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
 
 </div>
 </div>
@@ -406,7 +424,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00088">88</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="opt__struct__gulp_8py_source.html#l00103">103</a> of file <a class="el" href="opt__struct__gulp_8py_source.html">opt_struct_gulp.py</a>.</p>
 
 </div>
 </div>

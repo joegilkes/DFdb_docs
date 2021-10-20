@@ -167,21 +167,36 @@ $(document).ready(function(){initNavTree('opt__struct__gulp_8py_source.html','')
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"># Set up main calculator</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a7c33c328d3d9befe71f212d9e4d1c41e">   75</a></span>&#160;calc = GULP(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    keywords=<span class="stringliteral">&#39;conp gradients dist&#39;</span>,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    options=[],</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    keywords=<span class="stringliteral">&#39;conp opti dist&#39;</span>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    options=[<span class="stringliteral">&#39;maxcyc 20000&#39;</span>],</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    library=f<span class="stringliteral">&#39;{ff}.lib&#39;</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    )</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;molecule.set_calculator(calc)</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26">   82</a></span>&#160;opt = LBFGS(molecule, logfile=f<span class="stringliteral">&#39;{molname}{out_ext}_opt.log&#39;</span>, trajectory=f<span class="stringliteral">&#39;{molname}{out_ext}_opt.traj&#39;</span>)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;os.system(f<span class="stringliteral">&#39;echo &quot;FullOpt&quot; &gt;&gt; {molname}{out_ext}_opt.log&#39;</span>)</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8022d5899e1d9cf5dda6723aed20c94b">   84</a></span>&#160;opt.run(fmax=5e-3)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;molecule.info.update({<span class="stringliteral">&#39;forcefield&#39;</span>: ff})</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#afcff224ebedd5dcfe6c9dd2c5478059f">   88</a></span>&#160;writer = Trajectory(f<span class="stringliteral">&#39;{molname}.traj&#39;</span>, <span class="stringliteral">&#39;w&#39;</span>)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;writer.write(deepcopy(molecule))</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;writer.close()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"># opt = LBFGS(molecule, logfile=f&#39;{molname}{out_ext}_opt.log&#39;, trajectory=f&#39;{molname}{out_ext}_opt.traj&#39;)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"># os.system(f&#39;echo &quot;FullOpt&quot; &gt;&gt; {molname}{out_ext}_opt.log&#39;)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26">   84</a></span>&#160;opt = calc.get_optimizer(molecule)</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8022d5899e1d9cf5dda6723aed20c94b">   85</a></span>&#160;opt.run(fmax=5e-3)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"># Check for convergence of optimisation.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">with</span> open(<span class="stringliteral">&#39;gulp.got&#39;</span>, <span class="stringliteral">&#39;r&#39;</span>) <span class="keyword">as</span> gulp_outfile:</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#abf15a23bb814c41b4a6ac29137914249">   89</a></span>&#160;    lines = gulp_outfile.readlines()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"># Attempt to avoid some of the unnecessary file reading where possible.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordflow">if</span> len(lines) &lt; 1001:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> line <span class="keywordflow">in</span> lines:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;Maximum number of function calls has been reached&#39;</span> <span class="keywordflow">in</span> line:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">raise</span> RuntimeError(<span class="stringliteral">&#39;[GULPError] Maximum number of function calls has been reached.&#39;</span>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span> line <span class="keywordflow">in</span> lines[-1000:]:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> <span class="stringliteral">&#39;Maximum number of function calls has been reached&#39;</span> <span class="keywordflow">in</span> line:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">raise</span> RuntimeError(<span class="stringliteral">&#39;[GULPError] Maximum number of function calls has been reached.&#39;</span>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;molecule.info.update({<span class="stringliteral">&#39;forcefield&#39;</span>: ff})</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1opt__struct__gulp.html#afcff224ebedd5dcfe6c9dd2c5478059f">  103</a></span>&#160;writer = Trajectory(f<span class="stringliteral">&#39;{molname}.traj&#39;</span>, <span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;writer.write(deepcopy(molecule))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;writer.close()</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

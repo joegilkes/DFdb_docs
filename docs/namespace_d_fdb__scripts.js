@@ -144,6 +144,7 @@ var namespace_d_fdb__scripts =
       [ "calc", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a7c33c328d3d9befe71f212d9e4d1c41e", null ],
       [ "opt", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#af700f5669a90a51a45a0a8c0e505aa26", null ],
       [ "fmax", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#a8022d5899e1d9cf5dda6723aed20c94b", null ],
+      [ "lines", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#abf15a23bb814c41b4a6ac29137914249", null ],
       [ "writer", "namespace_d_fdb__scripts_1_1opt__struct__gulp.html#afcff224ebedd5dcfe6c9dd2c5478059f", null ]
     ] ],
     [ "opt_struct_xtb", "namespace_d_fdb__scripts_1_1opt__struct__xtb.html", [
