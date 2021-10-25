@@ -137,9 +137,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7db7bffce1c0423d2dc2e6b976f0645c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">select</a> (self, selection=None, filter=None, explain=False, verbosity=1, limit=None, offset=0, sort=None, include_data=True, columns='all', **kwargs)</td></tr>
 <tr class="memdesc:a7db7bffce1c0423d2dc2e6b976f0645c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select rows from a database, return as a list of rows.  <a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c">More...</a><br /></td></tr>
 <tr class="separator:a7db7bffce1c0423d2dc2e6b976f0645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac008646f8d190ba613855f119210bd7e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ac008646f8d190ba613855f119210bd7e">export</a> (self, row, filetype='xyz', filename=None)</td></tr>
-<tr class="memdesc:ac008646f8d190ba613855f119210bd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the Atoms object within the given row to a file.  <a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ac008646f8d190ba613855f119210bd7e">More...</a><br /></td></tr>
-<tr class="separator:ac008646f8d190ba613855f119210bd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87276431d330fab9ed66a1f991cd65dc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a87276431d330fab9ed66a1f991cd65dc">export</a> (self, row, filetype='xyz', filename=None, attach_calculator=False, add_additional_information=False)</td></tr>
+<tr class="memdesc:a87276431d330fab9ed66a1f991cd65dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the Atoms object within the given row to a file.  <a href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a87276431d330fab9ed66a1f991cd65dc">More...</a><br /></td></tr>
+<tr class="separator:a87276431d330fab9ed66a1f991cd65dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -729,8 +729,8 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac008646f8d190ba613855f119210bd7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac008646f8d190ba613855f119210bd7e">&#9670;&nbsp;</a></span>export()</h2>
+<a id="a87276431d330fab9ed66a1f991cd65dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87276431d330fab9ed66a1f991cd65dc">&#9670;&nbsp;</a></span>export()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,7 +757,19 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>filename</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>filename</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>attach_calculator</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>add_additional_information</em> = <code>False</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -777,11 +789,15 @@ Private Member Functions</h2></td></tr>
  The type of file to export as. </td></tr>
     <tr><td class="paramname">filename</td><td><em><b>str; Optional</b></em> <br  />
  Override for default filename. </td></tr>
+    <tr><td class="paramname">attach_calculator</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Attach calculator object to Atoms object. </td></tr>
+    <tr><td class="paramname">add_additional_information</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Put key-value pairs and data into Atoms.info dictionary. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00324">324</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00328">328</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 </div>
 </div>
@@ -837,7 +853,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>struct_dict, a dictionary containing the key-value pairs which will become columns and data in a database, and extra_data, a dictionary which also gets attached to the resulting database row but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00358">358</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00362">362</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">DFdb.db.DFdatabase.modification_list</a>.</p>
 
@@ -903,7 +919,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>calc_dict, a dictionary containing the key-value pairs which will become columns and data in a database, and extra_data, a dictionary which also gets attached to the resulting database row but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00423">423</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00427">427</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">DFdb.db.DFdatabase.add_batch()</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">DFdb.db.DFdatabase.add_relaxed()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -974,7 +990,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>dict_list, a list of dictionaries containing the key-value pairs which will become columns and data in a database, and data_list, a list of dictionaries which also gets attached to the resulting database rows but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00460">460</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00464">464</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 
