@@ -487,44 +487,45 @@ $(document).ready(function(){initNavTree('submit_8py_source.html',''); initResiz
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH --mail-user={self.options.o[&quot;SLURM_mail_user&quot;]}\n&#39;</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            s += <span class="stringliteral">&#39;\n&#39;</span></div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            s += <span class="stringliteral">&#39;module purge\n&#39;</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            s += <span class="stringliteral">&#39;module load intel/2020b iccifort/2020.1.217 impi/2019.7.217 imkl/2020.1.217 ELPA/2019.11.001 Python/3.8.2\n&#39;</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;Archer2&#39;</span>:</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            s = <span class="stringliteral">&#39;#!/bin/bash\n&#39;</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH -J {job_name}\n&#39;</span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH --nodes={self.options.o[&quot;SLURM_num_nodes&quot;]}\n&#39;</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH --ntasks-per-node={self.options.o[&quot;SLURM_cores_per_node&quot;]}\n&#39;</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --cpus-per-task=1\n&#39;</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --time=24:00:00\n&#39;</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --account=e05-discov-rjm\n&#39;</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --partition=standard\n&#39;</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --qos=standard\n&#39;</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            s += <span class="stringliteral">&#39;\n&#39;</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            s += <span class="stringliteral">&#39;module load epcc-job-env\n&#39;</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            s += <span class="stringliteral">&#39;export LD_LIBRARY_PATH=/opt/cray/pe/cce/10.0.4/cce-clang/x86_64/lib/:$LD_LIBRARY_PATH\n&#39;</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;Young&#39;</span>:</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            s = <span class="stringliteral">&#39;#!/bin/bash -l\n&#39;</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            s += f<span class="stringliteral">&#39;#$ -N {job_name}\n&#39;</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            s += <span class="stringliteral">&#39;#$ -l h_rt=48:00:00\n&#39;</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            s += f<span class="stringliteral">&#39;#$ -l mem={self.options.o[&quot;PBS_mem_per_process&quot;]}\n&#39;</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">if</span> (int(self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">options</a>options.o[<span class="stringliteral">&quot;PBS_num_MPI_processes&quot;</span>]) % 40 == 0):</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                s += f<span class="stringliteral">&#39;#$ -pe mpi {self.options.o[&quot;PBS_num_MPI_processes&quot;]}\n&#39;</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;PBS_num_MPI_processes must be a multiple of 40!&#39;</span>)</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            s += f<span class="stringliteral">&#39;#$ -wd {os.path.abspath(f&quot;{self.calc_folder}/{struct_name}&quot;)}\n&#39;</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            s += <span class="stringliteral">&#39;#$ -ac allow=C\n&#39;</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            s += <span class="stringliteral">&#39;#$ -P Gold\n&#39;</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            s += <span class="stringliteral">&#39;#$ -A UKCP_WAR_C\n&#39;</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            s += <span class="stringliteral">&#39;\n&#39;</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            s += <span class="stringliteral">&#39;source /home/mmm1003/PyEnvs/atomistic_main/bin/activate\n&#39;</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;nosubmit&#39;</span>:</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            s = <span class="stringliteral">&#39;# No submission system selected.\n&#39;</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            s += <span class="stringliteral">&#39;#!/bin/bash\n&#39;</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        preamble = s</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">return</span> preamble</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="comment"># s += &#39;module load intel/2020b iccifort/2020.1.217 impi/2019.7.217 imkl/2020.1.217 ELPA/2019.11.001 Python/3.8.2\n&#39;</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            s += <span class="stringliteral">&#39;module load intel/2020b iccifort/2020.4.304 impi/2019.9.304 imkl/2020.4.304 Python/3.8.6 ASE/3.21.1\n&#39;</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;Archer2&#39;</span>:</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            s = <span class="stringliteral">&#39;#!/bin/bash\n&#39;</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH -J {job_name}\n&#39;</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH --nodes={self.options.o[&quot;SLURM_num_nodes&quot;]}\n&#39;</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            s += f<span class="stringliteral">&#39;#SBATCH --ntasks-per-node={self.options.o[&quot;SLURM_cores_per_node&quot;]}\n&#39;</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --cpus-per-task=1\n&#39;</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --time=24:00:00\n&#39;</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --account=e05-discov-rjm\n&#39;</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --partition=standard\n&#39;</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            s += <span class="stringliteral">&#39;#SBATCH --qos=standard\n&#39;</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            s += <span class="stringliteral">&#39;\n&#39;</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            s += <span class="stringliteral">&#39;module load epcc-job-env\n&#39;</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            s += <span class="stringliteral">&#39;export LD_LIBRARY_PATH=/opt/cray/pe/cce/10.0.4/cce-clang/x86_64/lib/:$LD_LIBRARY_PATH\n&#39;</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;Young&#39;</span>:</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            s = <span class="stringliteral">&#39;#!/bin/bash -l\n&#39;</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            s += f<span class="stringliteral">&#39;#$ -N {job_name}\n&#39;</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            s += <span class="stringliteral">&#39;#$ -l h_rt=48:00:00\n&#39;</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            s += f<span class="stringliteral">&#39;#$ -l mem={self.options.o[&quot;PBS_mem_per_process&quot;]}\n&#39;</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">if</span> (int(self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">options</a>options.o[<span class="stringliteral">&quot;PBS_num_MPI_processes&quot;</span>]) % 40 == 0):</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                s += f<span class="stringliteral">&#39;#$ -pe mpi {self.options.o[&quot;PBS_num_MPI_processes&quot;]}\n&#39;</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;PBS_num_MPI_processes must be a multiple of 40!&#39;</span>)</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            s += f<span class="stringliteral">&#39;#$ -wd {os.path.abspath(f&quot;{self.calc_folder}/{struct_name}&quot;)}\n&#39;</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            s += <span class="stringliteral">&#39;#$ -ac allow=C\n&#39;</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            s += <span class="stringliteral">&#39;#$ -P Gold\n&#39;</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            s += <span class="stringliteral">&#39;#$ -A UKCP_WAR_C\n&#39;</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            s += <span class="stringliteral">&#39;\n&#39;</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            s += <span class="stringliteral">&#39;source /home/mmm1003/PyEnvs/atomistic_main/bin/activate\n&#39;</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">elif</span> self.<a class="code" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">sub_sys</a>sub_sys == <span class="stringliteral">&#39;nosubmit&#39;</span>:</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            s = <span class="stringliteral">&#39;# No submission system selected.\n&#39;</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            s += <span class="stringliteral">&#39;#!/bin/bash\n&#39;</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        preamble = s</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">return</span> preamble</div>
 <div class="ttc" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_html"><div class="ttname"><a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html">DFdb.submit.DFsubmit</a></div><div class="ttdoc">Handles communication with various queueing systems.</div><div class="ttdef"><b>Definition:</b> <a href="submit_8py_source.html#l00041">submit.py:41</a></div></div>
 <div class="ttc" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_html_a1bc1765884b1e54bcd4b8d8dcb4a83f5"><div class="ttname"><a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax</a></div><div class="ttdeci">def relax(self, row)</div><div class="ttdoc">Add a structure to the queue for geometry relaxation.</div><div class="ttdef"><b>Definition:</b> <a href="submit_8py_source.html#l00098">submit.py:98</a></div></div>
 <div class="ttc" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_html_a62393746906b5cb1654a150496983857"><div class="ttname"><a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a62393746906b5cb1654a150496983857">DFdb.submit.DFsubmit.qsub_command</a></div><div class="ttdeci">qsub_command</div><div class="ttdef"><b>Definition:</b> <a href="submit_8py_source.html#l00061">submit.py:61</a></div></div>
