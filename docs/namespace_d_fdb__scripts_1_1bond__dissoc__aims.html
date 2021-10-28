@@ -131,6 +131,22 @@ Variables</h2></td></tr>
 <tr class="separator:aa99eb7e3bf41960055fc38ea2183f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7938ac1dbf40384a1ae96c5eb9bac8f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a7938ac1dbf40384a1ae96c5eb9bac8f4">bond_length</a> = dissoc_init.get_distance(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a91b41c7b7c809f61e05931922675ff5c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a402974a2480737e19c0c782b068be073">a2index</a>)</td></tr>
 <tr class="separator:a7938ac1dbf40384a1ae96c5eb9bac8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fad4f2f34286467b64eeaacbd70582"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a74fad4f2f34286467b64eeaacbd70582">dissoc_atoms_symbols</a> = [dissoc_init.get_chemical_symbols()[i] for i in [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a91b41c7b7c809f61e05931922675ff5c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a402974a2480737e19c0c782b068be073">a2index</a>]]</td></tr>
+<tr class="separator:a74fad4f2f34286467b64eeaacbd70582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaab58ac2c7a8876743a98b0cac1a60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aaeaab58ac2c7a8876743a98b0cac1a60">num_atoms</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aa99eb7e3bf41960055fc38ea2183f3c5">dissoc_init</a>)</td></tr>
+<tr class="separator:aaeaab58ac2c7a8876743a98b0cac1a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd4c796702020c782a5b000c25bb3f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#abbd4c796702020c782a5b000c25bb3f6">ana</a> = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aa99eb7e3bf41960055fc38ea2183f3c5">dissoc_init</a>)</td></tr>
+<tr class="separator:abbd4c796702020c782a5b000c25bb3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca87c950aab53a09d44598078afaa64c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aca87c950aab53a09d44598078afaa64c">bonds</a> = ana.all_bonds[0]</td></tr>
+<tr class="separator:aca87c950aab53a09d44598078afaa64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103eba7404db900f30f2e98dfdee9d07"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a103eba7404db900f30f2e98dfdee9d07">index_mask</a> = [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a402974a2480737e19c0c782b068be073">a2index</a>]</td></tr>
+<tr class="separator:a103eba7404db900f30f2e98dfdee9d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d257585cf7fe784d0339eaac058b576"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a8d257585cf7fe784d0339eaac058b576">index_to_process</a> = []</td></tr>
+<tr class="separator:a8d257585cf7fe784d0339eaac058b576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663780a91eb96106dccaf1677d6801ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a663780a91eb96106dccaf1677d6801ab">safety_counter</a> = 0</td></tr>
+<tr class="separator:a663780a91eb96106dccaf1677d6801ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267d3e32d4ae606dadf878de11da83a8"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a267d3e32d4ae606dadf878de11da83a8">current_atomid</a> = index_to_process.pop(0)</td></tr>
+<tr class="separator:a267d3e32d4ae606dadf878de11da83a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab070f023a7b6a7d78a131e7cb709aabb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#ab070f023a7b6a7d78a131e7cb709aabb">spin_type</a> = 'collinear'</td></tr>
 <tr class="separator:ab070f023a7b6a7d78a131e7cb709aabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf0bc1cd13dcb8e9dd6e0fe77bca3faa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aaf0bc1cd13dcb8e9dd6e0fe77bca3faa">dim</a> = 1</td></tr>
@@ -161,6 +177,8 @@ Variables</h2></td></tr>
 <tr class="separator:ad2a958b1c263e38f299637524d3ee38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4f9b52b32648afbf37fca0b6e75b2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aee4f9b52b32648afbf37fca0b6e75b2a">fix</a></td></tr>
 <tr class="separator:aee4f9b52b32648afbf37fca0b6e75b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e131819f3082e827a089dd92659aca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a7e131819f3082e827a089dd92659aca6">indices</a></td></tr>
+<tr class="separator:a7e131819f3082e827a089dd92659aca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a20c32878130beb22e4f40af057e6c921"></a>
@@ -175,7 +193,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00012">12</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00011">11</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -191,7 +209,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00015">15</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00014">14</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -207,7 +225,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00018">18</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00017">17</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -223,7 +241,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00022">22</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00021">21</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">DFdb.db.DFdatabase.add_batch()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">DFdb.db.DFdatabase.add_relaxed()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a87276431d330fab9ed66a1f991cd65dc">DFdb.db.DFdatabase.export()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#aebc83fa09f59eecea96e6c32ec611b02">DFdb.analyse.DFanalysis.plot_bond_length_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba">DFdb.analyse.DFanalysis.plot_energy_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a03d35e3f3a998582aebb106cf1855537">DFdb.analyse.DFanalysis.plot_force_difference()</a>, <a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2cb9b3f01bb741aca59b84bd0c76aff6">DFdb.analyse.DFanalysis.plot_position_difference()</a>, <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a49d7e93e4dfb8b9bef771bbdc657e177">DFdb.options.DFoptions.set_calc_options()</a>, and <a class="el" href="class_d_fdb_1_1options_1_1_d_foptions.html#a3b53b63680c79113158b04e5aee61937">DFdb.options.DFoptions.set_globals()</a>.</p>
 
@@ -241,7 +259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00032">32</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00031">31</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -257,7 +275,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00038">38</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00037">37</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -273,7 +291,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00052">52</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00051">51</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -289,7 +307,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00058">58</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00057">57</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -305,7 +323,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00060">60</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00059">59</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -321,7 +339,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00062">62</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00061">61</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -337,7 +355,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00063">63</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00062">62</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -353,7 +371,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00065">65</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00064">64</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -369,7 +387,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00067">67</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00066">66</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -385,7 +403,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00073">73</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00072">72</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -401,7 +419,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00075">75</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00074">74</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -417,7 +435,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00082">82</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00081">81</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -433,7 +451,135 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00083">83</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a74fad4f2f34286467b64eeaacbd70582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74fad4f2f34286467b64eeaacbd70582">&#9670;&nbsp;</a></span>dissoc_atoms_symbols</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_aims.dissoc_atoms_symbols = [dissoc_init.get_chemical_symbols()[i] for i in [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a91b41c7b7c809f61e05931922675ff5c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a402974a2480737e19c0c782b068be073">a2index</a>]]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00084">84</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="aaeaab58ac2c7a8876743a98b0cac1a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeaab58ac2c7a8876743a98b0cac1a60">&#9670;&nbsp;</a></span>num_atoms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_aims.num_atoms = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aa99eb7e3bf41960055fc38ea2183f3c5">dissoc_init</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00085">85</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="abbd4c796702020c782a5b000c25bb3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd4c796702020c782a5b000c25bb3f6">&#9670;&nbsp;</a></span>ana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_aims.ana = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aa99eb7e3bf41960055fc38ea2183f3c5">dissoc_init</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00088">88</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="aca87c950aab53a09d44598078afaa64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca87c950aab53a09d44598078afaa64c">&#9670;&nbsp;</a></span>bonds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_aims.bonds = ana.all_bonds[0]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00089">89</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a103eba7404db900f30f2e98dfdee9d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103eba7404db900f30f2e98dfdee9d07">&#9670;&nbsp;</a></span>index_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_aims.index_mask = [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a402974a2480737e19c0c782b068be073">a2index</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00091">91</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a8d257585cf7fe784d0339eaac058b576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d257585cf7fe784d0339eaac058b576">&#9670;&nbsp;</a></span>index_to_process</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_aims.index_to_process = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00092">92</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a663780a91eb96106dccaf1677d6801ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663780a91eb96106dccaf1677d6801ab">&#9670;&nbsp;</a></span>safety_counter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DFdb_scripts.bond_dissoc_aims.safety_counter = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00098">98</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a267d3e32d4ae606dadf878de11da83a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267d3e32d4ae606dadf878de11da83a8">&#9670;&nbsp;</a></span>current_atomid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_aims.current_atomid = index_to_process.pop(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00101">101</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -449,7 +595,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00088">88</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00109">109</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -465,7 +611,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00089">89</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00110">110</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -495,7 +641,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        sc_accuracy_rho=3e-5,</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        sc_accuracy_forces=1e-4)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00095">95</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00116">116</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -511,7 +657,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00110">110</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00131">131</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -527,7 +673,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00111">111</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00132">132</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -543,7 +689,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00112">112</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00133">133</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -559,7 +705,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00113">113</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00134">134</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -575,7 +721,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00114">114</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00135">135</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -591,7 +737,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00115">115</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00136">136</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -607,7 +753,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00116">116</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00137">137</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -623,7 +769,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00121">121</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00142">142</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -639,7 +785,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00124">124</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00145">145</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -655,7 +801,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00132">132</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00158">158</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -671,7 +817,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00144">144</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00170">170</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
@@ -687,7 +833,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00145">145</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00172">172</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
+
+</div>
+</div>
+<a id="a7e131819f3082e827a089dd92659aca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e131819f3082e827a089dd92659aca6">&#9670;&nbsp;</a></span>indices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_aims.indices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__aims_8py_source.html#l00172">172</a> of file <a class="el" href="bond__dissoc__aims_8py_source.html">bond_dissoc_aims.py</a>.</p>
 
 </div>
 </div>
