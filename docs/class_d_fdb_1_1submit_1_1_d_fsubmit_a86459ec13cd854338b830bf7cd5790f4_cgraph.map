@@ -1,0 +1,4 @@
+<map id="DFdb.submit.DFsubmit.dissociate_bond" name="DFdb.submit.DFsubmit.dissociate_bond">
+<area shape="rect" id="node1" title="Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve." alt="" coords="5,13,256,39"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709" title="Backend for creating job submission system preamble." alt="" coords="304,5,461,47"/>
+</map>
