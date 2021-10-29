@@ -238,7 +238,7 @@ $(document).ready(function(){initNavTree('bond__dissoc__aims_8py_source.html',''
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"># Set up loop parameters.</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a0760ddf11904205689607f591e11c86f">  146</a></span>&#160;e_diff_cutoff = 5e-3</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#af1926f091de39a5490850c3f9429fa00">  147</a></span>&#160;max_iterations = 50</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#af1926f091de39a5490850c3f9429fa00">  147</a></span>&#160;max_iterations = 100</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"># Set up while loop.</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a3b686a74d1e8dae0116c1cd68a64f800">  150</a></span>&#160;writer = Trajectory(molname, <span class="stringliteral">&#39;w&#39;</span>)</div>
@@ -249,7 +249,7 @@ $(document).ready(function(){initNavTree('bond__dissoc__aims_8py_source.html',''
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordflow">while</span> not_dissociated:</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    print(<span class="stringliteral">&#39;---------------------------------------------------&#39;</span>)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    print(f<span class="stringliteral">&#39;Iteration: {counter+1}    {dissoc_atoms_symbols[0]}-{dissoc_atoms_symbols[1]} Bond Length: {bond_length} Ang&#39;</span>)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    print(f<span class="stringliteral">&#39;Iteration: {counter}    {dissoc_atoms_symbols[0]}-{dissoc_atoms_symbols[1]} Bond Length: {bond_length} Ang&#39;</span>)</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    molecule.set_calculator(deepcopy(calc))</div>
 <div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a72b7e61993e3d503b2a737ec473b4e95">  160</a></span>&#160;    forces = molecule.get_forces()</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    print(f<span class="stringliteral">&#39;Getting energy for molecule {counter} in dissociation...&#39;</span>)</div>
@@ -279,15 +279,19 @@ $(document).ready(function(){initNavTree('bond__dissoc__aims_8py_source.html',''
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    prev_energy = energy</div>
 <div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#ad2a958b1c263e38f299637524d3ee38c">  187</a></span>&#160;    new_mol = deepcopy(molecule)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    bond_length += 0.1</div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aee4f9b52b32648afbf37fca0b6e75b2a">  189</a></span>&#160;    new_mol.set_distance(a1index, a2index, bond_length, fix=0, indices=index_mask)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    molecule = deepcopy(new_mol)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    counter += 1</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    print(<span class="stringliteral">&#39;---------------------------------------------------&#39;</span>)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    print()</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;print(f<span class="stringliteral">&#39;Saving trajectory {molname}.&#39;</span>)</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;writer.close()</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment"># Do more granular increases in bond lengths while in the most sensitive region.</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> counter &lt; 5:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        bond_length += 0.025</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        bond_length += 0.1</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#aee4f9b52b32648afbf37fca0b6e75b2a">  193</a></span>&#160;    new_mol.set_distance(a1index, a2index, bond_length, fix=0, indices=index_mask)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    molecule = deepcopy(new_mol)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    counter += 1</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    print(<span class="stringliteral">&#39;---------------------------------------------------&#39;</span>)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    print()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;print(f<span class="stringliteral">&#39;Saving trajectory {molname}.&#39;</span>)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;writer.close()</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
