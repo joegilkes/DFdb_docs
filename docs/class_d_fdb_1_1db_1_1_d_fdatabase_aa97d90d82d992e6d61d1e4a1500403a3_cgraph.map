@@ -1,0 +1,6 @@
+<map id="DFdb.db.DFdatabase.add_reaction" name="DFdb.db.DFdatabase.add_reaction">
+<area shape="rect" id="node1" title="Load a reaction trajectory into a database." alt="" coords="5,39,172,80"/>
+<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a9cdd328800e35289a8866a9dcc968f53" title="Inbuilt method for parsing reaction details from a bond dissociation calculation." alt="" coords="220,5,367,47"/>
+<area shape="rect" id="node4" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#ab8294d968551daf7e45f8da6256247a4" title="Inbuilt method for parsing reaction details from a finished NEB calculation." alt="" coords="220,71,367,112"/>
+<area shape="rect" id="node3" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749" title="Inbuilt method for parsing calculator details from a finished calculation." alt="" coords="415,39,561,80"/>
+</map>

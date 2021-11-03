@@ -1,4 +1,0 @@
-<map id="DFdb.db.DFdatabase.add_reaction" name="DFdb.db.DFdatabase.add_reaction">
-<area shape="rect" id="node1" title="Load the end state of a NEB calculation into a database." alt="" coords="5,5,172,47"/>
-<area shape="rect" id="node2" href="$class_d_fdb_1_1db_1_1_d_fdatabase.html#a0f6c50a12b0364e484936533a11f4119" title="Inbuilt method for parsing reaction details from a finished NEB calculation." alt="" coords="220,5,367,47"/>
-</map>

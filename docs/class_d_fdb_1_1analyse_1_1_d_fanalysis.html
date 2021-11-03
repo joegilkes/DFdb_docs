@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('class_d_fdb_1_1analyse_1_1_d_fanalysis
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_d_fdb_1_1analyse_1_1_d_fanalysis__coll__graph.png" border="0" usemap="#a_d_fdb_8analyse_8_d_fanalysis_coll__map" alt="Collaboration graph"/></div>
 <map name="a_d_fdb_8analyse_8_d_fanalysis_coll__map" id="a_d_fdb_8analyse_8_d_fanalysis_coll__map">
-<area shape="rect" title="Handles analysis and plotting of comparative results." alt="" coords="5,5,208,200"/>
+<area shape="rect" title="Handles analysis and plotting of comparative results." alt="" coords="5,5,208,215"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba">plot_energy_difference</a> (self, reference_set, comparison_sets, plot_type='hist', reference_name=None, comparison_names=None, title=None, combine_figs=False, return_data=False, savefig=None)</td></tr>
 <tr class="memdesc:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the energy differences between identically structured molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba">More...</a><br /></td></tr>
 <tr class="separator:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2b9d6242fc0cab6956c27c966da0b4f8">plot_dissoc_path_difference</a> (self, reference_rxn, comparison_rxns, reference_name, comparison_names, title=None, return_data=None, savefig=None)</td></tr>
+<tr class="memdesc:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the difference in energies between a reference bond dissociation and comparative bond dissociations calculated with different electronic structure methods.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2b9d6242fc0cab6956c27c966da0b4f8">More...</a><br /></td></tr>
+<tr class="separator:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -963,6 +966,97 @@ Private Member Functions</h2></td></tr>
 <area shape="rect" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba" title="Plot the energy differences between identically structured molecules in DFdb sets compared to a refer..." alt="" coords="5,5,196,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a2b9d6242fc0cab6956c27c966da0b4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9d6242fc0cab6956c27c966da0b4f8">&#9670;&nbsp;</a></span>plot_dissoc_path_difference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def DFdb.analyse.DFanalysis.plot_dissoc_path_difference </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>reference_rxn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>comparison_rxns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>reference_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>comparison_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>title</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>return_data</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>savefig</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Plot the difference in energies between a reference bond dissociation and comparative bond dissociations calculated with different electronic structure methods. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference_rxn</td><td><em><b>list</b></em> <br  />
+ List of AtomsRows representing the reference energies of a bond dissociation </td></tr>
+    <tr><td class="paramname">reaction.</td><td></td></tr>
+    <tr><td class="paramname">comparison_rxns</td><td><em><b>list</b></em> <br  />
+ List of comparative lists of AtomsRows, each sublist representing a comparative set of energies for the same dissociation reaction as in reference_rxn. </td></tr>
+    <tr><td class="paramname">reference_name</td><td><em><b>str</b></em> <br  />
+ Name of the reference dataset. </td></tr>
+    <tr><td class="paramname">comparison_names</td><td><em><b>list</b></em> <br  />
+ List of names of the comparison datasets. </td></tr>
+    <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
+ Figure title for the graph. </td></tr>
+    <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
+ Whether to include a DataFrame of all the relative energy difference data used in </td></tr>
+    <tr><td class="paramname">plotting.</td><td></td></tr>
+    <tr><td class="paramname">savefig</td><td><em><b>str or None; Optional</b></em> <br  />
+ Whether to save the figure to file. Leaving as None means no saving, otherwise a string containing the path to save to should be passed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l01099">1099</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<div class="fragment"></div><!-- fragment -->
+<p class="reference">References <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 
 </div>
 </div>

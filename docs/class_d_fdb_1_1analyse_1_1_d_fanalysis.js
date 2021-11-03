@@ -9,5 +9,6 @@ var class_d_fdb_1_1analyse_1_1_d_fanalysis =
     [ "_compare_forces", "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a5fdea4dbbfe2611fb9b193d708b07073", null ],
     [ "plot_energy_difference", "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba", null ],
     [ "_compare_energies", "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a103d084d38614a6fd33388eeb26aedb1", null ],
+    [ "plot_dissoc_path_difference", "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2b9d6242fc0cab6956c27c966da0b4f8", null ],
     [ "skl_kde_samples", "class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a1abf06bd44f595f62f28a946547157b0", null ]
 ];
