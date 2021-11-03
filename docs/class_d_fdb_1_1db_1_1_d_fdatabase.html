@@ -244,34 +244,37 @@ Private Member Functions</h2></td></tr>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> self.mode == <span class="stringliteral">&#39;reaction&#39;</span>:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                temp_metadata = self.dc.metadata</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                temp_metadata.update({<span class="stringliteral">&#39;num_reacs&#39;</span>: 0})</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                self.dc.metadata = temp_metadata</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment"># Hacky workaround fix for the database needing to be refreshed before displaying metadata.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> self.dc.metadata[<span class="stringliteral">&#39;db_mode&#39;</span>] != self.mode:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Given database mode does not match the type of the existing database.&#39;</span>)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> options:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            self.options = options</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            self.options = DFoptions()</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        self.modification_list = [</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="stringliteral">&#39;_MS&#39;</span>,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="stringliteral">&#39;_ES&#39;</span>,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="stringliteral">&#39;_PrS&#39;</span>,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="stringliteral">&#39;_PhS&#39;</span>,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="stringliteral">&#39;Hyd_&#39;</span>,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="stringliteral">&#39;Cross_&#39;</span>,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="stringliteral">&#39;_MC&#39;</span>,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="stringliteral">&#39;_EC&#39;</span>,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="stringliteral">&#39;_PrC&#39;</span>,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="stringliteral">&#39;_PhC&#39;</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        ]</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                temp_metadata.update({</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="stringliteral">&#39;num_reacs&#39;</span>: 0,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="stringliteral">&#39;db_mode&#39;</span>: self.mode</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    })</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                self.dc.metadata = temp_metadata</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment"># Hacky workaround fix for the database needing to be refreshed before displaying metadata.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            self.dc = ase.db.connect(self.db_file)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> self.dc.metadata[<span class="stringliteral">&#39;db_mode&#39;</span>] != self.mode:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;Given database mode does not match the type of the existing database.&#39;</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> options:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            self.options = options</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            self.options = DFoptions()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        self.modification_list = [</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="stringliteral">&#39;_MS&#39;</span>,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="stringliteral">&#39;_ES&#39;</span>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="stringliteral">&#39;_PrS&#39;</span>,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="stringliteral">&#39;_PhS&#39;</span>,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="stringliteral">&#39;Hyd_&#39;</span>,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="stringliteral">&#39;Cross_&#39;</span>,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="stringliteral">&#39;_MC&#39;</span>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="stringliteral">&#39;_EC&#39;</span>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="stringliteral">&#39;_PrC&#39;</span>,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="stringliteral">&#39;_PhC&#39;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ]</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,7 +323,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00110">110</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00113">113</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749">DFdb.db.DFdatabase._calc_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84d536ce33dc377c608225de50c0095a">DFdb.db.DFdatabase._struct_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>, and <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -392,7 +395,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00152">152</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00155">155</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749">DFdb.db.DFdatabase._calc_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84d536ce33dc377c608225de50c0095a">DFdb.db.DFdatabase._struct_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>, and <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -446,7 +449,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00184">184</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00187">187</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84d536ce33dc377c608225de50c0095a">DFdb.db.DFdatabase._struct_parser()</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -509,7 +512,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00217">217</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00220">220</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a9cdd328800e35289a8866a9dcc968f53">DFdb.db.DFdatabase._dissoc_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ab8294d968551daf7e45f8da6256247a4">DFdb.db.DFdatabase._NEB_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a92584500eca7fe6176b725077e29b5e8">DFdb.db.DFdatabase.db_file</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -563,7 +566,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00252">252</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00255">255</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 </div>
 </div>
@@ -609,7 +612,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00284">284</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00287">287</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 
@@ -729,7 +732,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00323">323</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00326">326</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 
@@ -803,7 +806,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00350">350</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00353">353</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 
@@ -861,7 +864,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>struct_dict, a dictionary containing the key-value pairs which will become columns and data in a database, and extra_data, a dictionary which also gets attached to the resulting database row but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00384">384</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00387">387</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a6e2cdc39bd654bf8de0f962fff6416a1">DFdb.db.DFdatabase.modification_list</a>.</p>
 
@@ -927,7 +930,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>calc_dict, a dictionary containing the key-value pairs which will become columns and data in a database, and extra_data, a dictionary which also gets attached to the resulting database row but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00449">449</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00452">452</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a9cdd328800e35289a8866a9dcc968f53">DFdb.db.DFdatabase._dissoc_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ab8294d968551daf7e45f8da6256247a4">DFdb.db.DFdatabase._NEB_parser()</a>, <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a278a257be836da9fc578abce6161ae0a">DFdb.db.DFdatabase.add_batch()</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#ae9f6ba0c682f84c0fafa7e1c1f410f45">DFdb.db.DFdatabase.add_relaxed()</a>.</p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1001,7 +1004,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>dict_list, a list of dictionaries containing the key-value pairs which will become columns and data in a database, and data_list, a list of dictionaries which also gets attached to the resulting database rows but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00486">486</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00489">489</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749">DFdb.db.DFdatabase._calc_parser()</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 
@@ -1083,7 +1086,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>dict_list, a list of dictionaries containing the key-value pairs which will become columns and data in a database, and data_list, a list of dictionaries which also gets attached to the resulting database rows but cannot be used for selecting rows (just extra metadata from the calculator). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00543">543</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00546">546</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a61176dcdae68f6bf2b4665532f64c749">DFdb.db.DFdatabase._calc_parser()</a>, and <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a89d935e69d9436bebbaf945fe3e4bebb">DFdb.db.DFdatabase.dc</a>.</p>
 
@@ -1178,7 +1181,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00080">80</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00083">83</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>.</p>
 
@@ -1196,7 +1199,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00084">84</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="db_8py_source.html#l00087">87</a> of file <a class="el" href="db_8py_source.html">db.py</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a84d536ce33dc377c608225de50c0095a">DFdb.db.DFdatabase._struct_parser()</a>.</p>
 
