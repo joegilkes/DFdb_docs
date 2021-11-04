@@ -128,9 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba">plot_energy_difference</a> (self, reference_set, comparison_sets, plot_type='hist', reference_name=None, comparison_names=None, title=None, combine_figs=False, return_data=False, savefig=None)</td></tr>
 <tr class="memdesc:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the energy differences between identically structured molecules in <a class="el" href="namespace_d_fdb.html" title="ASE database wrapper package for making and analysing comparative databases of molecules.">DFdb</a> sets compared to a reference set.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba">More...</a><br /></td></tr>
 <tr class="separator:a9ce1f0b9186c2894a9d9f8394109e4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2b9d6242fc0cab6956c27c966da0b4f8">plot_dissoc_path_difference</a> (self, reference_rxn, comparison_rxns, reference_name, comparison_names, title=None, return_data=None, savefig=None)</td></tr>
-<tr class="memdesc:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the difference in energies between a reference bond dissociation and comparative bond dissociations calculated with different electronic structure methods.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a2b9d6242fc0cab6956c27c966da0b4f8">More...</a><br /></td></tr>
-<tr class="separator:a2b9d6242fc0cab6956c27c966da0b4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe76f17c7a65b2c3c5b71d49711daf1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a6fe76f17c7a65b2c3c5b71d49711daf1">plot_dissoc_path_difference</a> (self, reference_rxn, comparison_rxns, reference_name, comparison_names, title=None, energy_convergence=5e-3, return_data=None, savefig=None)</td></tr>
+<tr class="memdesc:a6fe76f17c7a65b2c3c5b71d49711daf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the difference in energies between a reference bond dissociation and comparative bond dissociations calculated with different electronic structure methods.  <a href="class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a6fe76f17c7a65b2c3c5b71d49711daf1">More...</a><br /></td></tr>
+<tr class="separator:a6fe76f17c7a65b2c3c5b71d49711daf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -969,8 +969,8 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b9d6242fc0cab6956c27c966da0b4f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b9d6242fc0cab6956c27c966da0b4f8">&#9670;&nbsp;</a></span>plot_dissoc_path_difference()</h2>
+<a id="a6fe76f17c7a65b2c3c5b71d49711daf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe76f17c7a65b2c3c5b71d49711daf1">&#9670;&nbsp;</a></span>plot_dissoc_path_difference()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1015,6 +1015,12 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>energy_convergence</em> = <code>5e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>return_data</em> = <code>None</code>, </td>
         </tr>
         <tr>
@@ -1045,6 +1051,8 @@ Private Member Functions</h2></td></tr>
  List of names of the comparison datasets. </td></tr>
     <tr><td class="paramname">title</td><td><em><b>str; Optional</b></em> <br  />
  Figure title for the graph. </td></tr>
+    <tr><td class="paramname">energy_convergence</td><td><em><b>float; Default:5e-3</b></em> <br  />
+ Value used to determine convergence of bond dissociation calculations. Will be used it plots to mark non-convergent calculations. </td></tr>
     <tr><td class="paramname">return_data</td><td><em><b>boolean; Default: False</b></em> <br  />
  Whether to include a DataFrame of all the relative energy difference data used in </td></tr>
     <tr><td class="paramname">plotting.</td><td></td></tr>
@@ -1054,7 +1062,7 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l01099">1099</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="analyse_8py_source.html#l01102">1102</a> of file <a class="el" href="analyse_8py_source.html">analyse.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 

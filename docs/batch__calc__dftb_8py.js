@@ -12,8 +12,6 @@ var batch__calc__dftb_8py =
     [ "out_ext", "batch__calc__dftb_8py.html#a7c8223b6d7fd39480391e28f2ecf054c", null ],
     [ "enable_spin", "batch__calc__dftb_8py.html#a026a425b91e6330e67362b5f7e086ca6", null ],
     [ "batch", "batch__calc__dftb_8py.html#a4aba080f9e01a5658e90dbfeb5760d05", null ],
-    [ "spin_type", "batch__calc__dftb_8py.html#ad8102b681cbfbfd536df8aad3c887406", null ],
-    [ "dim", "batch__calc__dftb_8py.html#ace12b0c3691e9ba574c97774b8f4326c", null ],
     [ "calc", "batch__calc__dftb_8py.html#af4ebcb8ac2bc68bbd4c452ad9528d622", null ],
     [ "writer", "batch__calc__dftb_8py.html#ac0cf502846eb5fc6cd8d0749803f3e39", null ],
     [ "label", "batch__calc__dftb_8py.html#a3cd1d5d88811e1035292d12ac48be2cd", null ],

@@ -153,47 +153,39 @@ $(document).ready(function(){initNavTree('batch__calc__dftb_8py_source.html','')
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a4aba080f9e01a5658e90dbfeb5760d05">   59</a></span>&#160;batch = read(batchname, index=<span class="stringliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;print(f<span class="stringliteral">&#39;Starting calculations on {len(batch)} {batchname[6:-5]} geometries.&#39;</span>)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"># Spin not implemented yet.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordflow">if</span> enable_spin:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ad8102b681cbfbfd536df8aad3c887406">   64</a></span>&#160;    spin_type = <span class="stringliteral">&#39;collinear&#39;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ace12b0c3691e9ba574c97774b8f4326c">   65</a></span>&#160;    dim = 1</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    spin_type = <span class="stringliteral">&#39;none&#39;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    dim = 0</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"># Set up main calculator</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#af4ebcb8ac2bc68bbd4c452ad9528d622">   71</a></span>&#160;calc = Dftb(</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Hamiltonian_=<span class="stringliteral">&#39;DFTB&#39;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Hamiltonian_SCC=<span class="stringliteral">&#39;Yes&#39;</span>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Hamiltonian_SCCTolerance=1e-6,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Hamiltonian_MaxSCCIterations=200,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Hamiltonian_MaxAngularMomentum_=<span class="stringliteral">&#39;&#39;</span>,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    Hamiltonian_MaxAngularMomentum_H=<span class="stringliteral">&#39;s&#39;</span>,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Hamiltonian_MaxAngularMomentum_C=<span class="stringliteral">&#39;p&#39;</span>,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Hamiltonian_MaxAngularMomentum_O=<span class="stringliteral">&#39;p&#39;</span>,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Hamiltonian_MaxAngularMomentum_Si=<span class="stringliteral">&#39;p&#39;</span>,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Hamiltonian_Dispersion_=<span class="stringliteral">&#39;TS&#39;</span>,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Hamiltonian_Dispersion_ReferenceSet=<span class="stringliteral">&#39;TS&#39;</span>,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment"># Hamiltonian_SpinPolarisation_=&#39;&#39;, # Spin not implemented yet</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Hamiltonian_Solver_=<span class="stringliteral">&#39;ELPA&#39;</span>,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ac0cf502846eb5fc6cd8d0749803f3e39">   88</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordflow">for</span> i, molecule <span class="keywordflow">in</span> enumerate(batch):</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a3cd1d5d88811e1035292d12ac48be2cd">   90</a></span>&#160;    calc.label = f<span class="stringliteral">&#39;{batchname[6:-5]}_{i}&#39;</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    molecule.set_calculator(calc)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    print(f<span class="stringliteral">&#39;Getting new forces for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a50ebceba0ed93b9dc03271c7bd0902d7">   93</a></span>&#160;    forces = molecule.get_forces()</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    print(f<span class="stringliteral">&#39;Forces: {forces}&#39;</span>)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    print(f<span class="stringliteral">&#39;Getting new energy for molecule {i+1} in batch...&#39;</span>)</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a96083a6333acba8cf4af7b87683ed753">   96</a></span>&#160;    energy = molecule.get_potential_energy()</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    print(f<span class="stringliteral">&#39;Energy: {energy}&#39;</span>)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    molecule.info.update({<span class="stringliteral">&#39;paramset&#39;</span>: paramset})</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    writer.write(deepcopy(molecule))</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;writer.close()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"># Set up main calculator</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#af4ebcb8ac2bc68bbd4c452ad9528d622">   63</a></span>&#160;calc = Dftb(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Hamiltonian_=<span class="stringliteral">&#39;DFTB&#39;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Hamiltonian_SCC=<span class="stringliteral">&#39;Yes&#39;</span>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Hamiltonian_SCCTolerance=1e-6,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Hamiltonian_MaxSCCIterations=500,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    Hamiltonian_MaxAngularMomentum_=<span class="stringliteral">&#39;&#39;</span>,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Hamiltonian_MaxAngularMomentum_H=<span class="stringliteral">&#39;s&#39;</span>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Hamiltonian_MaxAngularMomentum_C=<span class="stringliteral">&#39;p&#39;</span>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Hamiltonian_MaxAngularMomentum_O=<span class="stringliteral">&#39;p&#39;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Hamiltonian_MaxAngularMomentum_Si=<span class="stringliteral">&#39;p&#39;</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Hamiltonian_Dispersion_=<span class="stringliteral">&#39;TS&#39;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Hamiltonian_Dispersion_ReferenceSet=<span class="stringliteral">&#39;TS&#39;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment"># Hamiltonian_SpinPolarisation_=&#39;&#39;, # Spin not implemented yet</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Hamiltonian_Solver_=<span class="stringliteral">&#39;ELPA&#39;</span>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ac0cf502846eb5fc6cd8d0749803f3e39">   80</a></span>&#160;writer = Trajectory(batchname, <span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordflow">for</span> i, molecule <span class="keywordflow">in</span> enumerate(batch):</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a3cd1d5d88811e1035292d12ac48be2cd">   82</a></span>&#160;    calc.label = f<span class="stringliteral">&#39;{batchname[6:-5]}_{i}&#39;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    molecule.set_calculator(calc)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    print(f<span class="stringliteral">&#39;Getting new forces for molecule {i+1} in batch...&#39;</span>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a50ebceba0ed93b9dc03271c7bd0902d7">   85</a></span>&#160;    forces = molecule.get_forces()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    print(f<span class="stringliteral">&#39;Forces: {forces}&#39;</span>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    print(f<span class="stringliteral">&#39;Getting new energy for molecule {i+1} in batch...&#39;</span>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a96083a6333acba8cf4af7b87683ed753">   88</a></span>&#160;    energy = molecule.get_potential_energy()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    print(f<span class="stringliteral">&#39;Energy: {energy}&#39;</span>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    molecule.info.update({<span class="stringliteral">&#39;paramset&#39;</span>: paramset})</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    writer.write(deepcopy(molecule))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;writer.close()</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

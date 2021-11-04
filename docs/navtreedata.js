@@ -28,9 +28,9 @@ var NAVTREE =
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+        [ "Variables", "namespacemembers_vars.html", "namespacemembers_vars" ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -51,7 +51,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_d_fdb_2____init_____8py.html",
-"namespace_d_fdb__scripts_1_1batch__calc__gulp.html#ad2cc25f4f85cce1e216d6ea9f4898f7a"
+"class_d_fdb_1_1analyse_1_1_d_fanalysis.html#a9ce1f0b9186c2894a9d9f8394109e4ba",
+"namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html",
+"opt__struct__xtb_8py.html#af6e777cac5cd2344c40859ce97ac1879"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -121,10 +121,6 @@ Variables</h2></td></tr>
 <tr class="separator:a026a425b91e6330e67362b5f7e086ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aba080f9e01a5658e90dbfeb5760d05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#a4aba080f9e01a5658e90dbfeb5760d05">batch</a> = read(<a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#aaa64a33501f653b34a9b7cfead351517">batchname</a>, index=':')</td></tr>
 <tr class="separator:a4aba080f9e01a5658e90dbfeb5760d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8102b681cbfbfd536df8aad3c887406"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ad8102b681cbfbfd536df8aad3c887406">spin_type</a> = 'collinear'</td></tr>
-<tr class="separator:ad8102b681cbfbfd536df8aad3c887406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace12b0c3691e9ba574c97774b8f4326c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ace12b0c3691e9ba574c97774b8f4326c">dim</a> = 1</td></tr>
-<tr class="separator:ace12b0c3691e9ba574c97774b8f4326c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ebcb8ac2bc68bbd4c452ad9528d622"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#af4ebcb8ac2bc68bbd4c452ad9528d622">calc</a></td></tr>
 <tr class="separator:af4ebcb8ac2bc68bbd4c452ad9528d622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0cf502846eb5fc6cd8d0749803f3e39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#ac0cf502846eb5fc6cd8d0749803f3e39">writer</a> = Trajectory(<a class="el" href="namespace_d_fdb__scripts_1_1batch__calc__dftb.html#aaa64a33501f653b34a9b7cfead351517">batchname</a>, 'w')</td></tr>
@@ -329,38 +325,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8102b681cbfbfd536df8aad3c887406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8102b681cbfbfd536df8aad3c887406">&#9670;&nbsp;</a></span>spin_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string DFdb_scripts.batch_calc_dftb.spin_type = 'collinear'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00064">64</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="ace12b0c3691e9ba574c97774b8f4326c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace12b0c3691e9ba574c97774b8f4326c">&#9670;&nbsp;</a></span>dim</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DFdb_scripts.batch_calc_dftb.dim = 1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00065">65</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
-
-</div>
-</div>
 <a id="af4ebcb8ac2bc68bbd4c452ad9528d622"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4ebcb8ac2bc68bbd4c452ad9528d622">&#9670;&nbsp;</a></span>calc</h2>
 
@@ -376,7 +340,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    Hamiltonian_=<span class="stringliteral">&#39;DFTB&#39;</span>,</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    Hamiltonian_SCC=<span class="stringliteral">&#39;Yes&#39;</span>,</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    Hamiltonian_SCCTolerance=1e-6,</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    Hamiltonian_MaxSCCIterations=200,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    Hamiltonian_MaxSCCIterations=500,</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    Hamiltonian_MaxAngularMomentum_=<span class="stringliteral">&#39;&#39;</span>,</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    Hamiltonian_MaxAngularMomentum_H=<span class="stringliteral">&#39;s&#39;</span>,</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    Hamiltonian_MaxAngularMomentum_C=<span class="stringliteral">&#39;p&#39;</span>,</div>
@@ -389,7 +353,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00071">71</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00063">63</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -405,7 +369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00088">88</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00080">80</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -421,7 +385,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00090">90</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00082">82</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -437,7 +401,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00093">93</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00085">85</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -453,7 +417,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00096">96</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__calc__dftb_8py_source.html#l00088">88</a> of file <a class="el" href="batch__calc__dftb_8py_source.html">batch_calc_dftb.py</a>.</p>
 
 </div>
 </div>
