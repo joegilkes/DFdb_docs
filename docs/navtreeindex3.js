@@ -1,5 +1,17 @@
 var NAVTREEINDEX3 =
 {
+"opt__struct__xtb_8py.html#a404825f47025672e57d8b3eaa79cc632":[2,0,0,1,12,0],
+"opt__struct__xtb_8py.html#a51033389e0fa1df6ade4eeb119a53610":[2,0,0,1,12,12],
+"opt__struct__xtb_8py.html#a5ed6f2dd4a9eaa8cc8c0790c7970665a":[2,0,0,1,12,13],
+"opt__struct__xtb_8py.html#a6ad1a49562e6ad0a3d31d1cf63f564e3":[2,0,0,1,12,4],
+"opt__struct__xtb_8py.html#a74230347b683db5995fd7eea4204bf53":[2,0,0,1,12,14],
+"opt__struct__xtb_8py.html#a94e3ff52da98a05a912359222b47aa88":[2,0,0,1,12,2],
+"opt__struct__xtb_8py.html#a9a75f1b67a4486da92130873c54a7378":[2,0,0,1,12,9],
+"opt__struct__xtb_8py.html#aa308aa25d76fdd4f817597f3e2b40aee":[2,0,0,1,12,5],
+"opt__struct__xtb_8py.html#aad54147b097c2fdd62cab27b41852f77":[2,0,0,1,12,3],
+"opt__struct__xtb_8py.html#ab9eaed084a89c5c9c2e41d67206527a5":[2,0,0,1,12,7],
+"opt__struct__xtb_8py.html#aeaaf3af3a927bdb1493f49d715a6b8e7":[2,0,0,1,12,15],
+"opt__struct__xtb_8py.html#af46e5c6d95e64809ad04920cf2a024b3":[2,0,0,1,12,6],
 "opt__struct__xtb_8py.html#af6e777cac5cd2344c40859ce97ac1879":[2,0,0,1,12,1],
 "opt__struct__xtb_8py.html#af76906b02fac2de4547118e0be1bd341":[2,0,0,1,12,10],
 "opt__struct__xtb_8py_source.html":[2,0,0,1,12],
