@@ -121,18 +121,40 @@ Variables</h2></td></tr>
 <tr class="separator:ae1ed7d181b8eac9c333766c49d65481f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35ea18d59f4a8c2a09b9ab2a369a7ff1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35ea18d59f4a8c2a09b9ab2a369a7ff1">paramset</a> = args.paramset</td></tr>
 <tr class="separator:a35ea18d59f4a8c2a09b9ab2a369a7ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba0bb6af6bda6a824133ef4aa795794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0ba0bb6af6bda6a824133ef4aa795794">calctype</a> = args.calctype</td></tr>
+<tr class="separator:a0ba0bb6af6bda6a824133ef4aa795794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439b017812263abcd4a66e2bf1076175"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a439b017812263abcd4a66e2bf1076175">do_opt</a> = True</td></tr>
+<tr class="separator:a439b017812263abcd4a66e2bf1076175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4eae5c642fce3c35f5b1429bfc9a10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a9d4eae5c642fce3c35f5b1429bfc9a10">out_ext</a> = args.out_ext</td></tr>
 <tr class="separator:a9d4eae5c642fce3c35f5b1429bfc9a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069429854366234a9d1a34868813770f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a069429854366234a9d1a34868813770f">continue_calc</a> = args.continue_calc</td></tr>
+<tr class="separator:a069429854366234a9d1a34868813770f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab080c145a3b758f3835cca622e847a7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab080c145a3b758f3835cca622e847a7c">enable_spin</a> = args.enable_spin</td></tr>
 <tr class="separator:ab080c145a3b758f3835cca622e847a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25b5e292e23d39eb740090b927a0cc34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a> = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>)</td></tr>
+<tr class="memitem:a35e35ed8e2a4b5c6a47f160730eab30c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35e35ed8e2a4b5c6a47f160730eab30c">prev_dissoc_traj</a> = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, index=':')</td></tr>
+<tr class="separator:a35e35ed8e2a4b5c6a47f160730eab30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96698b2f91a8c557396549f16232e150"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a96698b2f91a8c557396549f16232e150">n_dissoc_steps_so_far</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35e35ed8e2a4b5c6a47f160730eab30c">prev_dissoc_traj</a>)-1</td></tr>
+<tr class="separator:a96698b2f91a8c557396549f16232e150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b5e292e23d39eb740090b927a0cc34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35e35ed8e2a4b5c6a47f160730eab30c">prev_dissoc_traj</a>[-1]</td></tr>
 <tr class="separator:a25b5e292e23d39eb740090b927a0cc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45a285237596cdbcb8018c3fefdc11d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a45a285237596cdbcb8018c3fefdc11d9">bond_length</a> = dissoc_init.get_distance(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad6d12220173a52f1393927f58d129d4c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>)</td></tr>
 <tr class="separator:a45a285237596cdbcb8018c3fefdc11d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04486a76962029c5eec584a4f373460"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa04486a76962029c5eec584a4f373460">dissoc_atoms_symbols</a> = [dissoc_init.get_chemical_symbols()[i] for i in [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad6d12220173a52f1393927f58d129d4c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>]]</td></tr>
-<tr class="separator:aa04486a76962029c5eec584a4f373460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88022471d62ec706e88d43d9dec65f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae88022471d62ec706e88d43d9dec65f3">num_atoms</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td></tr>
-<tr class="separator:ae88022471d62ec706e88d43d9dec65f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401abb4c318f8a4cc21a7c6710f42127"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a401abb4c318f8a4cc21a7c6710f42127">dissoc_atoms_symbols</a> = [dissoc_init.get_chemical_symbols()[i] for i in [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad6d12220173a52f1393927f58d129d4c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>]]</td></tr>
+<tr class="separator:a401abb4c318f8a4cc21a7c6710f42127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe645fd06eedead99b4fb740700cdc7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#abe645fd06eedead99b4fb740700cdc7e">opt_num_atoms</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td></tr>
+<tr class="separator:abe645fd06eedead99b4fb740700cdc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f6ec5d52722c7ca0475a3d9e8113c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a> = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, index=':')</td></tr>
+<tr class="separator:aa9f6ec5d52722c7ca0475a3d9e8113c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89eb9cd1076bc83e3cd64b3db747d3a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a89eb9cd1076bc83e3cd64b3db747d3a5">ene_dissoc_idx</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>[0].info['dissoc_atom_indices']</td></tr>
+<tr class="separator:a89eb9cd1076bc83e3cd64b3db747d3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374d56f70e38b2acc0f9d18a977bda04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a374d56f70e38b2acc0f9d18a977bda04">ene_num_steps</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>)</td></tr>
+<tr class="separator:a374d56f70e38b2acc0f9d18a977bda04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064260c09dd93017022c07fb5556bad8"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a064260c09dd93017022c07fb5556bad8">ene_bond_lengths</a> = [mol.info['dissoc_bond_length'] for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>]</td></tr>
+<tr class="separator:a064260c09dd93017022c07fb5556bad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2447d383f2eb7bcd35f6b61b8186ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a1d2447d383f2eb7bcd35f6b61b8186ba">ene_dissoc_elems</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>[0].info['dissoc_atom_elements']</td></tr>
+<tr class="separator:a1d2447d383f2eb7bcd35f6b61b8186ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b115906887230f151cf5960b9724bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a94b115906887230f151cf5960b9724bf">calc</a></td></tr>
+<tr class="separator:a94b115906887230f151cf5960b9724bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57556fc19fbf8a6b080cc9327569544"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad57556fc19fbf8a6b080cc9327569544">ana</a> = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td></tr>
 <tr class="separator:ad57556fc19fbf8a6b080cc9327569544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5068e470a0f8f4b585a996a77df04c41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a5068e470a0f8f4b585a996a77df04c41">bonds</a> = ana.all_bonds[0]</td></tr>
@@ -145,38 +167,40 @@ Variables</h2></td></tr>
 <tr class="separator:a4fb72940c46d6f099a1097d657f4f1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a998f8de5d52603a0c00ee6930ef3d44c"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a998f8de5d52603a0c00ee6930ef3d44c">current_atomid</a> = index_to_process.pop(0)</td></tr>
 <tr class="separator:a998f8de5d52603a0c00ee6930ef3d44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94b115906887230f151cf5960b9724bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a94b115906887230f151cf5960b9724bf">calc</a></td></tr>
-<tr class="separator:a94b115906887230f151cf5960b9724bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4c873fb7ca658457004bdd91d0fe98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a2b4c873fb7ca658457004bdd91d0fe98">constraint</a> = FixAtoms(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a5098e6f5e91f523778965a194bc0027b">indices</a>=[<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad6d12220173a52f1393927f58d129d4c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>])</td></tr>
+<tr class="separator:a2b4c873fb7ca658457004bdd91d0fe98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a609fd2a21973ef8c60a70f86af44df6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a609fd2a21973ef8c60a70f86af44df6e">e_diff_cutoff</a> = 5e-3</td></tr>
 <tr class="separator:a609fd2a21973ef8c60a70f86af44df6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02fc5d1fd938c8616701ab0e4191c86b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a02fc5d1fd938c8616701ab0e4191c86b">max_iterations</a> = 100</td></tr>
 <tr class="separator:a02fc5d1fd938c8616701ab0e4191c86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4925945e0e50d80a24c10e2d8a60467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab4925945e0e50d80a24c10e2d8a60467">writer</a> = Trajectory(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, 'w')</td></tr>
+<tr class="memitem:ab4925945e0e50d80a24c10e2d8a60467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab4925945e0e50d80a24c10e2d8a60467">writer</a> = Trajectory(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, 'a')</td></tr>
 <tr class="separator:ab4925945e0e50d80a24c10e2d8a60467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ec3752f6ceb26d2e511c601bc0a2a26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a1ec3752f6ceb26d2e511c601bc0a2a26">not_dissociated</a> = True</td></tr>
-<tr class="separator:a1ec3752f6ceb26d2e511c601bc0a2a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d80fd73036bc26f8d2ea22d358b6ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a> = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td></tr>
-<tr class="separator:ab2d80fd73036bc26f8d2ea22d358b6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe343fbfbbc2341296a7530c8e5bd0e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#abe343fbfbbc2341296a7530c8e5bd0e9">counter</a> = 0</td></tr>
-<tr class="separator:abe343fbfbbc2341296a7530c8e5bd0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0aa449f0162ff7a90d52be5bb9d7334"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a> = None</td></tr>
+<tr class="memitem:a0e46625840868c87af989ba61baf8a4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0e46625840868c87af989ba61baf8a4b">counter</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a96698b2f91a8c557396549f16232e150">n_dissoc_steps_so_far</a>+1</td></tr>
+<tr class="separator:a0e46625840868c87af989ba61baf8a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0aa449f0162ff7a90d52be5bb9d7334"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a> = dissoc_init.get_potential_energy()</td></tr>
 <tr class="separator:ac0aa449f0162ff7a90d52be5bb9d7334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a5f1ececdad0e86a7e79a2730bdaf41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0a5f1ececdad0e86a7e79a2730bdaf41">label</a></td></tr>
-<tr class="separator:a0a5f1ececdad0e86a7e79a2730bdaf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f81b39a546c2d054a51bd284ecd6595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a3f81b39a546c2d054a51bd284ecd6595">forces</a> = molecule.get_forces()</td></tr>
-<tr class="separator:a3f81b39a546c2d054a51bd284ecd6595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5742886d90c4f2b34eb3c844f5d2923"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> = molecule.get_potential_energy()</td></tr>
-<tr class="separator:af5742886d90c4f2b34eb3c844f5d2923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad0d174791e053dc24fa846dedee97ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aad0d174791e053dc24fa846dedee97ac">lines</a> = dftb_outfile.readlines()</td></tr>
-<tr class="separator:aad0d174791e053dc24fa846dedee97ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8730f2f44a76d21ef9e2de8137e8f967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a8730f2f44a76d21ef9e2de8137e8f967">e_diff</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> - <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a></td></tr>
-<tr class="separator:a8730f2f44a76d21ef9e2de8137e8f967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af665974a045030fff664e975c6e4e9fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af665974a045030fff664e975c6e4e9fc">new_mol</a> = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a>)</td></tr>
+<tr class="memitem:af665974a045030fff664e975c6e4e9fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af665974a045030fff664e975c6e4e9fc">new_mol</a> = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td></tr>
 <tr class="separator:af665974a045030fff664e975c6e4e9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5272c2ceff25ad05c453078b84a9198c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a5272c2ceff25ad05c453078b84a9198c">fix</a></td></tr>
 <tr class="separator:a5272c2ceff25ad05c453078b84a9198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5098e6f5e91f523778965a194bc0027b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a5098e6f5e91f523778965a194bc0027b">indices</a></td></tr>
 <tr class="separator:a5098e6f5e91f523778965a194bc0027b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d80fd73036bc26f8d2ea22d358b6ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a> = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af665974a045030fff664e975c6e4e9fc">new_mol</a>)</td></tr>
+<tr class="separator:ab2d80fd73036bc26f8d2ea22d358b6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ec3752f6ceb26d2e511c601bc0a2a26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a1ec3752f6ceb26d2e511c601bc0a2a26">not_dissociated</a> = True</td></tr>
+<tr class="separator:a1ec3752f6ceb26d2e511c601bc0a2a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae387a26e3c3a853757a20475dbb35c48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae387a26e3c3a853757a20475dbb35c48">opt</a> = LBFGS(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a>, logfile=f'{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a9d4eae5c642fce3c35f5b1429bfc9a10">out_ext</a>}_opt_{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0e46625840868c87af989ba61baf8a4b">counter</a>}.log', trajectory=f'{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a9d4eae5c642fce3c35f5b1429bfc9a10">out_ext</a>}_opt_{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0e46625840868c87af989ba61baf8a4b">counter</a>}.traj')</td></tr>
+<tr class="separator:ae387a26e3c3a853757a20475dbb35c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c8d654bea004624c4f02e3e99b27ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a23c8d654bea004624c4f02e3e99b27ae">fmax</a></td></tr>
+<tr class="separator:a23c8d654bea004624c4f02e3e99b27ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5742886d90c4f2b34eb3c844f5d2923"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> = molecule.get_potential_energy()</td></tr>
+<tr class="separator:af5742886d90c4f2b34eb3c844f5d2923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8730f2f44a76d21ef9e2de8137e8f967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a8730f2f44a76d21ef9e2de8137e8f967">e_diff</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> - <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a></td></tr>
+<tr class="separator:a8730f2f44a76d21ef9e2de8137e8f967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5f1ececdad0e86a7e79a2730bdaf41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0a5f1ececdad0e86a7e79a2730bdaf41">label</a></td></tr>
+<tr class="separator:a0a5f1ececdad0e86a7e79a2730bdaf41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f81b39a546c2d054a51bd284ecd6595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a3f81b39a546c2d054a51bd284ecd6595">forces</a> = molecule.get_forces()</td></tr>
+<tr class="separator:a3f81b39a546c2d054a51bd284ecd6595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="aa21fece3a9e145711396bfd26954b24c"></a>
@@ -191,7 +215,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00011">11</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00013">13</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -207,7 +231,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00014">14</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00016">16</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -223,7 +247,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00017">17</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00019">19</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -239,7 +263,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00021">21</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00023">23</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -255,7 +279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00036">36</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00037">37</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -271,7 +295,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00043">43</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00038">38</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -287,7 +311,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00044">44</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00052">52</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -303,7 +327,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00049">49</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00065">65</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -319,7 +343,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00051">51</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00067">67</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -335,7 +359,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00053">53</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00069">69</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -351,7 +375,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00054">54</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00070">70</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -367,7 +391,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00056">56</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00072">72</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a0ba0bb6af6bda6a824133ef4aa795794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba0bb6af6bda6a824133ef4aa795794">&#9670;&nbsp;</a></span>calctype</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.calctype = args.calctype</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00074">74</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a439b017812263abcd4a66e2bf1076175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439b017812263abcd4a66e2bf1076175">&#9670;&nbsp;</a></span>do_opt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DFdb_scripts.bond_dissoc_dftb.do_opt = True</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00076">76</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -383,7 +439,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00058">58</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00080">80</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a069429854366234a9d1a34868813770f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069429854366234a9d1a34868813770f">&#9670;&nbsp;</a></span>continue_calc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DFdb_scripts.bond_dissoc_dftb.continue_calc = args.continue_calc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00086">86</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -399,7 +471,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00064">64</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00094">94</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a35e35ed8e2a4b5c6a47f160730eab30c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e35ed8e2a4b5c6a47f160730eab30c">&#9670;&nbsp;</a></span>prev_dissoc_traj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.prev_dissoc_traj = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, index=':')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00109">109</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a96698b2f91a8c557396549f16232e150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96698b2f91a8c557396549f16232e150">&#9670;&nbsp;</a></span>n_dissoc_steps_so_far</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DFdb_scripts.bond_dissoc_dftb.n_dissoc_steps_so_far = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35e35ed8e2a4b5c6a47f160730eab30c">prev_dissoc_traj</a>)-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00110">110</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -410,12 +514,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.dissoc_init = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>)</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.dissoc_init = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a35e35ed8e2a4b5c6a47f160730eab30c">prev_dissoc_traj</a>[-1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00076">76</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00112">112</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -431,12 +535,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00077">77</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00113">113</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="aa04486a76962029c5eec584a4f373460"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa04486a76962029c5eec584a4f373460">&#9670;&nbsp;</a></span>dissoc_atoms_symbols</h2>
+<a id="a401abb4c318f8a4cc21a7c6710f42127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401abb4c318f8a4cc21a7c6710f42127">&#9670;&nbsp;</a></span>dissoc_atoms_symbols</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,119 +551,103 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00078">78</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00114">114</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="ae88022471d62ec706e88d43d9dec65f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae88022471d62ec706e88d43d9dec65f3">&#9670;&nbsp;</a></span>num_atoms</h2>
+<a id="abe645fd06eedead99b4fb740700cdc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe645fd06eedead99b4fb740700cdc7e">&#9670;&nbsp;</a></span>opt_num_atoms</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.num_atoms = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.opt_num_atoms = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00080">80</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00116">116</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="ad57556fc19fbf8a6b080cc9327569544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad57556fc19fbf8a6b080cc9327569544">&#9670;&nbsp;</a></span>ana</h2>
+<a id="aa9f6ec5d52722c7ca0475a3d9e8113c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f6ec5d52722c7ca0475a3d9e8113c6">&#9670;&nbsp;</a></span>ene_dissoc_traj</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ana = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ene_dissoc_traj = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, index=':')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00084">84</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00133">133</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="a5068e470a0f8f4b585a996a77df04c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5068e470a0f8f4b585a996a77df04c41">&#9670;&nbsp;</a></span>bonds</h2>
+<a id="a89eb9cd1076bc83e3cd64b3db747d3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89eb9cd1076bc83e3cd64b3db747d3a5">&#9670;&nbsp;</a></span>ene_dissoc_idx</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.bonds = ana.all_bonds[0]</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ene_dissoc_idx = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>[0].info['dissoc_atom_indices']</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00085">85</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00134">134</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="a05e545ad51617504d4675106411d68c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05e545ad51617504d4675106411d68c1">&#9670;&nbsp;</a></span>index_mask</h2>
+<a id="a374d56f70e38b2acc0f9d18a977bda04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374d56f70e38b2acc0f9d18a977bda04">&#9670;&nbsp;</a></span>ene_num_steps</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.index_mask = [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>]</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ene_num_steps = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00087">87</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00137">137</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="a3ed5ee0eb9b59499e820d9a1899f457a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed5ee0eb9b59499e820d9a1899f457a">&#9670;&nbsp;</a></span>index_to_process</h2>
+<a id="a064260c09dd93017022c07fb5556bad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064260c09dd93017022c07fb5556bad8">&#9670;&nbsp;</a></span>ene_bond_lengths</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.index_to_process = []</td>
+          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.ene_bond_lengths = [mol.info['dissoc_bond_length'] for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00088">88</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00138">138</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="a4fb72940c46d6f099a1097d657f4f1a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fb72940c46d6f099a1097d657f4f1a0">&#9670;&nbsp;</a></span>safety_counter</h2>
+<a id="a1d2447d383f2eb7bcd35f6b61b8186ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2447d383f2eb7bcd35f6b61b8186ba">&#9670;&nbsp;</a></span>ene_dissoc_elems</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int DFdb_scripts.bond_dissoc_dftb.safety_counter = 0</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ene_dissoc_elems = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#aa9f6ec5d52722c7ca0475a3d9e8113c6">ene_dissoc_traj</a>[0].info['dissoc_atom_elements']</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00094">94</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="a998f8de5d52603a0c00ee6930ef3d44c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a998f8de5d52603a0c00ee6930ef3d44c">&#9670;&nbsp;</a></span>current_atomid</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.current_atomid = index_to_process.pop(0)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00097">97</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00139">139</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -591,7 +679,119 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Hamiltonian_Solver_Mode=2 <span class="keywordflow">if</span> enable_spin <span class="keywordflow">else</span> 1</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00112">112</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00146">146</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="ad57556fc19fbf8a6b080cc9327569544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57556fc19fbf8a6b080cc9327569544">&#9670;&nbsp;</a></span>ana</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.ana = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00166">166</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a5068e470a0f8f4b585a996a77df04c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5068e470a0f8f4b585a996a77df04c41">&#9670;&nbsp;</a></span>bonds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.bonds = ana.all_bonds[0]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00167">167</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a05e545ad51617504d4675106411d68c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05e545ad51617504d4675106411d68c1">&#9670;&nbsp;</a></span>index_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.index_mask = [<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00169">169</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a3ed5ee0eb9b59499e820d9a1899f457a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed5ee0eb9b59499e820d9a1899f457a">&#9670;&nbsp;</a></span>index_to_process</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.index_to_process = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00170">170</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a4fb72940c46d6f099a1097d657f4f1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb72940c46d6f099a1097d657f4f1a0">&#9670;&nbsp;</a></span>safety_counter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DFdb_scripts.bond_dissoc_dftb.safety_counter = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00176">176</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a998f8de5d52603a0c00ee6930ef3d44c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998f8de5d52603a0c00ee6930ef3d44c">&#9670;&nbsp;</a></span>current_atomid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DFdb_scripts.bond_dissoc_dftb.current_atomid = index_to_process.pop(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00179">179</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a2b4c873fb7ca658457004bdd91d0fe98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4c873fb7ca658457004bdd91d0fe98">&#9670;&nbsp;</a></span>constraint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.constraint = FixAtoms(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a5098e6f5e91f523778965a194bc0027b">indices</a>=[<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ad6d12220173a52f1393927f58d129d4c">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ae1ed7d181b8eac9c333766c49d65481f">a2index</a>])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00190">190</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -607,7 +807,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00130">130</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00199">199</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -623,7 +823,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00131">131</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00200">200</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -634,60 +834,28 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.writer = Trajectory(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, 'w')</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.writer = Trajectory(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>, 'a')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00134">134</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00205">205</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
-<a id="a1ec3752f6ceb26d2e511c601bc0a2a26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ec3752f6ceb26d2e511c601bc0a2a26">&#9670;&nbsp;</a></span>not_dissociated</h2>
+<a id="a0e46625840868c87af989ba61baf8a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e46625840868c87af989ba61baf8a4b">&#9670;&nbsp;</a></span>counter</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool DFdb_scripts.bond_dissoc_dftb.not_dissociated = True</td>
+          <td class="memname">int DFdb_scripts.bond_dissoc_dftb.counter = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a96698b2f91a8c557396549f16232e150">n_dissoc_steps_so_far</a>+1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00135">135</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="ab2d80fd73036bc26f8d2ea22d358b6ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d80fd73036bc26f8d2ea22d358b6ba">&#9670;&nbsp;</a></span>molecule</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.molecule = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00136">136</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="abe343fbfbbc2341296a7530c8e5bd0e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe343fbfbbc2341296a7530c8e5bd0e9">&#9670;&nbsp;</a></span>counter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DFdb_scripts.bond_dissoc_dftb.counter = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00137">137</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00206">206</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -698,92 +866,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.prev_energy = None</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.prev_energy = dissoc_init.get_potential_energy()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00138">138</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="a0a5f1ececdad0e86a7e79a2730bdaf41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a5f1ececdad0e86a7e79a2730bdaf41">&#9670;&nbsp;</a></span>label</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.label</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00143">143</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="a3f81b39a546c2d054a51bd284ecd6595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f81b39a546c2d054a51bd284ecd6595">&#9670;&nbsp;</a></span>forces</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.forces = molecule.get_forces()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00145">145</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="af5742886d90c4f2b34eb3c844f5d2923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5742886d90c4f2b34eb3c844f5d2923">&#9670;&nbsp;</a></span>energy</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.energy = molecule.get_potential_energy()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00147">147</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="aad0d174791e053dc24fa846dedee97ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad0d174791e053dc24fa846dedee97ac">&#9670;&nbsp;</a></span>lines</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.lines = dftb_outfile.readlines()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00152">152</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
-
-</div>
-</div>
-<a id="a8730f2f44a76d21ef9e2de8137e8f967"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8730f2f44a76d21ef9e2de8137e8f967">&#9670;&nbsp;</a></span>e_diff</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.e_diff = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> - <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00172">172</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00207">207</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -794,12 +882,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_dftb.new_mol = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a>)</td>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.new_mol = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a25b5e292e23d39eb740090b927a0cc34">dissoc_init</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00184">184</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00208">208</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -815,7 +903,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00190">190</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00214">214</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
@@ -831,7 +919,135 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00190">190</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00214">214</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="ab2d80fd73036bc26f8d2ea22d358b6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d80fd73036bc26f8d2ea22d358b6ba">&#9670;&nbsp;</a></span>molecule</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.molecule = deepcopy(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af665974a045030fff664e975c6e4e9fc">new_mol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00215">215</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a1ec3752f6ceb26d2e511c601bc0a2a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec3752f6ceb26d2e511c601bc0a2a26">&#9670;&nbsp;</a></span>not_dissociated</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DFdb_scripts.bond_dissoc_dftb.not_dissociated = True</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00222">222</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="ae387a26e3c3a853757a20475dbb35c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae387a26e3c3a853757a20475dbb35c48">&#9670;&nbsp;</a></span>opt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.opt = LBFGS(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ab2d80fd73036bc26f8d2ea22d358b6ba">molecule</a>, logfile=f'{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a9d4eae5c642fce3c35f5b1429bfc9a10">out_ext</a>}_opt_{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0e46625840868c87af989ba61baf8a4b">counter</a>}.log', trajectory=f'{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a510b7370f21751ac508f181e83f2ff48">molname</a>}{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a9d4eae5c642fce3c35f5b1429bfc9a10">out_ext</a>}_opt_{<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#a0e46625840868c87af989ba61baf8a4b">counter</a>}.traj')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00234">234</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a23c8d654bea004624c4f02e3e99b27ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c8d654bea004624c4f02e3e99b27ae">&#9670;&nbsp;</a></span>fmax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.fmax</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00235">235</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="af5742886d90c4f2b34eb3c844f5d2923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5742886d90c4f2b34eb3c844f5d2923">&#9670;&nbsp;</a></span>energy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.energy = molecule.get_potential_energy()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00239">239</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a8730f2f44a76d21ef9e2de8137e8f967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8730f2f44a76d21ef9e2de8137e8f967">&#9670;&nbsp;</a></span>e_diff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.e_diff = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#af5742886d90c4f2b34eb3c844f5d2923">energy</a> - <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__dftb.html#ac0aa449f0162ff7a90d52be5bb9d7334">prev_energy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00253">253</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a0a5f1ececdad0e86a7e79a2730bdaf41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5f1ececdad0e86a7e79a2730bdaf41">&#9670;&nbsp;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00288">288</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
+
+</div>
+</div>
+<a id="a3f81b39a546c2d054a51bd284ecd6595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f81b39a546c2d054a51bd284ecd6595">&#9670;&nbsp;</a></span>forces</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_dftb.forces = molecule.get_forces()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__dftb_8py_source.html#l00291">291</a> of file <a class="el" href="bond__dissoc__dftb_8py_source.html">bond_dissoc_dftb.py</a>.</p>
 
 </div>
 </div>
