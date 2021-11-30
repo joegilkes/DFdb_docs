@@ -1,17 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"namespacemembers_vars_o.html":[0,1,2,11],
-"namespacemembers_vars_p.html":[0,1,2,12],
-"namespacemembers_vars_s.html":[0,1,2,13],
-"namespacemembers_vars_t.html":[0,1,2,14],
-"namespacemembers_vars_w.html":[0,1,2,15],
-"namespacemembers_w.html":[0,1,0,15],
-"namespaces.html":[0,0],
-"opt__struct__aims_8py.html":[2,0,0,1,9],
-"opt__struct__aims_8py.html#a068cf1e93c469bb120c26ccf02c87e4a":[2,0,0,1,9,2],
-"opt__struct__aims_8py.html#a0e81c07eac1228cc83437374edf8e73e":[2,0,0,1,9,22],
-"opt__struct__aims_8py.html#a398f731d99de0d4e55abdf6c80414487":[2,0,0,1,9,7],
-"opt__struct__aims_8py.html#a5d44f55e55317dfb9b1e05bfe7827227":[2,0,0,1,9,3],
 "opt__struct__aims_8py.html#a5d925965afa435959e71700be5590320":[2,0,0,1,9,10],
 "opt__struct__aims_8py.html#a5eb9382b9a9449f240ef4bef15b9e8ea":[2,0,0,1,9,0],
 "opt__struct__aims_8py.html#a6bd4bb72cec5af05a90464602e037f27":[2,0,0,1,9,16],

@@ -105,10 +105,10 @@ Variables</h2></td></tr>
 <tr class="separator:a2f5f3c8fd6f7d1b75b782c2796db2356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1076c71d6214457b671f1e9457353224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a1076c71d6214457b671f1e9457353224">type</a></td></tr>
 <tr class="separator:a1076c71d6214457b671f1e9457353224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcedd1e4681b1d29a0e808b4babeed2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#adcedd1e4681b1d29a0e808b4babeed2c">dest</a></td></tr>
-<tr class="separator:adcedd1e4681b1d29a0e808b4babeed2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1baa82d5238fa362fd5e34d83cf8037"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#ac1baa82d5238fa362fd5e34d83cf8037">choices</a></td></tr>
 <tr class="separator:ac1baa82d5238fa362fd5e34d83cf8037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcedd1e4681b1d29a0e808b4babeed2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#adcedd1e4681b1d29a0e808b4babeed2c">dest</a></td></tr>
+<tr class="separator:adcedd1e4681b1d29a0e808b4babeed2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43c2a0fe85468d3df23254dc43690af1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a43c2a0fe85468d3df23254dc43690af1">default</a></td></tr>
 <tr class="separator:a43c2a0fe85468d3df23254dc43690af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692a00631ea3ebb04cab4a1354095133"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a692a00631ea3ebb04cab4a1354095133">args</a> = parser.parse_args()</td></tr>
@@ -143,14 +143,10 @@ Variables</h2></td></tr>
 <tr class="separator:ac026ab0ccbd936a0b571c25c45b22f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea99962b9b0cd35c5c4c6dfb2431bc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a> = read(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a94f251cf2871f33fa093ccb9d7fcfc71">molname</a>, index=':')</td></tr>
 <tr class="separator:a7ea99962b9b0cd35c5c4c6dfb2431bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65b607f1e6e06628d4d4354fb102ec48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a65b607f1e6e06628d4d4354fb102ec48">ene_dissoc_idx</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>[0].info['dissoc_atom_indices']</td></tr>
-<tr class="separator:a65b607f1e6e06628d4d4354fb102ec48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4972950c99282c70125759513c1cbe3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a4972950c99282c70125759513c1cbe3a">ene_num_steps</a> = len(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>)</td></tr>
 <tr class="separator:a4972950c99282c70125759513c1cbe3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80b8971c4fc75a3835afa95ec9992f6e"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a80b8971c4fc75a3835afa95ec9992f6e">ene_bond_lengths</a> = [mol.info['dissoc_bond_length'] for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>]</td></tr>
+<tr class="memitem:a80b8971c4fc75a3835afa95ec9992f6e"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a80b8971c4fc75a3835afa95ec9992f6e">ene_bond_lengths</a> = [mol.get_distance(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#afb4f94cb4c94e3ee15e9d6bc00fc76ab">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a1326615a5aa8578dfc4fbc98d2772f9d">a2index</a>) for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>]</td></tr>
 <tr class="separator:a80b8971c4fc75a3835afa95ec9992f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4ae95871b0d6f0cdbc4e5b065f775a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#afa4ae95871b0d6f0cdbc4e5b065f775a">ene_dissoc_elems</a> = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>[0].info['dissoc_atom_elements']</td></tr>
-<tr class="separator:afa4ae95871b0d6f0cdbc4e5b065f775a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81af4346d991971bd0e174305c6c9b97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a81af4346d991971bd0e174305c6c9b97">calc</a></td></tr>
 <tr class="separator:a81af4346d991971bd0e174305c6c9b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4717571f776d43ee4ded6e86b089ca63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a4717571f776d43ee4ded6e86b089ca63">ana</a> = Analysis(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a2f33172ae5ed038c6ae5960ed5922bb9">dissoc_init</a>)</td></tr>
@@ -265,22 +261,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adcedd1e4681b1d29a0e808b4babeed2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcedd1e4681b1d29a0e808b4babeed2c">&#9670;&nbsp;</a></span>dest</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_xtb.dest</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00037">37</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
-
-</div>
-</div>
 <a id="ac1baa82d5238fa362fd5e34d83cf8037"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1baa82d5238fa362fd5e34d83cf8037">&#9670;&nbsp;</a></span>choices</h2>
 
@@ -293,7 +273,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00038">38</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00037">37</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+
+</div>
+</div>
+<a id="adcedd1e4681b1d29a0e808b4babeed2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcedd1e4681b1d29a0e808b4babeed2c">&#9670;&nbsp;</a></span>dest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFdb_scripts.bond_dissoc_xtb.dest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00043">43</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -309,7 +305,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00052">52</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00051">51</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -325,7 +321,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00057">57</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00056">56</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -341,7 +337,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00059">59</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00058">58</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -357,7 +353,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00061">61</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00060">60</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -373,7 +369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00062">62</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00061">61</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -389,7 +385,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00064">64</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00063">63</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -405,7 +401,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00066">66</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00065">65</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -421,7 +417,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00068">68</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00067">67</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -437,7 +433,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00072">72</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00071">71</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -453,7 +449,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00078">78</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00077">77</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -469,7 +465,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00095">95</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00094">94</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -485,7 +481,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00096">96</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00095">95</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -501,7 +497,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00098">98</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00097">97</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -517,7 +513,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00099">99</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00098">98</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -533,7 +529,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00100">100</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00099">99</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -549,7 +545,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00102">102</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00101">101</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -565,23 +561,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00119">119</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
-
-</div>
-</div>
-<a id="a65b607f1e6e06628d4d4354fb102ec48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65b607f1e6e06628d4d4354fb102ec48">&#9670;&nbsp;</a></span>ene_dissoc_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_xtb.ene_dissoc_idx = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>[0].info['dissoc_atom_indices']</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00120">120</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00118">118</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -597,7 +577,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00123">123</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00120">120</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -608,28 +588,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list DFdb_scripts.bond_dissoc_xtb.ene_bond_lengths = [mol.info['dissoc_bond_length'] for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>]</td>
+          <td class="memname">list DFdb_scripts.bond_dissoc_xtb.ene_bond_lengths = [mol.get_distance(<a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#afb4f94cb4c94e3ee15e9d6bc00fc76ab">a1index</a>, <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a1326615a5aa8578dfc4fbc98d2772f9d">a2index</a>) for mol in <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00124">124</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
-
-</div>
-</div>
-<a id="afa4ae95871b0d6f0cdbc4e5b065f775a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa4ae95871b0d6f0cdbc4e5b065f775a">&#9670;&nbsp;</a></span>ene_dissoc_elems</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DFdb_scripts.bond_dissoc_xtb.ene_dissoc_elems = <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__xtb.html#a7ea99962b9b0cd35c5c4c6dfb2431bc6">ene_dissoc_traj</a>[0].info['dissoc_atom_elements']</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00125">125</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00121">121</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -651,7 +615,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    max_iterations=500</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00132">132</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00128">128</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -667,7 +631,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00142">142</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00138">138</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -683,7 +647,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00143">143</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00139">139</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -699,7 +663,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00145">145</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00141">141</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -715,7 +679,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00146">146</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00142">142</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -731,7 +695,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00152">152</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00148">148</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -747,7 +711,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00155">155</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00151">151</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -763,7 +727,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00166">166</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00162">162</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -779,7 +743,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00175">175</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00171">171</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -795,7 +759,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00176">176</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00172">172</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -811,7 +775,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00181">181</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00177">177</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -827,7 +791,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00182">182</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00178">178</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -843,7 +807,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00183">183</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00179">179</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -859,7 +823,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00184">184</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00180">180</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -875,7 +839,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00190">190</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00186">186</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -891,7 +855,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00190">190</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00186">186</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -907,7 +871,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00191">191</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00187">187</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -923,7 +887,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00198">198</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00194">194</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -939,7 +903,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00210">210</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00206">206</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -955,7 +919,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00211">211</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00207">207</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -971,7 +935,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00215">215</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00211">211</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -987,7 +951,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00229">229</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00225">225</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +967,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00264">264</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00260">260</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +983,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00267">267</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bond__dissoc__xtb_8py_source.html#l00263">263</a> of file <a class="el" href="bond__dissoc__xtb_8py_source.html">bond_dissoc_xtb.py</a>.</p>
 
 </div>
 </div>

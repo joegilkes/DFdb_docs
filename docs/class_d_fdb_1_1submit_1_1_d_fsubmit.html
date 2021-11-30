@@ -122,9 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6582c88f2259936ac65ca86595904cb5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">batch_get_energies</a> (self, rows)</td></tr>
 <tr class="memdesc:a6582c88f2259936ac65ca86595904cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a batch job to the queue to obtain updated energies and forces.  <a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">More...</a><br /></td></tr>
 <tr class="separator:a6582c88f2259936ac65ca86595904cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86459ec13cd854338b830bf7cd5790f4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4">dissociate_bond</a> (self, row, atomids)</td></tr>
-<tr class="memdesc:a86459ec13cd854338b830bf7cd5790f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve.  <a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4">More...</a><br /></td></tr>
-<tr class="separator:a86459ec13cd854338b830bf7cd5790f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746b469cd314113371d83abd31e3feb3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3">dissociate_bond</a> (self, rows, atomids, jobtype)</td></tr>
+<tr class="memdesc:a746b469cd314113371d83abd31e3feb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve.  <a href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3">More...</a><br /></td></tr>
+<tr class="separator:a746b469cd314113371d83abd31e3feb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -356,8 +356,8 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a86459ec13cd854338b830bf7cd5790f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86459ec13cd854338b830bf7cd5790f4">&#9670;&nbsp;</a></span>dissociate_bond()</h2>
+<a id="a746b469cd314113371d83abd31e3feb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a746b469cd314113371d83abd31e3feb3">&#9670;&nbsp;</a></span>dissociate_bond()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -372,13 +372,19 @@ Private Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
+          <td class="paramname"><em>rows</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>atomids</em>&#160;</td>
+          <td class="paramname"><em>atomids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>jobtype</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -392,23 +398,25 @@ Private Member Functions</h2></td></tr>
 <p>Contains a job generator which creates all the neccessary files and directories, then submits a bond dissociation job for the relevant structures and calculator through the requested job submission system.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">row</td><td><em><b>AtomsRow</b></em> <br  />
- ASE AtomsRow obtained with <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c" title="Select rows from a database, return as a list of rows.">DFdb.db.DFdatabase.select()</a> or <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068" title="Select a single row from a database.">DFdb.db.DFdatabase.get()</a>. atomids <em><b>list of ints</b></em> <br  />
- Two integer atom ids which determine the bond to be dissociated. </td></tr>
+    <tr><td class="paramname">rows</td><td><em><b>AtomsRow or list of AtomsRows</b></em> <br  />
+ For jobtype=opt, ASE AtomsRow obtained with <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a7db7bffce1c0423d2dc2e6b976f0645c" title="Select rows from a database, return as a list of rows.">DFdb.db.DFdatabase.select()</a> or <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#aacbdc84f79ff3308de3e96e69b323068" title="Select a single row from a database.">DFdb.db.DFdatabase.get()</a>. For jobtype=ene, list of ASE AtomsRows. atomids <em><b>list of ints</b></em> <br  />
+ Two integer atom ids which determine the bond to be dissociated. jobtype <em><b>str; Choices: (opt, ene)</b></em> <br  />
+ Whether to perform a constrained optimisation-based bond dissociation from a single starting geometry, or to run a batch energy </td></tr>
+    <tr><td class="paramname">recalculation.</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00292">292</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00296">296</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
-<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
+<p class="reference">References <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#ab35c61190866e842e877cf1cec4d0f9f">DFdb.submit.DFsubmit.calc_options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>, and <a class="el" href="namespace_d_fdb__scripts_1_1bond__dissoc__aims.html#a40fd5a25f407e55e33f25363c37be4c7">DFdb_scripts.bond_dissoc_aims.type</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit_a86459ec13cd854338b830bf7cd5790f4_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1submit_1_1_d_fsubmit_a86459ec13cd854338b830bf7cd5790f4_cgraph" alt=""/></div>
-<map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a86459ec13cd854338b830bf7cd5790f4_cgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a86459ec13cd854338b830bf7cd5790f4_cgraph">
+<div class="center"><img src="class_d_fdb_1_1submit_1_1_d_fsubmit_a746b469cd314113371d83abd31e3feb3_cgraph.png" border="0" usemap="#aclass_d_fdb_1_1submit_1_1_d_fsubmit_a746b469cd314113371d83abd31e3feb3_cgraph" alt=""/></div>
+<map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a746b469cd314113371d83abd31e3feb3_cgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_a746b469cd314113371d83abd31e3feb3_cgraph">
 <area shape="rect" title="Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve." alt="" coords="5,13,256,39"/>
 <area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709" title="Backend for creating job submission system preamble." alt="" coords="304,5,461,47"/>
 </map>
@@ -469,11 +477,11 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>preamble, a string containing the starting section of the job submission script. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00393">393</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00419">419</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 <div class="fragment"></div><!-- fragment -->
 <p class="reference">References <a class="el" href="class_d_fdb_1_1db_1_1_d_fdatabase.html#a65b08f0051eb0bd88901fc1993ab9a54">DFdb.db.DFdatabase.options</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa75e7dec98124c191a03f8204ae4641e">DFdb.submit.DFsubmit.options</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a7dc0463fb71fbee5f3ea738598411cfc">DFdb.submit.DFsubmit.sub_sys</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -483,7 +491,7 @@ Private Member Functions</h2></td></tr>
 <map name="aclass_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph" id="aclass_d_fdb_1_1submit_1_1_d_fsubmit_aa701f87b55736cefe4d7c9c87a4e0709_icgraph">
 <area shape="rect" title="Backend for creating job submission system preamble." alt="" coords="304,64,461,105"/>
 <area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5" title="Add a batch job to the queue to obtain updated energies and forces." alt="" coords="36,5,225,47"/>
-<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4" title="Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve." alt="" coords="5,71,256,98"/>
+<area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3" title="Add a bond dissociation job to the queue to automatically obtain a bond dissociation curve." alt="" coords="5,71,256,98"/>
 <area shape="rect" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5" title="Add a structure to the queue for geometry relaxation." alt="" coords="39,122,223,149"/>
 </map>
 </div>
@@ -555,7 +563,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00060">60</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#aa701f87b55736cefe4d7c9c87a4e0709">DFdb.submit.DFsubmit._preamble_writer()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +597,7 @@ Private Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="submit_8py_source.html#l00077">77</a> of file <a class="el" href="submit_8py_source.html">submit.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a86459ec13cd854338b830bf7cd5790f4">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a6582c88f2259936ac65ca86595904cb5">DFdb.submit.DFsubmit.batch_get_energies()</a>, <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a746b469cd314113371d83abd31e3feb3">DFdb.submit.DFsubmit.dissociate_bond()</a>, and <a class="el" href="class_d_fdb_1_1submit_1_1_d_fsubmit.html#a1bc1765884b1e54bcd4b8d8dcb4a83f5">DFdb.submit.DFsubmit.relax()</a>.</p>
 
 </div>
 </div>
